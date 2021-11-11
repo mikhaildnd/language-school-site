@@ -1,5 +1,38 @@
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .btn {
+  display: inline-block;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: normal;
+  border-radius: 30px;
+  color: $white;
+  letter-spacing: 0.01rem;
+  font-family: $text;
+  text-align: center;
+  transition-property: box-shadow, background-color;
+  will-change: box-shadow, background-color;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  &--size-normal {
+    padding: 1.0625em 2.125em;
+    font-size: 16px;
+    font-weight: 600;
+    @media (min-width: $md1) {
+      font-size: 18px;
+    }
+  }
+  &--green {
+    background-color: $green;
+    &:hover {
+      box-shadow: #1e5f5d66 0 8px 10px 0;
+    }
+    &:active {
+      background-color: #175654;
+    }
+    &:focus {
+      box-shadow: #00000026 inset 0px 10px 10px 0px;
+    }
+  }
 }
 //<Form> ========================================================================================================================================================
 .form {

@@ -4,7 +4,20 @@
   <body>
     <div class="wrapper">
       @@include('_header.html',{})
-      <main class="page"></main>
+      <main class="page">
+        <div class="promo container">
+          <div class="promo__info">
+            <h1 class="promo__heading">ШКОЛА ИНОСТРАННЫХ ЯЗЫКОВ ДЛЯ ВСЕЙ СЕМЬИ</h1>
+            <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
+          </div>
+          <div class="promo__image">
+            <picture>
+              <source srcset="img/main-image.svg" type="image/svg+xml" />
+              <img src="img/main-image-sm.png" alt="Композиция" />
+            </picture>
+          </div>
+        </div>
+      </main>
       @@include('_footer.html',{})
     </div>
     @@include('_popup.html',{}) @@include('_js.html',{})
