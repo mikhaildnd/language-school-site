@@ -542,6 +542,7 @@ body._lock {
 
 .promo {
   padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .promo__info {
@@ -564,8 +565,53 @@ body._lock {
 .promo__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.lessons {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.lessons__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.lessons__text {
+  font-family: "NextArtHeavy";
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: -100px;
+}
+
+.lessons__text span {
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.lessons__img {
+  width: 166px;
+  height: 130px;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.lessons__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page {
@@ -580,6 +626,18 @@ body._lock {
   .checkbox-label__input {
     width: 28px;
     height: 28px;
+  }
+
+  .lessons__text {
+    font-family: "NextArtHeavy";
+    font-size: 24px;
+    line-height: 1.415;
+    letter-spacing: 0.02rem;
+  }
+
+  .lessons__img {
+    width: 193px;
+    height: 150px;
   }
 }
 
@@ -638,6 +696,19 @@ body._lock {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     width: 140px;
+  }
+
+  .lessons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .lessons__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
@@ -715,6 +786,11 @@ body._lock {
   .promo__image {
     -ms-flex-preferred-size: calc(45% - 16px);
         flex-basis: calc(45% - 16px);
+  }
+
+  .lessons__item {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 }
 

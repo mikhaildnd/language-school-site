@@ -1,6 +1,7 @@
 .promo {
   // @include wrap;
   padding-top: 60px;
+  padding-bottom: 40px;
   @media (min-width: $md4) {
     display: flex;
   }
@@ -46,7 +47,58 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: cover;
+    }
+  }
+}
+
+.lessons {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  @media (min-width: $md5) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  // .lessons__item
+  &__item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    @media (min-width: $md5) {
+      flex-basis: 50%;
+    }
+    @media (min-width: $md4) {
+      flex-basis: auto;
+    }
+  }
+  // .lessons__text
+  &__text {
+    @include h1_mobile;
+    align-self: flex-end;
+    margin-left: -100px;
+    @media (min-width: $md7) {
+      @include h1;
+    }
+    span {
+      background-color: $white;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  // .lessons__img
+  &__img {
+    width: 166px;
+    height: 130px;
+    border-radius: 60px;
+    overflow: hidden;
+    @media (min-width: $md7) {
+      width: 193px;
+      height: 150px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
