@@ -44,15 +44,17 @@ const _path = {
     css: project_name + '/css/',
     images: project_name + '/img/',
     fonts: project_name + '/fonts/',
+    iconfonts: project_name + '/iconfonts/',
     videos: project_name + '/videos/',
   },
   src: {
     favicon: src_folder + '/img/favicon.{jpg,png,svg,gif,ico,webp}',
     html: [src_folder + '/**/*.html', '!' + src_folder + '/_*.html'],
     js: src_folder + '/js/*.js',
-    css: src_folder + '/scss/style.scss',
+    css: [src_folder + '/scss/style.scss', src_folder + '/scss/iconfonts.scss'],
     images: [src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}', '!**/favicon.*'],
     fonts: src_folder + '/fonts/*.ttf',
+    iconfonts: src_folder + '/iconfonts/*.{ttf,svg,eot,woff}',
     videos: src_folder + '/videos/*.*',
   },
   watch: {
@@ -117,6 +119,14 @@ export const html = () => {
       .pipe(gulp.dest(_path.build.html))
       .pipe(sync.stream())
   );
+};
+//iconfonts
+export const iconfonts = () => {
+  return gulp
+    .src(_path.src.iconfonts)
+    .pipe(plumber())
+    .pipe(gulp.dest(_path.build.iconfonts))
+    .pipe(sync.stream());
 };
 
 // Styles
@@ -264,7 +274,7 @@ export const watch = () => {
 
 export const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, images),
+  gulp.parallel(html, styles, scripts, images, iconfonts),
   fontsOtf2ttf,
   fonts,
   fontsInclude

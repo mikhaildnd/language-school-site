@@ -1,52 +1,67 @@
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
-	@font-face {
-		font-family: $font_name;
-		font-display: swap;
-		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-		font-weight: #{$weight};
-		font-style: #{$style};
-	}
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+//heading
+@mixin h1 {
+  font-family: $heading;
+  font-size: 24px;
+  line-height: 1.415;
+  letter-spacing: 0.02rem;
+  // font-weight: 900;
+}
+@mixin h2 {
+  font-family: $text;
+  font-size: 18px;
+  line-height: 1.665;
+  font-weight: 500;
+}
+@mixin h3 {
+  font-family: $text;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: 300;
 }
 
-//Адаптивный шрифт
-@mixin adaptiv-font($pcSize, $mobSize, $maxSize) {
-	$addSize: $pcSize - $mobSize;
-	@if $maxSize==1 {
-		//Только если меньше контейнера
-		font-size: $pcSize + px;
-		@media (max-width: #{$maxWidthContainer + px}) {
-			font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
-		}
-	} @else if $maxSize==2 {
-		//Только если больше контейнера
-		font-size: $pcSize + px;
-		@media (min-width: #{$maxWidthContainer + px}) {
-			font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-		}
-	} @else {
-		//Всегда
-		font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-	}
+@mixin h1_mobile {
+  font-family: $heading;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  // font-weight: 900;
+}
+@mixin h2_mobile {
+  font-family: $text;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+@mixin h3_mobile {
+  font-family: $text;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
-//Адаптивное свойство
-@mixin adaptiv-value($property, $startSize, $minSize, $type) {
-	$addSize: $startSize - $minSize;
-	@if $type==1 {
-		//Только если меньше контейнера
-		#{$property}: $startSize + px;
-		@media (max-width: #{$maxWidthContainer + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
-		}
-	} @else if $type==2 {
-		//Только если больше контейнера
-		#{$property}: $startSize + px;
-		@media (min-width: #{$maxWidthContainer + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-		}
-	} @else {
-		//Всегда
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-	}
+//price
+@mixin price {
+  font-family: $heading;
+  font-size: 22px;
+  letter-spacing: 0.02rem;
+  line-height: 1.365;
+  // font-weight: 900;
+}
+@mixin price_mobile {
+  font-family: $heading;
+  font-size: 20px;
+  letter-spacing: 0.02rem;
+  line-height: 1.3;
+  // font-weight: 900;
 }
