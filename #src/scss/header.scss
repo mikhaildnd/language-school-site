@@ -2,6 +2,7 @@
 }
 
 .main-nav {
+  @include padding-container($maxWidthContainer, $pl, $pr);
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -9,6 +9,33 @@
     font-style: #{$style};
   }
 }
+//container
+@mixin container($max-width) {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+}
+@mixin padding-container($max-width, $padding-left, $padding-right) {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+//icon-pseudo
+@mixin icon-before($size, $display) {
+  content: '';
+  display: $display;
+  width: $size;
+  height: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+//text-gradient
+@mixin text-gradient {
+  span {
+    background-image: linear-gradient(to top, rgb(255, 236, 160) 60%, rgba(0, 0, 0, 0) 50%);
+  }
+}
 
 //heading
 @mixin h1 {
