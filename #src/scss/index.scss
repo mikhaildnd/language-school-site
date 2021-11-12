@@ -59,6 +59,9 @@
     display: flex;
     flex-wrap: wrap;
   }
+  @media (min-width: $md4) {
+    padding-bottom: 70px;
+  }
   // .lessons__item
   &__item {
     display: flex;
@@ -99,6 +102,92 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+.languages {
+  background-color: $light-yellow;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  border-radius: 50px;
+  // .languages__inner
+  &__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 240px;
+    @media (min-width: $md6) {
+      max-width: 260px;
+    }
+    @media (min-width: $md5) {
+      max-width: 280px;
+    }
+    @media (min-width: $md4) {
+      max-width: 820px;
+    }
+  }
+  // .languages__heading
+  &__heading {
+    @include h1_mobile;
+    margin-bottom: 40px;
+    span {
+      background-image: linear-gradient(to top, rgb(255, 236, 160) 60%, rgba(0, 0, 0, 0) 50%);
+      // background: linear-gradient(to top, #ffeca0 50%, transparent 50%);
+    }
+  }
+  // .languages__list
+  &__list {
+    @media (min-width: $md4) {
+      display: flex;
+      flex-wrap: wrap;
+      // margin-left: -10px;
+      // margin-right: -10px;
+    }
+  }
+  // .languages__item
+  &__item {
+    @include h2_mobile;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    @media (min-width: $md4) {
+      flex-basis: 25%;
+      padding-left: 10px;
+      padding-right: 10px;
+      //   margin-left: 30px;
+      //   margin-right: 30px;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    &--eng {
+      &::before {
+        background-image: url(../img/icons/languages/eng.svg);
+      }
+    }
+    &--de {
+      &::before {
+        background-image: url(../img/icons/languages/de.svg);
+      }
+    }
+    &--esp {
+      &::before {
+        background-image: url(../img/icons/languages/esp.svg);
+      }
+    }
+    &--fr {
+      &::before {
+        background-image: url(../img/icons/languages/fr.svg);
+      }
     }
   }
 }

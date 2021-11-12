@@ -614,6 +614,76 @@ body._lock {
      object-fit: cover;
 }
 
+.languages {
+  background-color: #fffbed;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  border-radius: 50px;
+}
+
+.languages__inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 240px;
+}
+
+.languages__heading {
+  font-family: "NextArtHeavy";
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  margin-bottom: 40px;
+}
+
+.languages__heading span {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #ffeca0), color-stop(50%, rgba(0, 0, 0, 0)));
+  background-image: -o-linear-gradient(bottom, #ffeca0 60%, rgba(0, 0, 0, 0) 50%);
+  background-image: linear-gradient(to top, #ffeca0 60%, rgba(0, 0, 0, 0) 50%);
+}
+
+.languages__item {
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.languages__item::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.languages__item--eng::before {
+  background-image: url(../img/icons/languages/eng.svg);
+}
+
+.languages__item--de::before {
+  background-image: url(../img/icons/languages/de.svg);
+}
+
+.languages__item--esp::before {
+  background-image: url(../img/icons/languages/esp.svg);
+}
+
+.languages__item--fr::before {
+  background-image: url(../img/icons/languages/fr.svg);
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -644,6 +714,18 @@ body._lock {
 @media (min-width: 480px) {
   .form__label-checkbox {
     margin-bottom: 30px;
+  }
+
+  .lessons__text {
+    font-size: 22px;
+  }
+
+  .languages__inner {
+    max-width: 260px;
+  }
+
+  .languages__heading {
+    font-size: 22px;
   }
 }
 
@@ -709,6 +791,20 @@ body._lock {
   .lessons__item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+
+  .lessons__text {
+    font-size: 24px;
+    line-height: 1.415;
+  }
+
+  .languages__inner {
+    max-width: 280px;
+  }
+
+  .languages__heading {
+    font-size: 24px;
+    line-height: 1.415;
   }
 }
 
@@ -788,9 +884,32 @@ body._lock {
         flex-basis: calc(45% - 16px);
   }
 
+  .lessons {
+    padding-bottom: 70px;
+  }
+
   .lessons__item {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+  }
+
+  .languages__inner {
+    max-width: 820px;
+  }
+
+  .languages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .languages__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
