@@ -64,6 +64,10 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  // @media (min-width: $md2) {
+  //   padding-left: 40px;
+  //   padding-right: 40px;
+  // }
   // @media (min-width: $md4) {
   //   max-width: 720px;
   // }
@@ -74,6 +78,7 @@ body {
 // @import 'animations';
 @import 'vars';
 @import 'forms';
+@import 'extends';
 // @import "ui";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 

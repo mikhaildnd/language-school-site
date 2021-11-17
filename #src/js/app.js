@@ -19,3 +19,17 @@ toggleClass({
   toggleClass: 'open',
   triggerToggle: true,
 });
+
+// const formTabs = document.querySelector('.main-form__group--tabs');
+// const targetTab = document.querySelector('main-form__item--children');
+// const addFields = document.querySelector('.main-form__group--additional-group');
+
+// formTabs.addEventListener('click', (e) => {
+//   let target = e.target.closest(targetTab);
+
+//   console.log(target);
+//   // if (!target) {
+//   //   addFields.classList.remove('show');
+//   // }
+//   // addFields.classList.add('show');
+// });

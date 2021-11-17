@@ -5,7 +5,7 @@
     <div class="wrapper">
       @@include('_header.html',{})
       <main class="page">
-        <div class="promo container">
+        <div class="promo">
           <div class="promo__info">
             <h1 class="promo__heading">ШКОЛА ИНОСТРАННЫХ ЯЗЫКОВ ДЛЯ ВСЕЙ СЕМЬИ</h1>
             <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
@@ -17,35 +17,37 @@
             </picture>
           </div>
         </div>
-        <div class="lessons container">
-          <div class="lessons__item">
-            <div class="lessons__img">
-              <picture>
-                <source srcset="img/lessons/lessons-adult.webp" />
-                <img src="img/lessons/lessons-adult.jpg" alt="Обучение для взрослых" />
-              </picture>
+        <div class="lessons">
+          <div class="lessons__content">
+            <div class="lessons__item">
+              <div class="lessons__img">
+                <picture>
+                  <source srcset="img/lessons/lessons-adult.webp" />
+                  <img src="img/lessons/lessons-adult.jpg" alt="Обучение для взрослых" />
+                </picture>
+              </div>
+              <div class="lessons__text">
+                <span>ОБУЧЕНИЕ</span>
+                <br />
+                <span>ВЗРОСЛЫХ</span>
+              </div>
             </div>
-            <div class="lessons__text">
-              <span>ОБУЧЕНИЕ</span>
-              <br />
-              <span>ВЗРОСЛЫХ</span>
-            </div>
-          </div>
-          <div class="lessons__item">
-            <div class="lessons__img">
-              <picture>
-                <source srcset="img/lessons/lessons-children.webp" />
-                <img src="img/lessons/lessons-children.jpg" alt="Обучение для детей" />
-              </picture>
-            </div>
-            <div class="lessons__text">
-              <span>ОБУЧЕНИЕ</span>
-              <br />
-              <span>ДЕТЕЙ</span>
+            <div class="lessons__item">
+              <div class="lessons__img">
+                <picture>
+                  <source srcset="img/lessons/lessons-children.webp" />
+                  <img src="img/lessons/lessons-children.jpg" alt="Обучение для детей" />
+                </picture>
+              </div>
+              <div class="lessons__text">
+                <span>ОБУЧЕНИЕ</span>
+                <br />
+                <span>ДЕТЕЙ</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="languages container">
+        <div class="languages">
           <div class="languages__inner">
             <h3 class="languages__heading">
               <span>У нас ваши дети</span>
@@ -60,7 +62,7 @@
             </ul>
           </div>
         </div>
-        <div class="benefits container">
+        <div class="benefits">
           <div class="benefits__text-block">
             <h3 class="benefits__heading"><span>Почему Speaky School?</span></h3>
             <p class="benefits__text">
@@ -83,6 +85,203 @@
               Аккредитация международной организацией Edexel
             </li>
           </ul>
+        </div>
+        <div class="trial-lesson">
+          <div class="trial-lesson__inner">
+            <div class="trial-lesson__content">
+              <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
+              <form class="trial-lesson__form main-form">
+                <div
+                  class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
+                >
+                  <div class="main-form__item main-form__item--tab">
+                    <input name="for-whom" id="adult" type="radio" checked />
+                    <label for="adult">Взрослые</label>
+                  </div>
+                  <div
+                    class="
+                      main-form__item
+                      main-form__item--half-width
+                      main-form__item--tab
+                      main-form__item--children
+                    "
+                  >
+                    <input name="for-whom" id="children" type="radio" />
+                    <label for="children">Дети</label>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div class="main-form__item main-form__item--select">
+                    <select class="field field--select" id="lang">
+                      <option selected>Английский язык</option>
+                      <option value="1">Французский язык</option>
+                      <option value="2">Немецкий язык</option>
+                      <option value="3">Испанский язык</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div
+                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
+                  >
+                    <input
+                      class="radio-button radio-button--offset-right"
+                      name="where-study"
+                      id="school"
+                      type="radio"
+                      checked
+                    />
+                    <label class="label" for="school">Занятия в клубе</label>
+                  </div>
+                  <div
+                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
+                  >
+                    <input
+                      class="radio-button radio-button--offset-right"
+                      name="where-study"
+                      id="online"
+                      type="radio"
+                    />
+                    <label class="label" for="online">Онлайн-занятия</label>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text error"
+                      type="text"
+                      placeholder="Ваше имя"
+                      value=""
+                    />
+                  </div>
+                  <div class="main-form__item main-form__item--phone-field">
+                    <input
+                      class="field field--text"
+                      type="tel"
+                      placeholder="Ваш телефон"
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main-form__group main-form__group--additional-group">
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text"
+                      type="text"
+                      placeholder="Имя ребенка"
+                      value=""
+                    />
+                  </div>
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text"
+                      type="text"
+                      placeholder="Возраст ребенка"
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main-form__group main-form__group--offset-bottom">
+                  <div class="main-form__item main-form__item--full-width">
+                    <input
+                      class="field field--text"
+                      type="email"
+                      placeholder="Ваша почта"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="main-form__item main-form__item--button">
+                  <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="trial-lesson__img">
+            <picture>
+              <source srcset="img/modal/trial-side.svg" media="(min-width: 768px)" />
+              <source srcset="img/modal/trial-slim.svg" media="(min-width: 576px)" />
+              <source srcset="img/modal/trial-slim-2.svg" media="(min-width: 480px)" />
+              <source srcset="img/modal/trial-mobile.svg" />
+              <img src="img/modal/trial-mobile.png" alt="Изображение модального окна" />
+            </picture>
+          </div>
+        </div>
+        <div class="for-clients">
+          <div class="for-clients__item">
+            <div class="for-clients__img-wrapper">
+              <div class="for-clients__img for-clients__img--kids">
+                <picture>
+                  <source
+                    srcset="img/for-kids/for-kids-image-lg.webp"
+                    media="(min-width: 1300px)"
+                  />
+                  <source srcset="img/for-kids/for-kids-image.webp" />
+                  <img src="img/for-kids/for-kids-image.jpg" alt="Фото учащихся младшей группы" />
+                </picture>
+              </div>
+            </div>
+            <div class="for-clients__wrapper">
+              <h2 class="for-clients__heading"><span>Для детей</span></h2>
+              <div class="for-clients__list-content">
+                <div class="for-clients__list-wrapper">
+                  <h3 class="for-clients__list-heading">Онлайн</h3>
+                  <ul class="for-clients__list">
+                    <li class="for-clients__list-item">адаптированная под ребёнка программа</li>
+                    <li class="for-clients__list-item">гибкое расписание</li>
+                    <li class="for-clients__list-item">занятия в привычной обстановке</li>
+                    <li class="for-clients__list-item">динамичные занятия по 30-40 минут</li>
+                  </ul>
+                </div>
+                <div class="for-clients__list-wrapper">
+                  <h3 class="for-clients__list-heading">Оффлайн</h3>
+                  <ul class="for-clients__list">
+                    <li class="for-clients__list-item">занятия в нашей школе в г. Троицке</li>
+                    <li class="for-clients__list-item">удобное расписание</li>
+                    <li class="for-clients__list-item">живое общение со сверстниками</li>
+                    <li class="for-clients__list-item">
+                      увлекательные занятия в небольших группах
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="for-clients__item for-clients__item--reverse">
+            <div class="for-clients__img-wrapper">
+              <div class="for-clients__img for-clients__img--adults">
+                <picture>
+                  <source srcset="img/for-adults/for-adults-image.webp" />
+                  <img src="img/for-adults/for-adults-image.jpg" alt="Фото взрослых учащихся" />
+                </picture>
+              </div>
+            </div>
+            <div class="for-clients__wrapper">
+              <h3 class="for-clients__heading"><span>Для взрослых</span></h3>
+              <div class="for-clients__list-content">
+                <div class="for-clients__list-wrapper">
+                  <h4 class="for-clients__list-heading">Онлайн</h4>
+                  <ul class="for-clients__list">
+                    <li class="for-clients__list-item">занятия из любой точки в удобное время</li>
+                    <li class="for-clients__list-item">персональная программа</li>
+                    <li class="for-clients__list-item">гибкое расписание</li>
+                    <li class="for-clients__list-item">преодоление языкового барьера</li>
+                  </ul>
+                </div>
+                <div class="for-clients__list-wrapper">
+                  <h4 class="for-clients__list-heading">Оффлайн</h4>
+                  <ul class="for-clients__list">
+                    <li class="for-clients__list-item">занятия в нашей школе в г. Троицке</li>
+                    <li class="for-clients__list-item">удобное расписание</li>
+                    <li class="for-clients__list-item">уютная атмосфера</li>
+                    <li class="for-clients__list-item">индивидуальные или групповые занятия</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       @@include('_footer.html',{})
