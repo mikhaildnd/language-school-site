@@ -7,11 +7,22 @@
 // import { Accordeon } from './modules/toggle-accordeon.js';
 import { toggleClass } from './modules/helpers.js';
 
-// import Swiper, { Pagination, Navigation, Mousewheel, Parallax } from 'swiper';
-// import 'swiper/css';
+import Swiper, { EffectFade } from 'swiper';
+import 'swiper/css';
+
+import 'swiper/css/effect-fade';
 // !import 'swiper/css/pagination';
 
 // webpSupportTest();
+
+const historySlider = new Swiper('.slider-history', {
+  modules: [EffectFade],
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 100,
+});
 
 toggleClass({
   triggerSelector: '.main-nav__trigger',

@@ -31,22 +31,28 @@
         </div>
       </li>
       <li class="main-nav__item main-nav__item--main-socials">
-        <div class="socials">
-          <ul class="socials__list">
-            <li class="socials__item">
+        <ul class="social-links social-links--gutters main-nav__social-links">
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
               <span class="icon icon-facebook"></span>
-            </li>
-            <li class="socials__item">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
               <span class="icon icon-instagram"></span>
-            </li>
-            <li class="socials__item">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
               <span class="icon icon-viber"></span>
-            </li>
-            <li class="socials__item">
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
               <span class="icon icon-vk"></span>
-            </li>
-          </ul>
-        </div>
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
     <button class="main-nav__trigger"><span></span></button>
@@ -57,39 +63,51 @@
             <div class="education">
               <ul class="education__list education__list--dropdown">
                 <li class="education__item education__item--offset-bottom">
-                  Обучение детей онлайн
+                  <a href="#" class="education__link">Обучение детей онлайн</a>
                 </li>
                 <li class="education__item education__item--offset-bottom">
-                  Обучение детей оффлайн
+                  <a href="#" class="education__link">Обучение детей оффлайн</a>
                 </li>
-                <li class="education__item education__item--offset-bottom">Обучение взрослых</li>
+                <li class="education__item education__item--offset-bottom">
+                  <a href="#" class="education__link">Обучение взрослых</a>
+                </li>
               </ul>
             </div>
           </li>
           <li class="main-nav__item main-nav__item--offset-bottom">
-            <div class="socials">
-              <ul class="socials__list">
-                <li class="socials__item">
+            <ul class="social-links social-links--gutters-50-fixed main-nav__social-links">
+              <li class="social-links__item">
+                <a class="social-links__link" href="#">
                   <span class="icon icon-facebook"></span>
-                </li>
-                <li class="socials__item">
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link" href="#">
                   <span class="icon icon-instagram"></span>
-                </li>
-                <li class="socials__item">
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link" href="#">
                   <span class="icon icon-viber"></span>
-                </li>
-                <li class="socials__item">
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link" href="#">
                   <span class="icon icon-vk"></span>
-                </li>
-              </ul>
-            </div>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="main-nav__item main-nav__item--offset-bottom">
             <div class="contacts">
               <h5 class="contacts__heading">Контакты</h5>
               <ul class="contacts__list">
-                <li class="contacts__item">+7 (495) 723-75-15</li>
-                <li class="contacts__item">info@speaky.school</li>
+                <li class="contacts__item">
+                  <a href="tel:+74957237515">+7 (495) 723-75-15</a>
+                </li>
+                <li class="contacts__item">
+                  <a href="mailto:info@speaky.school?subject=вопрос">info@speaky.school</a>
+                </li>
                 <li class="contacts__item">
                   108840, Россия,
                   <br />
@@ -314,7 +332,12 @@
         <div class="for-clients">
           <div class="for-clients__item">
             <div class="for-clients__img-wrapper">
-              <div class="for-clients__img for-clients__img--kids">
+              <div
+                class="
+                  for-clients__img for-clients__img--kids
+                  image-decorate image-decorate--rounded
+                "
+              >
                 <picture>
                   <source
                     srcset="img/for-kids/for-kids-image-lg.webp"
@@ -353,7 +376,12 @@
           </div>
           <div class="for-clients__item for-clients__item--reverse">
             <div class="for-clients__img-wrapper">
-              <div class="for-clients__img for-clients__img--adults">
+              <div
+                class="
+                  for-clients__img for-clients__img--adults
+                  image-decorate image-decorate--rounded
+                "
+              >
                 <picture>
                   <source srcset="img/for-adults/for-adults-image.webp" />
                   <img src="img/for-adults/for-adults-image.jpg" alt="Фото взрослых учащихся" />
@@ -385,8 +413,483 @@
             </div>
           </div>
         </div>
+        <section class="learning-way">
+          <div class="learning-way__text-wrapper">
+            <h2 class="learning-way__heading">
+              <span>Мы используем SMART-подход в обучении</span>
+            </h2>
+            <p class="learning-way__text">
+              Чтобы обучение было максимально эффективным, мы составляем индивидуальную карту
+              обучения: ваша исходная точка, конечный результат, срок достижения этого результата. И
+              будем вместе идти к этим целям
+            </p>
+          </div>
+          <div class="learning-way__method learning-method">
+            <ul class="learning-method__list">
+              <li
+                class="
+                  learning-method__item
+                  abbreviation-bg abbreviation-bg--char-s abbreviation-bg--char-position
+                "
+              >
+                <span class="learning-method__decryption-text">specific</span>
+                <span class="learning-method__main-text">
+                  Конкретная
+                  <br />
+                  цель
+                </span>
+              </li>
+              <li
+                class="
+                  learning-method__item
+                  abbreviation-bg abbreviation-bg--char-m abbreviation-bg--char-position
+                "
+              >
+                <span class="learning-method__decryption-text">measurable</span>
+                <span class="learning-method__main-text">
+                  Критерии
+                  <br />
+                  успеха
+                </span>
+              </li>
+              <li
+                class="
+                  learning-method__item
+                  abbreviation-bg abbreviation-bg--char-a abbreviation-bg--char-position
+                "
+              >
+                <span class="learning-method__decryption-text">achievable</span>
+                <span class="learning-method__main-text">
+                  Достижимая
+                  <br />
+                  цель
+                </span>
+              </li>
+              <li
+                class="
+                  learning-method__item
+                  abbreviation-bg abbreviation-bg--char-r abbreviation-bg--char-position
+                "
+              >
+                <span class="learning-method__decryption-text">relevant</span>
+                <span class="learning-method__main-text">
+                  Цель, имеющая
+                  <br />
+                  значение
+                </span>
+              </li>
+              <li
+                class="
+                  learning-method__item
+                  abbreviation-bg abbreviation-bg--char-t abbreviation-bg--char-position
+                "
+              >
+                <span class="learning-method__decryption-text">time bound</span>
+                <span class="learning-method__main-text">
+                  Четкие
+                  <br />
+                  сроки
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="learning-way__target learning-target">
+            <div
+              class="
+                learning-target__image learning-target__image--learning-target
+                image-decorate image-decorate--rounded
+              "
+            >
+              <picture>
+                <source
+                  srcset="img/learning-target/learning-target.webp"
+                  media="(min-width: 1300px)"
+                />
+                <source srcset="img/learning-target/learning-target-sm.webp" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/learning-target/learning-target.webp"
+                />
+                <img src="img/learning-target/learning-target.jpg" alt="Фото учащихся учащейся" />
+              </picture>
+            </div>
+            <div class="learning-target__text-wrapper">
+              <strong class="learning-target__heading">Пример</strong>
+              <p class="learning-target__text">
+                Я учил английский в школе, но все забыл. Сейчас я хочу работать в международной
+                компании, успешно пройти интервью и затем свободно общаться с коллегами.
+              </p>
+            </div>
+          </div>
+          <div class="learning-way__steps learning-steps">
+            <div class="learning-steps__item">
+              <div class="learning-steps__text-wrapper">
+                <h3
+                  class="
+                    learning-steps__heading
+                    abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position
+                  "
+                >
+                  Определяем текущий
+                  <br />
+                  уровень и ставим цель
+                </h3>
+                <p class="learning-steps__text">
+                  Улучшение языковых навыков до уровня свободного общения в определенной специфике
+                  (бизнес-английский).
+                </p>
+              </div>
+            </div>
+            <div class="learning-steps__item learning-steps__item--reverse">
+              <div class="learning-steps__text-wrapper">
+                <h3
+                  class="
+                    learning-steps__heading
+                    abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position
+                  "
+                >
+                  Критерии успеха
+                </h3>
+                <p class="learning-steps__text">
+                  Определяем даты промежуточных итогов, где оценим успехи по всем скилам. Что лично
+                  для вас будет являться успехом? Когда вы сможете свободно выразить мысль? Не
+                  будете путать слова? Напишите самостоятельно имейл?
+                </p>
+              </div>
+            </div>
+            <div class="learning-steps__item">
+              <div class="learning-steps__text-wrapper">
+                <h3
+                  class="
+                    learning-steps__heading
+                    abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position
+                  "
+                >
+                  Достижимая цель
+                </h3>
+                <p class="learning-steps__text">
+                  Если мы определили стартовый уровень как Beginner, значит наша реальная цель в
+                  короткий срок – Pre-Intermediate
+                </p>
+              </div>
+            </div>
+            <div class="learning-steps__item learning-steps__item--reverse">
+              <div class="learning-steps__text-wrapper">
+                <h3
+                  class="
+                    learning-steps__heading
+                    abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position
+                  "
+                >
+                  Имеющая значение цель
+                </h3>
+                <p class="learning-steps__text">
+                  Что лично для вас изменится с появлением языковой компетенции?
+                </p>
+              </div>
+            </div>
+            <div class="learning-steps__item">
+              <div class="learning-steps__text-wrapper">
+                <h3
+                  class="
+                    learning-steps__heading
+                    abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position
+                  "
+                >
+                  Четкие сроки
+                </h3>
+                <p class="learning-steps__text">Когда вы хотите достигнуть этого уровня?</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="trial-lesson">
+          <div class="trial-lesson__inner">
+            <div class="trial-lesson__content">
+              <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
+              <form class="trial-lesson__form main-form">
+                <div
+                  class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
+                >
+                  <div class="main-form__item main-form__item--tab">
+                    <input name="for-whom" id="adult" type="radio" checked />
+                    <label for="adult">Взрослые</label>
+                  </div>
+                  <div
+                    class="
+                      main-form__item
+                      main-form__item--half-width
+                      main-form__item--tab
+                      main-form__item--children
+                    "
+                  >
+                    <input name="for-whom" id="children" type="radio" />
+                    <label for="children">Дети</label>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div class="main-form__item main-form__item--select">
+                    <select class="field field--select" id="lang">
+                      <option selected>Английский язык</option>
+                      <option value="1">Французский язык</option>
+                      <option value="2">Немецкий язык</option>
+                      <option value="3">Испанский язык</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div
+                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
+                  >
+                    <input
+                      class="radio-button radio-button--offset-right"
+                      name="where-study"
+                      id="school"
+                      type="radio"
+                      checked
+                    />
+                    <label class="label" for="school">Занятия в клубе</label>
+                  </div>
+                  <div
+                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
+                  >
+                    <input
+                      class="radio-button radio-button--offset-right"
+                      name="where-study"
+                      id="online"
+                      type="radio"
+                    />
+                    <label class="label" for="online">Онлайн-занятия</label>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text error"
+                      type="text"
+                      placeholder="Ваше имя"
+                      value=""
+                    />
+                  </div>
+                  <div class="main-form__item main-form__item--phone-field">
+                    <input
+                      class="field field--text"
+                      type="tel"
+                      placeholder="Ваш телефон"
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main-form__group main-form__group--additional-group">
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text"
+                      type="text"
+                      placeholder="Имя ребенка"
+                      value=""
+                    />
+                  </div>
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text"
+                      type="text"
+                      placeholder="Возраст ребенка"
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main-form__group main-form__group--offset-bottom">
+                  <div class="main-form__item main-form__item--full-width">
+                    <input
+                      class="field field--text"
+                      type="email"
+                      placeholder="Ваша почта"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="main-form__item main-form__item--button">
+                  <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="trial-lesson__img">
+            <picture>
+              <source srcset="img/modal/trial-side.svg" media="(min-width: 768px)" />
+              <source srcset="img/modal/trial-slim.svg" media="(min-width: 576px)" />
+              <source srcset="img/modal/trial-slim-2.svg" media="(min-width: 480px)" />
+              <source srcset="img/modal/trial-mobile.svg" />
+              <img src="img/modal/trial-mobile.png" alt="Изображение модального окна" />
+            </picture>
+          </div>
+        </div>
+        <div class="history">
+          <h2 class="history__heading"><span>История развития Speaky school</span></h2>
+          <div class="history__nav-line nav-line">
+            <div class="nav-line__item">
+              <span class="nav-line__bullet"></span>
+              <span class="nav-line__number">2016</span>
+            </div>
+            <div class="nav-line__item">
+              <span class="nav-line__bullet"></span>
+              <span class="nav-line__number">2017</span>
+            </div>
+            <div class="nav-line__item">
+              <span class="nav-line__bullet"></span>
+              <span class="nav-line__number">2018</span>
+            </div>
+            <div class="nav-line__item">
+              <span class="nav-line__bullet"></span>
+              <span class="nav-line__number">2019</span>
+            </div>
+            <div class="nav-line__item">
+              <span class="nav-line__bullet"></span>
+              <span class="nav-line__number">2020</span>
+            </div>
+            <div class="nav-line__item">
+              <span class="nav-line__bullet"></span>
+              <span class="nav-line__number">2021</span>
+            </div>
+          </div>
+          <div class="history__slider slider-history swiper">
+            <div class="swiper-wrapper">
+              <div class="slider-history__slide swiper-slide">
+                <div class="slider-history__text-wrapper">
+                  <div class="slider-history__heading">2019</div>
+                  <p class="slider-history__text">Открытие языковых лагерей для взрослых и детей</p>
+                </div>
+                <div
+                  class="
+                    slider-history__image
+                    image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed
+                  "
+                >
+                  <picture>
+                    <source srcset="img/slider-history/slider-image-1.webp" />
+                    <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2019 года" />
+                  </picture>
+                </div>
+              </div>
+              <div class="slider-history__slide swiper-slide">
+                <div class="slider-history__text-wrapper">
+                  <div class="slider-history__heading">2020</div>
+                  <p class="slider-history__text">
+                    Открытие языковых лагерей для взрослых и детей. Открытие языковых лагерей для
+                    взрослых и детей. Открытие языковых лагерей для взрослых и детей. Открытие
+                    языковых лагерей для взрослых и детей
+                  </p>
+                </div>
+                <div
+                  class="
+                    slider-history__image
+                    image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed
+                  "
+                >
+                  <picture>
+                    <source srcset="img/slider-history/slider-image-1.webp" />
+                    <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2019 года" />
+                  </picture>
+                </div>
+              </div>
+              <div class="slider-history__slide swiper-slide">
+                <div class="slider-history__text-wrapper">
+                  <div class="slider-history__heading">2021</div>
+                  <p class="slider-history__text">Открытие языковых лагерей для взрослых и детей</p>
+                </div>
+                <div
+                  class="
+                    slider-history__image
+                    image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed
+                  "
+                >
+                  <picture>
+                    <source srcset="img/slider-history/slider-image-1.webp" />
+                    <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2019 года" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__block-group">
+      <div class="footer__logo">
+        <img src="img/logo.svg" alt="Логотп школы" />
+      </div>
+      <div class="footer__social">
+        <ul class="social-links social-links--gutters-50-fixed footer__social-links">
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
+              <span class="icon icon-facebook"></span>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
+              <span class="icon icon-instagram"></span>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
+              <span class="icon icon-viber"></span>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#">
+              <span class="icon icon-vk"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="footer__button btn btn--green btn--size-normal">Онлайн-оплата</a>
+    </div>
+    <div class="footer__courses">
+      <h3 class="footer__item-heading">Иностранные языки</h3>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="#" class="footer__link">Для взрослых онлайн</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#" class="footer__link">Для взрослых офлайн</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#" class="footer__link">Для детей онлайн</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#" class="footer__link">Для детей офлайн</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__contacts">
+      <h3 class="footer__item-heading">Контакты</h3>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="#" class="footer__link" type="tel">+7 (495) 723-75-15</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#" class="footer__link" type="email">info@speaky.school</a>
+        </li>
+        <li class="footer__list-item">
+          108840, Россия,
+          <br />
+          г. Москва, г. Троицк,
+          <br />
+          Троицкий бульвар, 6
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__bottom-item footer__copyright">
+        © 2021 Speaky school. Все права защищены.
+      </span>
+      <span class="footer__bottom-item footer__autor">Design by @arinkob</span>
+    </div>
+  </div>
+</footer>
 
     </div>
     <div class="popup popup_popup">

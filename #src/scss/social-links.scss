@@ -1,0 +1,40 @@
+.social-links {
+  display: flex;
+  //initial стили
+  justify-content: flex-start;
+  list-style: none;
+  &--gutters {
+    .social-links__item {
+      margin-right: 35px;
+      @media (min-width: 870px) {
+        margin-right: 50px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &--gutters-50-fixed {
+    .social-links__item {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  // .social-links__item
+  &__item {
+    font-size: 20px;
+  }
+  // .social-links__link
+  &__link {
+    color: #000;
+    &:hover .icon::before {
+      color: $green;
+    }
+    &:active > .icon::before,
+    &:focus > .icon::before {
+      color: $mint;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 .header {
 }
-
 .main-nav {
   @include padding-container($maxWidthContainer, $pl, $pr);
   display: flex;
@@ -54,6 +53,10 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+  // .main-nav__social-links
+  &__social-links {
+    justify-content: center;
   }
   // .main-nav__logo
   &__logo {
@@ -182,19 +185,12 @@
       }
     }
   }
-}
-.socials {
-  // .socials__list
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
-  // .socials__item
-  &__item {
-    font-size: 20px;
-    padding: 12px;
+  // .education__link
+  &__link {
+    @include nav-link-style;
   }
 }
+
 .contacts {
   // .contacts__heading
   &__heading {
@@ -213,6 +209,9 @@
     margin-bottom: 12px;
     &:last-child {
       margin-bottom: 0;
+    }
+    a {
+      @include nav-link-style;
     }
   }
 }
