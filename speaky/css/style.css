@@ -395,6 +395,16 @@ body._lock {
   color: #61b5a9;
 }
 
+.header {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #ffffff;
+}
+
 .main-nav {
   max-width: 1300px;
   margin-left: auto;
@@ -575,6 +585,7 @@ body._lock {
 }
 
 .education__item {
+  position: relative;
   font-family: "Raleway-Light";
   font-size: 14px;
   line-height: 1.5;
@@ -588,6 +599,78 @@ body._lock {
 
 .education__item--offset-bottom:last-child {
   margin-bottom: 0;
+}
+
+.education__item--arrow::after {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  content: "";
+  display: block;
+  background-image: url(../img/icons/dropdown-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 10px;
+  height: 6px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.education__item--arrow:hover .education__dropdown {
+  -webkit-transform: perspective(100px) rotateX(0deg) translateX(-50%);
+          transform: perspective(100px) rotateX(0deg) translateX(-50%);
+  opacity: 1;
+}
+
+.education__dropdown {
+  padding-top: 20px;
+  position: absolute;
+  top: 20px;
+  left: 55%;
+  min-width: 180px;
+  -webkit-transition: opacity, -webkit-transform 0.2s ease;
+  transition: opacity, -webkit-transform 0.2s ease;
+  -o-transition: opacity, transform 0.2s ease;
+  transition: opacity, transform 0.2s ease;
+  transition: opacity, transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: perspective(100px) rotateX(-90deg) translateX(-50%);
+          transform: perspective(100px) rotateX(-90deg) translateX(-50%);
+  opacity: 0;
+}
+
+.education__dropdown-inner {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #ffeca0;
+  border-radius: 15px;
+}
+
+.education__dropdown-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 6px solid #ffeca0;
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.education__dropdown-item {
+  font-family: "Raleway-Light";
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .education__link {
@@ -1748,6 +1831,7 @@ body._lock {
           flex-grow: 1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding-top: 70px;
 }
 
 @media (min-width: 375px) {
@@ -2139,8 +2223,20 @@ body._lock {
   }
 
   .education__item {
+    font-size: 16px;
+  }
+
+  .education__item {
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .education__dropdown-item {
+    font-size: 16px;
+  }
+
+  .contacts__item {
+    font-size: 16px;
   }
 
   .footer__block-group {
@@ -2165,6 +2261,10 @@ body._lock {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+
+  .footer__list {
+    font-size: 16px;
   }
 
   .footer__bottom {
@@ -2241,6 +2341,10 @@ body._lock {
     grid-area: text;
   }
 
+  .benefits__text {
+    font-size: 16px;
+  }
+
   .benefits__list {
     grid-area: list;
   }
@@ -2294,6 +2398,14 @@ body._lock {
     text-align: initial;
   }
 
+  .field {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
   .for-clients__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2325,9 +2437,17 @@ body._lock {
     margin-left: 30px;
   }
 
+  .for-clients__list {
+    font-size: 16px;
+  }
+
   .learning-method__item {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+
+  .learning-method__decryption-text {
+    font-size: 16px;
   }
 
   .learning-target {
@@ -2345,6 +2465,10 @@ body._lock {
     margin-top: 66px;
   }
 
+  .learning-target__text {
+    font-size: 16px;
+  }
+
   .learning-steps__item {
     margin-bottom: 50px;
   }
@@ -2352,6 +2476,10 @@ body._lock {
   .learning-steps__item::after {
     width: 128px;
     height: 111px;
+  }
+
+  .learning-steps__text {
+    font-size: 16px;
   }
 
   .slider-history {

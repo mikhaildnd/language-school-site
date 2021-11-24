@@ -6,6 +6,7 @@
 // import { PaginationMove } from './modules/pagination-move.js';
 // import { Accordeon } from './modules/toggle-accordeon.js';
 import { toggleClass } from './modules/helpers.js';
+import { bodyLock } from './modules/helpers.js';
 
 import Swiper, { EffectFade } from 'swiper';
 import 'swiper/css';
@@ -24,12 +25,35 @@ const historySlider = new Swiper('.slider-history', {
   speed: 100,
 });
 
-toggleClass({
-  triggerSelector: '.main-nav__trigger',
-  eTargetSelector: '.main-nav__dropdown',
-  toggleClass: 'open',
-  triggerToggle: true,
-});
+toggleClass(
+  {
+    triggerSelector: '.main-nav__trigger',
+    eTargetSelector: '.main-nav__dropdown',
+    toggleClass: 'open',
+    triggerToggle: true,
+    // cb: bodyLock('.main-nav__trigger.open'),
+  },
+  {
+    // func: sendMessage(),
+    // arg1: 'q',
+    // arg2: 'r',
+  }
+);
+
+let sendMessage = (arg1, arg2) => {
+  // console.log(arg1, arg2);
+  console.log('hey');
+};
+let wrapper = (func, ...args) => {
+  func(...args);
+};
+// wrapper(sendMessage, 'q', 'r');
+// const lock = new bodyLock('.main-nav__trigger');
+
+function clbck(arg1, arg2) {
+  console.log('hey');
+  // console.log(arg1 + arg2);
+}
 
 // const formTabs = document.querySelector('.main-form__group--tabs');
 // const targetTab = document.querySelector('main-form__item--children');
