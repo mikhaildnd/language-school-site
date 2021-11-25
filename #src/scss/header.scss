@@ -208,7 +208,8 @@
         cursor: pointer;
         transform: translateY(-50%);
       }
-      &:hover .education__dropdown {
+      &:hover .education__dropdown,
+      &:focus-within .education__dropdown {
         transform: perspective(100px) rotateX(0deg) translateX(-50%);
         opacity: 1;
       }
@@ -225,6 +226,11 @@
     transform-origin: top;
     transform: perspective(100px) rotateX(-90deg) translateX(-50%);
     opacity: 0;
+    & .education__link:active,
+    & .education__link:focus {
+      transform: perspective(100px) rotateX(0deg) translateX(-50%);
+      opacity: 1;
+    }
   }
   // .education__dropdown-inner
   &__dropdown-inner {

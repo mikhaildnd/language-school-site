@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"for-kids-offline" })
+  <body>
+    <div class="wrapper">
+      @@include('_header.html',{})
+      <main class="page">
+        <div class="promo">
+          <div class="promo__info">
+            <h1 class="promo__heading">ЭФФЕКТИВНОЕ ИЗУЧЕНИЕ ЯЗЫКОВ</h1>
+            <p>Прокачайте язык вместе с нами под любые цели</p>
+            <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
+          </div>
+          <div class="promo__decoration">
+            <div class="promo__inner">
+              <div class="promo__image-decoration promo__image-decoration--left-offset-28p">
+                <picture>
+                  <source srcset="img/for-adults/for-adults-frame-hero.svg" type="image/svg+xml" />
+                  <img src="img/for-adults/for-adults-frame-hero.png" alt="Композиция" />
+                </picture>
+              </div>
+              <div
+                class="
+                  promo__image-photo promo__image-photo--adults promo__image-photo--drop-turn-90
+                "
+              >
+                <picture>
+                  <source srcset="img/for-adults/for-adults-image-xxl.webp" />
+                  <img src="img/for-adults/for-adults-image-xxl.jpg" alt="Композиция" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="languages">
+          <div class="languages__inner">
+            <h3 class="languages__heading">
+              <span>У нас ваши дети</span>
+              <br />
+              <span>могут выучить:</span>
+            </h3>
+            <ul class="languages__list">
+              <li class="languages__item languages__item--eng">Английский</li>
+              <li class="languages__item languages__item--de">Немецкий</li>
+              <li class="languages__item languages__item--esp">Испанский</li>
+              <li class="languages__item languages__item--fr">Французский</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trial-lesson">
+          <div class="trial-lesson__inner">
+            <div class="trial-lesson__content">
+              <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
+              <form class="trial-lesson__form main-form">
+                <div
+                  class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
+                >
+                  <div class="main-form__item main-form__item--tab">
+                    <input name="for-whom" id="adult" type="radio" checked />
+                    <label for="adult">Взрослые</label>
+                  </div>
+                  <div
+                    class="
+                      main-form__item
+                      main-form__item--half-width
+                      main-form__item--tab
+                      main-form__item--children
+                    "
+                  >
+                    <input name="for-whom" id="children" type="radio" />
+                    <label for="children">Дети</label>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div class="main-form__item main-form__item--select">
+                    <select class="field field--select" id="lang">
+                      <option selected>Английский язык</option>
+                      <option value="1">Французский язык</option>
+                      <option value="2">Немецкий язык</option>
+                      <option value="3">Испанский язык</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div
+                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
+                  >
+                    <input
+                      class="radio-button radio-button--offset-right"
+                      name="where-study"
+                      id="school"
+                      type="radio"
+                      checked
+                    />
+                    <label class="label" for="school">Занятия в клубе</label>
+                  </div>
+                  <div
+                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
+                  >
+                    <input
+                      class="radio-button radio-button--offset-right"
+                      name="where-study"
+                      id="online"
+                      type="radio"
+                    />
+                    <label class="label" for="online">Онлайн-занятия</label>
+                  </div>
+                </div>
+                <div class="main-form__group">
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text error"
+                      type="text"
+                      placeholder="Ваше имя"
+                      value=""
+                    />
+                  </div>
+                  <div class="main-form__item main-form__item--phone-field">
+                    <input
+                      class="field field--text"
+                      type="tel"
+                      placeholder="Ваш телефон"
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main-form__group main-form__group--additional-group">
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text"
+                      type="text"
+                      placeholder="Имя ребенка"
+                      value=""
+                    />
+                  </div>
+                  <div class="main-form__item main-form__item--name-field">
+                    <input
+                      class="field field--text"
+                      type="text"
+                      placeholder="Возраст ребенка"
+                      value=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main-form__group main-form__group--offset-bottom">
+                  <div class="main-form__item main-form__item--full-width">
+                    <input
+                      class="field field--text"
+                      type="email"
+                      placeholder="Ваша почта"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="main-form__item main-form__item--button">
+                  <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="trial-lesson__img">
+            <picture>
+              <source srcset="img/modal/trial-side.svg" media="(min-width: 768px)" />
+              <source srcset="img/modal/trial-slim.svg" media="(min-width: 576px)" />
+              <source srcset="img/modal/trial-slim-2.svg" media="(min-width: 480px)" />
+              <source srcset="img/modal/trial-mobile.svg" />
+              <img src="img/modal/trial-mobile.png" alt="Изображение модального окна" />
+            </picture>
+          </div>
+        </div>
+      </main>
+      @@include('_footer.html',{})
+    </div>
+    @@include('_popup.html',{}) @@include('_js.html',{})
+  </body>
+</html>

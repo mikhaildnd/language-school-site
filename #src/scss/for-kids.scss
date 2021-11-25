@@ -1,0 +1,153 @@
+.features {
+  margin-bottom: 100px;
+  @include padding-container($maxWidthContainer, $pl, $pr);
+  @media (min-width: $md4) {
+    margin-bottom: 140px;
+    display: flex;
+  }
+  // .features__text
+  &__text {
+    margin-bottom: 40px;
+    @media (min-width: $md4) {
+      margin-right: 40px;
+      margin-bottom: 0;
+      // max-width: 430px;
+      flex-basis: 35%;
+      flex-shrink: 0;
+    }
+    @media (min-width: $md1) {
+      margin-right: 65px;
+    }
+    p {
+      @include h2_mobile;
+    }
+  }
+  // .features__heading
+  &__heading {
+    @include h1_mobile;
+    margin-bottom: 20px;
+  }
+  // .features__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    :nth-child(1n) {
+      border-left-color: #fdd503;
+    }
+    :nth-child(2n) {
+      border-left-color: $red;
+    }
+    @media (min-width: $md4) {
+      align-self: center;
+    }
+    @media (min-width: $md1) {
+      align-self: flex-start;
+      margin: 30px -10px -10px;
+    }
+  }
+  // .features__list-item
+  &__list-item {
+    @include h3_mobile;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 14px;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 4px;
+    @media (min-width: $md1) {
+      flex-basis: calc(50% - 20px);
+      //?флекс, чтобы p внутри центрировались
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+  }
+}
+
+.tip {
+  @include padding-container($maxWidthContainer, $pl, $pr);
+  @include section-decorate;
+  margin-bottom: 100px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  // .tip__inner
+  &__inner {
+    @include container(840px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $md4) {
+      flex-direction: row;
+      align-items: initial;
+    }
+  }
+  // .tip__message
+  &__message {
+    margin-bottom: 40px;
+    @media (min-width: $md4) {
+      flex-basis: 50%;
+      align-self: center;
+      margin-bottom: 0;
+    }
+  }
+  // .tip__message-wrapper
+  //враппер для марджина хедера в зависимости наличия текста под ним
+  &__message-wrapper {
+  }
+  // .tip__message-heading
+  &__message-heading {
+    @include h1_mobile;
+    @include text-gradient;
+    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  // .tip__message-text
+  &__message-text {
+    @include h3_mobile;
+    margin-bottom: 40px;
+  }
+  // .tip__button
+  &__button {
+  }
+  // .tip__image
+  &__image {
+    @media (min-width: $md4) {
+      flex-basis: 50%;
+    }
+  }
+  // .tip__image-inner
+  &__image-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+    height: 264px;
+    img {
+      top: 32px;
+      left: 30px;
+      width: 222px;
+      height: 222px;
+    }
+    &--frames-kids {
+      &::before {
+        background-image: url(../img/tip/tip-frame.svg);
+      }
+      &::after {
+        background-image: url(../img/tip/tip-frame-top.svg);
+        background-position-x: right 13px;
+      }
+    }
+    &--frames-adults {
+      &::before {
+        background-image: url(../img/tip/tip-frame-adults.svg);
+      }
+      &::after {
+        background-image: url(../img/tip/tip-frame-adults-top.svg);
+        background-position-x: right 13px;
+      }
+    }
+  }
+}

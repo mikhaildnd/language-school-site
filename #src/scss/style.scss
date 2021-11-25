@@ -79,6 +79,7 @@ body {
 @import 'vars';
 @import 'forms';
 @import 'extends';
+@import 'image-decorate';
 // @import "ui";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
@@ -88,10 +89,13 @@ body {
 @import 'header';
 @import 'footer';
 @import 'index';
+@import 'for-kids';
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
   flex-grow: 1;
   flex-shrink: 0;
   padding-top: 70px;
+
+  @include max-width-limiter;
 }
