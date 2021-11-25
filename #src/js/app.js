@@ -40,20 +40,20 @@ toggleClass(
   }
 );
 
-let sendMessage = (arg1, arg2) => {
-  // console.log(arg1, arg2);
-  console.log('hey');
-};
-let wrapper = (func, ...args) => {
-  func(...args);
-};
-// wrapper(sendMessage, 'q', 'r');
-// const lock = new bodyLock('.main-nav__trigger');
+// let sendMessage = (arg1, arg2) => {
+//   // console.log(arg1, arg2);
+//   console.log('hey');
+// };
+// let wrapper = (func, ...args) => {
+//   func(...args);
+// };
+// // wrapper(sendMessage, 'q', 'r');
+// // const lock = new bodyLock('.main-nav__trigger');
 
-function clbck(arg1, arg2) {
-  console.log('hey');
-  // console.log(arg1 + arg2);
-}
+// function clbck(arg1, arg2) {
+//   console.log('hey');
+//   // console.log(arg1 + arg2);
+// }
 
 // const formTabs = document.querySelector('.main-form__group--tabs');
 // const targetTab = document.querySelector('main-form__item--children');

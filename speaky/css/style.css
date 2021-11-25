@@ -2076,6 +2076,88 @@ body._lock {
   background-position-x: right 13px;
 }
 
+.result {
+  margin-bottom: 100px;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.result__heading {
+  font-family: "NextArtHeavy";
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  margin-bottom: 40px;
+}
+
+.result__heading span {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #ffeca0), color-stop(50%, rgba(0, 0, 0, 0)));
+  background-image: -o-linear-gradient(bottom, #ffeca0 60%, rgba(0, 0, 0, 0) 50%);
+  background-image: linear-gradient(to top, #ffeca0 60%, rgba(0, 0, 0, 0) 50%);
+}
+
+.result__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -12.5px;
+}
+
+.result__item {
+  margin: 12.5px;
+}
+
+.item-result {
+  background-color: #fffbed;
+  border-radius: 50px;
+  padding: 28px 37px;
+}
+
+.item-result__text {
+  font-family: "Raleway-Light";
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.item-result__text::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 26px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item-result__text--icon-books::before {
+  background-image: url(../img/icons/result/books.svg);
+}
+
+.item-result__text--icon-device::before {
+  background-image: url(../img/icons/result/device.svg);
+}
+
+.item-result__text--icon-brain::before {
+  background-image: url(../img/icons/result/brain.svg);
+}
+
+.item-result__text--icon-innovation::before {
+  background-image: url(../img/icons/result/innovation.svg);
+}
+
+.item-result__text--icon-audiobook::before {
+  background-image: url(../img/icons/result/audiobook.svg);
+}
+
+.item-result__text--icon-network::before {
+  background-image: url(../img/icons/result/network.svg);
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2256,6 +2338,15 @@ body._lock {
 
   .tip__message-heading {
     font-size: 22px;
+  }
+
+  .result__heading {
+    font-size: 22px;
+  }
+
+  .result__item {
+    -ms-flex-preferred-size: calc(50% - 25px);
+        flex-basis: calc(50% - 25px);
   }
 
   .page {
@@ -2495,6 +2586,11 @@ body._lock {
   }
 
   .tip__message-heading {
+    font-size: 24px;
+    line-height: 1.415;
+  }
+
+  .result__heading {
     font-size: 24px;
     line-height: 1.415;
   }
@@ -2924,6 +3020,15 @@ body._lock {
   .tip__image {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+
+  .result__item {
+    -ms-flex-preferred-size: calc(33.333% - 25px);
+        flex-basis: calc(33.333% - 25px);
+  }
+
+  .item-result__text {
+    font-size: 16px;
   }
 
   .page {
