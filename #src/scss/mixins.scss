@@ -77,12 +77,13 @@
   padding-left: $left;
   padding-right: $right;
 }
-@mixin padding-container($max-width, $left, $right) {
+@mixin padding-container($max-width, $left, $right, $width: 100%) {
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
   padding-left: $left;
   padding-right: $right;
+  width: $width;
 }
 //icon-pseudo
 @mixin icon-before($size, $display) {
