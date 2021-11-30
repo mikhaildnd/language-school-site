@@ -560,6 +560,33 @@ body._lock {
 .main-form__item--select {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  position: relative;
+}
+
+.main-form__item--select::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  content: "";
+  display: block;
+  background-image: url(../img/icons/dropdown-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 10px;
+  height: 6px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.main-form__item--select:hover .education__dropdown,
+.main-form__item--select:focus-within .education__dropdown {
+  -webkit-transform: perspective(100px) rotateX(0deg) translateX(-50%);
+          transform: perspective(100px) rotateX(0deg) translateX(-50%);
+  opacity: 1;
 }
 
 .main-form__item--radio-pair {
@@ -592,26 +619,10 @@ body._lock {
 }
 
 .field--select {
-  position: relative;
+  padding-right: 1.5em;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-
-.field--select::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border-width: 6px 4px 0;
-  border-style: solid;
-  border-color: #000000 transparent transparent;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  pointer-events: none;
 }
 
 .radio-button {

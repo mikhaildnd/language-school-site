@@ -55,6 +55,28 @@
     }
     &--select {
       flex-basis: 100%;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        content: '';
+        display: block;
+        background-image: url(../img/icons/dropdown-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 10px;
+        height: 6px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      &:hover .education__dropdown,
+      &:focus-within .education__dropdown {
+        transform: perspective(100px) rotateX(0deg) translateX(-50%);
+        opacity: 1;
+      }
     }
     &--radio-pair {
       display: flex;
@@ -74,21 +96,8 @@
   @include field-decorate;
   width: 100%;
   &--select {
-    position: relative;
+    padding-right: 1.5em; //отступ для стрелки
     appearance: none;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      width: 0;
-      height: 0;
-      border-width: 6px 4px 0;
-      border-style: solid;
-      border-color: $black transparent transparent;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
   }
   &--text {
     @extend %field-error;
