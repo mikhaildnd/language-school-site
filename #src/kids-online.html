@@ -4,8 +4,8 @@
   <body>
     <div class="wrapper">
       @@include('_header.html',{})
-      <main class="page">
-        <div class="promo">
+      <div class="page">
+        <div class="promo page__promo page__promo--offset-bot-100">
           <div class="promo__info">
             <h1 class="promo__heading">ИЗУЧЕНИЕ ЯЗЫКОВ ОНЛАЙН ДЛЯ ДЕТЕЙ С 3 ЛЕТ</h1>
             <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
@@ -24,14 +24,14 @@
                 "
               >
                 <picture>
-                  <source srcset="img/for-kids/for-kids-hero-image.webp" />
+                  <source srcset="img/for-kids/for-kids-hero-image.webp" type="image/webp" />
                   <img src="img/for-kids/for-kids-hero-image.jpg" alt="Композиция" />
                 </picture>
               </div>
             </div>
           </div>
         </div>
-        <div class="languages">
+        <div class="languages page__languages">
           <div class="languages__inner">
             <h3 class="languages__heading">
               <span>У нас ваши дети</span>
@@ -46,7 +46,7 @@
             </ul>
           </div>
         </div>
-        <div class="features">
+        <div class="features page__features">
           <div class="features__text">
             <h2 class="features__heading">Выбирая для своего ребенка</h2>
             <p>
@@ -69,7 +69,7 @@
             </li>
           </ul>
         </div>
-        <div class="tip">
+        <div class="tip page__tip">
           <div class="tip__inner">
             <div class="tip__message">
               <div class="tip__message-wrapper">
@@ -100,7 +100,7 @@
             </div>
           </div>
         </div>
-        <div class="result">
+        <div class="result page__result">
           <h2 class="result__heading"><span>Результата достигаем за счет:</span></h2>
           <div class="result__list">
             <div class="result__item item-result">
@@ -135,7 +135,7 @@
             </div>
           </div>
         </div>
-        <div class="our-values">
+        <div class="our-values page__our-values">
           <div class="our-values__group">
             <h2 class="our-values__heading"><span>Что такое иностранные языки для нас?</span></h2>
             <ul class="our-values__list">
@@ -280,13 +280,130 @@
             "
           >
             <picture>
-              <source srcset="img/for-kids/for-kids-image-lg.webp" media="(min-width: 1300px)" />
-              <source srcset="img/for-kids/for-kids-image.webp" />
+              <source
+                srcset="img/for-kids/for-kids-image-lg.webp"
+                media="(min-width: 1300px)"
+                type="image/webp"
+              />
+              <source srcset="img/for-kids/for-kids-image.webp" type="image/webp" />
               <img src="img/for-kids/for-kids-image.jpg" alt="Фото учащихся младшей группы" />
             </picture>
           </div>
         </div>
-        <div class="trial-lesson">
+        <div class="prices page__prices">
+          <h2 class="prices__heading"><span>Пакеты обучения</span></h2>
+          <div class="prices__tabs">
+            <div class="prices__tabs-group">
+              <div class="tab-label prices__tabs-item">
+                <input id="individual" name="lessons-where" type="radio" checked />
+                <label for="individual">Индивидуальные занятия</label>
+              </div>
+              <div class="tab-label prices__tabs-item">
+                <input id="club" name="lessons-where" type="radio" />
+                <label for="club">Разговорный клуб</label>
+              </div>
+            </div>
+            <div class="prices__tabs-group prices__tabs-group--short">
+              <div class="tab-label prices__tabs-item">
+                <input id="half-hour" name="lessons-duration" type="radio" checked />
+                <label for="half-hour">30 минут</label>
+              </div>
+              <div class="tab-label prices__tabs-item">
+                <input id="full-hour" name="lessons-duration" type="radio" />
+                <label for="full-hour">60 минут</label>
+              </div>
+            </div>
+          </div>
+          <div class="prices__rates">
+            <div class="prices__rates-group">
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">4 занятия по 30 мин</p>
+                  <div class="card-rates__cost">3400 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">8 занятий по 30 мин</p>
+                  <div class="card-rates__cost">6800 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">12 занятий по 30 мин</p>
+                  <div class="card-rates__cost">10200 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="prices__rates-group">
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-4-of-full-hour"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">4 занятия по 60 мин</p>
+                  <div class="card-rates__cost">5400 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-8-of-full-hour"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">8 занятий по 60 мин</p>
+                  <div class="card-rates__cost">10800 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-12-of-full-hour"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">12 занятий по 60 мин</p>
+                  <div class="card-rates__cost">16200 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="prices__rates-group">
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-4-club"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">4 занятия по 60 мин</p>
+                  <div class="card-rates__cost">4800 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+              <div class="prices__rates-card card-rates">
+                <div class="card-rates__decorate card-rates__decorate--bg-8-club"></div>
+                <div class="card-rates__content">
+                  <p class="card-rates__duration">8 занятий по 60 мин</p>
+                  <div class="card-rates__cost">9200 ₽</div>
+                  <button class="card-rates__button btn btn--green btn--size-normal">
+                    Выбрать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trial-lesson page__trial-lesson">
           <div class="trial-lesson__inner">
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
@@ -294,12 +411,13 @@
                 <div
                   class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
                 >
-                  <div class="main-form__item main-form__item--tab">
+                  <div class="tab-label main-form__item main-form__item--tab">
                     <input name="for-whom" id="adult" type="radio" checked />
                     <label for="adult">Взрослые</label>
                   </div>
                   <div
                     class="
+                      tab-label
                       main-form__item
                       main-form__item--half-width
                       main-form__item--tab
@@ -409,7 +527,7 @@
             </picture>
           </div>
         </div>
-      </main>
+      </div>
       @@include('_footer.html',{})
     </div>
     @@include('_popup.html',{}) @@include('_js.html',{})

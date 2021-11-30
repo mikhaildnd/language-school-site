@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   // .main-nav__list
@@ -70,7 +71,7 @@
     img {
       width: 195px;
       height: 40px;
-      @media (min-width: $md4) {
+      @media (min-width: $md3) {
         width: 244px;
         height: 50px;
       }
@@ -179,12 +180,14 @@
     letter-spacing: 0.02rem;
     white-space: nowrap;
     @media (min-width: $md4) {
-      padding-left: 12px;
-      padding-right: 12px;
+      // margin-left: 12px;
+      // margin-right: 12px;
+      margin-left: 21px;
+      margin-right: 21px;
     }
     @media (min-width: $md1) {
-      padding-left: 21px;
-      padding-right: 21px;
+      margin-left: 21px;
+      margin-right: 21px;
     }
     &--offset-bottom {
       margin-bottom: 20px;
@@ -196,7 +199,7 @@
       &::after {
         position: absolute;
         top: 50%;
-        right: 5px;
+        right: -17px;
         content: '';
         display: block;
         background-image: url(../img/icons/dropdown-arrow.svg);

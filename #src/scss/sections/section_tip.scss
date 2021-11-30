@@ -1,0 +1,84 @@
+.tip {
+  @include padding-container($maxWidthContainer, $pl, $pr);
+  @include section-decorate;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  // .tip__inner
+  &__inner {
+    @include container(840px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $md4) {
+      flex-direction: row;
+      align-items: initial;
+    }
+  }
+  // .tip__message
+  &__message {
+    margin-bottom: 40px;
+    @media (min-width: $md4) {
+      flex-basis: 50%;
+      align-self: center;
+      margin-bottom: 0;
+    }
+  }
+  // .tip__message-wrapper
+  //враппер для марджина хедера в зависимости наличия текста под ним
+  &__message-wrapper {
+  }
+  // .tip__message-heading
+  &__message-heading {
+    @include h1_mobile;
+    @include text-gradient;
+    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  // .tip__message-text
+  &__message-text {
+    @include h3_mobile;
+    margin-bottom: 40px;
+  }
+  // .tip__button
+  &__button {
+  }
+  // .tip__image
+  &__image {
+    @media (min-width: $md4) {
+      flex-basis: 50%;
+    }
+  }
+  // .tip__image-inner
+  &__image-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+    height: 264px;
+    img {
+      top: 32px;
+      left: 30px;
+      width: 222px;
+      height: 222px;
+    }
+    &--frames-kids {
+      &::before {
+        background-image: url(../img/tip/tip-frame.svg);
+      }
+      &::after {
+        background-image: url(../img/tip/tip-frame-top.svg);
+        background-position-x: right 13px;
+      }
+    }
+    &--frames-adults {
+      &::before {
+        background-image: url(../img/tip/tip-frame-adults.svg);
+      }
+      &::after {
+        background-image: url(../img/tip/tip-frame-adults-top.svg);
+        background-position-x: right 13px;
+      }
+    }
+  }
+}

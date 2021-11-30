@@ -1,368 +1,6 @@
-//Promo
-.promo {
-  @include padding-container($maxWidthContainer, $pl, $pr);
-  padding-top: 60px;
-  padding-bottom: 40px;
-  @media (min-width: $md4) {
-    display: flex;
-  }
-  // .promo__info
-  &__info {
-    margin-bottom: 60px;
-    @media (min-width: $md4) {
-      align-self: center;
-      flex-basis: calc(55% - 16px);
-      margin-right: 16px;
-      margin-bottom: 0;
-    }
-  }
-  // .promo__heading
-  &__heading {
-    font-family: $heading;
-    font-size: 30px;
-    line-height: 1.325;
-    letter-spacing: 0.02rem;
-    margin-bottom: 40px;
-    @media (min-width: $md3) {
-      font-size: 41px;
-    }
-    @media (min-width: $md1) {
-      font-size: 50px;
-    }
-  }
-  // .promo__btn
-  &__btn {
-  }
-  // .promo__decoration
-  &__decoration {
-    margin-left: -20px;
-    margin-right: -20px;
-    overflow: hidden;
-    @media (min-width: $md4) {
-      flex-basis: calc(45% - 16px);
-      margin-left: 16px;
-      margin-right: 0;
-    }
-  }
-  // .promo__inner
-  &__inner {
-    // height: 100%;
-    position: relative;
-    &--width-limiter-450 {
-      @media (min-width: $md2) {
-        max-width: 450px;
-        margin-left: auto;
-      }
-    }
-  }
-  // .promo__image-decoration
-  &__image-decoration {
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-    &--left-offset {
-      padding-left: 25px;
-    }
-    &--left-offset-28p {
-      padding-left: 28%;
-    }
-  }
-  // .promo__image-photo
-  &__image-photo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      overflow: hidden;
-      border: 4px solid $orange;
-    }
-    //sizes and position
-    &--adults {
-      width: 167px;
-      height: 154px;
-      @media (min-width: $md7) {
-        width: 195px;
-        height: 180px;
-      }
-      @media (min-width: $md6) {
-        width: 250px;
-        height: 230px;
-      }
-      @media (min-width: $md5) {
-        width: 300px;
-        height: 275px;
-      }
-      @media (min-width: $md4) {
-        width: 163px;
-        height: 152px;
-      }
-      @media (min-width: $md3) {
-        width: 215px;
-        height: 200px;
-      }
-      @media (min-width: $md2) {
-        width: 222px;
-        height: 204px;
-      }
-      @media (min-width: $md1) {
-        width: 287px;
-        height: 262px;
-      }
-    }
-    &--kids-online {
-      left: 30px;
-      width: 195px;
-      height: 195px;
-      @media (min-width: $md7) {
-        left: 35px;
-        width: 235px;
-        height: 235px;
-      }
-      @media (min-width: $md6) {
-        left: 45px;
-        width: 290px;
-        height: 290px;
-      }
-      @media (min-width: $md5) {
-        left: 57px;
-        width: 347px;
-        height: 347px;
-      }
-      @media (min-width: $md4) {
-        left: 30px;
-        width: 188px;
-        height: 188px;
-      }
-      @media (min-width: $md3) {
-        left: 40px;
-        width: 250px;
-        height: 250px;
-      }
-      @media (min-width: $md2) {
-        width: 260px;
-        height: 260px;
-      }
-      @media (min-width: $md1) {
-        left: 45px;
-        width: 272px;
-        height: 272px;
-      }
-    }
-    &--kids-offline {
-      left: 25px;
-      width: 197px;
-      height: 197px;
-      @media (min-width: $md7) {
-        width: 234px;
-        height: 234px;
-      }
-      @media (min-width: $md6) {
-        width: 304px;
-        height: 304px;
-      }
-      @media (min-width: $md5) {
-        width: 368px;
-        height: 368px;
-      }
-      @media (min-width: $md4) {
-        width: 192px;
-        height: 192px;
-      }
-      @media (min-width: $md3) {
-        width: 258px;
-        height: 258px;
-      }
-      @media (min-width: $md2) {
-        width: 268px;
-        height: 268px;
-      }
-      @media (min-width: $md1) {
-        width: 284px;
-        height: 284px;
-      }
-      //рамка снаружи
-      &::before {
-        z-index: 3;
-        content: '';
-        position: absolute;
-        bottom: 22%;
-        left: -25px;
-        width: 50px;
-        height: 136px;
-        background-image: url(../img/for-kids-offline/for-kids-offline-frame-top.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-    //form
-    &--rounded {
-      img {
-        border-radius: 50%;
-      }
-    }
-    &--drop {
-      img {
-        border-radius: 40px 0 40px 140px;
-        // border-radius: 25% 0 25% 52%;
-      }
-    }
-    &--drop-turn-90 {
-      img {
-        border-radius: 140px 40px 0 40px;
-      }
-    }
-  }
-}
-//Lessons
-.lessons {
-  @include padding-container($maxWidthContainer, $pl, $pr);
-  padding-top: 40px;
-  padding-bottom: 80px;
-  @media (min-width: $md4) {
-    padding-bottom: 70px;
-  }
-  // .lessons__content
-  &__content {
-    @media (min-width: $md5) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      margin-left: -10px;
-      margin-right: -10px;
-    }
-  }
-  // .lessons__item
-  &__item {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    overflow: hidden;
-    @media (min-width: $md5) {
-      flex-basis: calc(50% - 20px);
-      justify-content: flex-start;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    @media (min-width: $md4) {
-      flex-basis: auto;
-    }
-  }
-  // .lessons__text
-  &__text {
-    @include h1_mobile;
-    align-self: flex-end;
-    margin-left: -100px;
-    @media (min-width: $md7) {
-      @include h1;
-    }
-    span {
-      background-color: $white;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  }
-  // .lessons__img
-  &__img {
-    flex-shrink: 0;
-    width: 166px;
-    // height: 130px;
-    border-radius: 60px;
-    overflow: hidden;
-    @media (min-width: $md7) {
-      width: 193px;
-      // height: 150px;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-//Languages
-.languages {
-  @include padding-container($maxWidthContainer, $pl, $pr);
-  display: flex;
-  justify-content: center;
-  padding-top: 65px;
-  padding-bottom: 65px;
-  @include section-decorate;
-
-  // .languages__inner
-  &__inner {
-    @include container(840px, auto);
-    @media (min-width: $md4) {
-      width: 100%;
-    }
-  }
-  // .languages__heading
-  &__heading {
-    @include h1_mobile;
-    @include text-gradient;
-    margin-bottom: 40px;
-  }
-  // .languages__list
-  &__list {
-    @media (min-width: $md4) {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -10px;
-      margin-right: -10px;
-    }
-  }
-  // .languages__item
-  &__item {
-    @include h2_mobile;
-    display: flex;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    @media (min-width: $md4) {
-      flex-basis: 25%;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    &::before {
-      @include icon-before(36px, inline-block);
-      margin-right: 20px;
-      flex-shrink: 0;
-    }
-    &--eng {
-      &::before {
-        background-image: url(../img/icons/languages/eng.svg);
-      }
-    }
-    &--de {
-      &::before {
-        background-image: url(../img/icons/languages/de.svg);
-      }
-    }
-    &--esp {
-      &::before {
-        background-image: url(../img/icons/languages/esp.svg);
-      }
-    }
-    &--fr {
-      &::before {
-        background-image: url(../img/icons/languages/fr.svg);
-      }
-    }
-  }
-}
 //Benefits
 .benefits {
   @include padding-container($maxWidthContainer, $pl, $pr);
-  padding-top: 100px;
-  margin-bottom: 100px;
   @media (min-width: $md4) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -376,9 +14,6 @@
     grid-template-columns: repeat(3, minmax(min-content, 1fr));
     grid-template-areas: 'text list list';
   }
-  // @media (min-width: $md1) {
-  //   @include container-paddings($pl * 2, $pr);
-  // }
   // .benefits__text-block
   &__text-block {
     margin-bottom: 40px;
@@ -477,210 +112,9 @@
     }
   }
 }
-//Trial-lesson
-.trial-lesson {
-  @include container($maxWidthContainer);
-  @include section-decorate;
-  overflow: hidden;
-  // background-color: rgb(116, 200, 67);
-  margin-bottom: 100px;
-  @media (min-width: $md4) {
-    display: flex;
-  }
-  // .trial-lesson__inner
-  &__inner {
-    @include container-paddings($pl, $pr);
-    @include section-offsets;
-    padding-top: 65px;
-    padding-bottom: 60px;
-  }
-  // .trial-lesson__content
-  &__content {
-    max-width: 470px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  // .trial-lesson__img
-  &__img {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 0 0;
-    }
-  }
-  // .trial-lesson__heading
-  &__heading {
-    @include h1_mobile;
-    margin-bottom: 30px;
-  }
-  // .trial-lesson__form
-  &__form {
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-//Form
-.main-form {
-  // .main-form__group
-  &__group {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -7.5px;
-    margin-right: -7.5px;
-    margin-bottom: 12px;
-    @media (min-width: $md4) {
-      margin-bottom: 14px;
-    }
-    &--offset-bottom {
-      margin-bottom: 28px;
-      @media (min-width: $md4) {
-        margin-bottom: 30px;
-      }
-    }
-    &--additional-group {
-      display: none;
-      &.show {
-        display: block;
-      }
-    }
-  }
-  // .main-form__item
-  &__item {
-    margin-left: 7.5px;
-    margin-right: 7.5px; //todo extends
-    &--name-field {
-      @extend %pair-fields;
-    }
-    &--phone-field {
-      @extend %pair-fields;
-    }
-    &--full-width {
-      flex-basis: calc(100% - 15px);
-    }
-    &--tab {
-      flex-basis: calc(50% - 15px);
-      label {
-        @include h2_mobile;
-        text-align: center;
-        border-bottom: 2px solid #94c6c4;
-        display: block;
-        padding: 10px 12px;
-        cursor: pointer;
-      }
-      input:checked + label {
-        border-color: $green;
-      }
-      input {
-        display: none;
-      }
-    }
-    &--select {
-      flex-basis: 100%;
-    }
-    &--radio-pair {
-      display: flex;
-      align-items: center;
-    }
-    &--button {
-      text-align: center;
-      @media (min-width: $md4) {
-        text-align: initial;
-      }
-    }
-  }
-}
-//Form fileds
-.field {
-  @include h3_mobile;
-  @include field-decorate;
-  width: 100%;
-  &--select {
-    position: relative;
-    appearance: none;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      width: 0;
-      height: 0;
-      border-width: 6px 4px 0;
-      border-style: solid;
-      border-color: $black transparent transparent;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-  }
-  &--text {
-    @extend %field-error;
-  }
-}
-
-.radio-button {
-  position: relative;
-  cursor: pointer;
-  background-color: $white;
-  border: 2px solid $green;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  appearance: none;
-  color-adjust: exact;
-  transition: box-shadow 0.1s linear;
-  &:hover {
-    box-shadow: 0 0 3px 1px $green;
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-  }
-  &:checked::before {
-    background-color: $green;
-    width: 6px;
-    height: 6px;
-  }
-  &:active::before {
-    background-color: $green;
-    width: 12px;
-    height: 12px;
-  }
-  &.error {
-    border: 2px solid #bdbdbd;
-    background-color: $white;
-    box-shadow: none;
-    &::before {
-      background-color: $white;
-    }
-  }
-  &.inactive {
-    border: 2px solid #bdbdbd;
-    background-color: #bdbdbd;
-    box-shadow: none;
-    &::before {
-      background-color: #bdbdbd;
-    }
-  }
-  &--offset-right {
-    margin-right: 10px;
-  }
-}
-//todo сделать элементом наверн
-.label {
-  @include h3_mobile;
-  cursor: pointer;
-}
+//For clients
 .for-clients {
   @include padding-container($maxWidthContainer, $pl, $pr);
-  margin-bottom: 100px;
   // .for-clients__item
   &__item {
     margin-bottom: 100px;
@@ -884,12 +318,9 @@
     }
   }
 }
+//Learning-way
 .learning-way {
   @include padding-container(920px, $pl, $pr);
-  margin-bottom: 100px;
-  @media (min-width: $md3) {
-    margin-bottom: 140px;
-  }
   // .learning-way__text-wrapper
   &__text-wrapper {
     margin-bottom: 40px;
@@ -913,6 +344,7 @@
   &__steps {
   }
 }
+//Learning-method (part of "learning-way" section)
 .learning-method {
   // .learning-method__list
   &__list {
@@ -951,7 +383,7 @@
     display: block;
   }
 }
-
+//learning-target (part of "learning-way" section)
 .learning-target {
   display: flex;
   flex-wrap: wrap;
@@ -1020,7 +452,7 @@
     @include h3_mobile;
   }
 }
-
+//learning-steps (part of "learning-way" section)
 .learning-steps {
   // @include container(820px);
   counter-reset: step-list;
@@ -1029,10 +461,11 @@
     position: relative;
     margin-bottom: 40px;
     @media (min-width: $md4) {
+      display: flex;
       margin-bottom: 50px;
     }
     &::after {
-      @media (min-width: $md5) {
+      @media (min-width: $md4) {
         flex-shrink: 0;
         margin-top: 20px;
         content: '';
@@ -1049,21 +482,19 @@
       }
     }
     &:last-child {
+      margin-bottom: 0;
       &::after {
         @media (min-width: $md5) {
           display: none;
         }
       }
     }
-    @media (min-width: $md5) {
-      display: flex;
-    }
     &--reverse {
-      @media (min-width: $md5) {
+      @media (min-width: $md4) {
         justify-content: flex-end;
       }
       &::after {
-        @media (min-width: $md5) {
+        @media (min-width: $md4) {
           order: 0;
           margin-right: 50px;
           transform: rotateY(180deg);
@@ -1093,19 +524,18 @@
   &__text {
     @include h3_mobile;
   }
-  // .learning-steps__item--reverse
-  &__item--reverse {
-  }
 }
-
+//History
 .history {
   @include padding-container(920px, $pl, $pr);
-  margin-bottom: 100px;
   // .history__heading
   &__heading {
     @include h1_mobile;
     @include text-gradient;
     margin-bottom: 40px;
+    @media (min-width: $md1) {
+      margin-bottom: 60px;
+    }
   }
   // .history__nav-line
   &__nav-line {
@@ -1117,7 +547,7 @@
     margin-right: auto;
   }
 }
-
+//Nav-line
 .nav-line {
   position: relative;
   display: flex;
@@ -1179,7 +609,7 @@
     transition: color 0.2s linear;
   }
 }
-
+//Slider-history
 .slider-history {
   max-width: 280px;
   @media (min-width: $md7) {
@@ -1256,62 +686,6 @@
         width: 300px;
         height: 250px;
       }
-    }
-  }
-}
-
-.abbreviation-bg {
-  &::before {
-    z-index: -1;
-    position: absolute;
-    font-family: $font-decorate;
-    font-size: 80px;
-    color: #ffeca0;
-  }
-  &--char-s {
-    &::before {
-      content: 'S';
-    }
-  }
-  &--char-m {
-    &::before {
-      content: 'M';
-    }
-  }
-  &--char-a {
-    &::before {
-      content: 'A';
-    }
-  }
-  &--char-r {
-    &::before {
-      content: 'R';
-    }
-  }
-  &--char-t {
-    &::before {
-      content: 'T';
-    }
-  }
-  &--char-position {
-    &::before {
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-  &--counter {
-    &::before {
-      counter-increment: step-list;
-      //перед или после counter(step-list) можно поставить 'префикс/постфикс'
-      content: counter(step-list);
-    }
-  }
-  &--counter-position {
-    &::before {
-      top: 60%;
-      left: -15px;
-      transform: translateY(-50%);
     }
   }
 }

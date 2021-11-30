@@ -4,8 +4,8 @@
   <body>
     <div class="wrapper">
       @@include('_header.html',{})
-      <main class="page">
-        <div class="promo">
+      <div class="page">
+        <div class="promo page__promo page__promo--offset-bot-100">
           <div class="promo__info">
             <h1 class="promo__heading">ИЗУЧЕНИЕ ЯЗЫКОВ В НАШЕЙ ШКОЛЕ В Г. ТРОИЦКЕ</h1>
             <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
@@ -25,14 +25,17 @@
                 class="promo__image-photo promo__image-photo--kids-offline promo__image-photo--drop"
               >
                 <picture>
-                  <source srcset="img/for-kids-offline/for-kids-offline-image.webp" />
+                  <source
+                    srcset="img/for-kids-offline/for-kids-offline-image.webp"
+                    type="image/webp"
+                  />
                   <img src="img/for-kids-offline/for-kids-offline-image.jpg" alt="Композиция" />
                 </picture>
               </div>
             </div>
           </div>
         </div>
-        <div class="languages">
+        <div class="languages page__languages">
           <div class="languages__inner">
             <h3 class="languages__heading">
               <span>У нас ваши дети</span>
@@ -47,7 +50,7 @@
             </ul>
           </div>
         </div>
-        <div class="trial-lesson">
+        <div class="trial-lesson page__trial-lesson">
           <div class="trial-lesson__inner">
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
@@ -55,12 +58,13 @@
                 <div
                   class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
                 >
-                  <div class="main-form__item main-form__item--tab">
+                  <div class="tab-label main-form__item main-form__item--tab">
                     <input name="for-whom" id="adult" type="radio" checked />
                     <label for="adult">Взрослые</label>
                   </div>
                   <div
                     class="
+                      tab-label
                       main-form__item
                       main-form__item--half-width
                       main-form__item--tab
@@ -170,7 +174,7 @@
             </picture>
           </div>
         </div>
-      </main>
+      </div>
       @@include('_footer.html',{})
     </div>
     @@include('_popup.html',{}) @@include('_js.html',{})

@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 // import logger from 'gulplog';
-// import webpCss from 'gulp-webpcss';
+import webpCss from 'gulp-webpcss';
 // import webpHtml from 'gulp-webp-html';
 // import sourcemap from 'gulp-sourcemaps'; //не установлен
 // import debug from 'gulp-debug';
@@ -131,35 +131,33 @@ export const iconfonts = () => {
 
 // Styles
 export const styles = () => {
-  return (
-    gulp
-      .src(_path.src.css)
-      .pipe(plumber())
-      .pipe(scss({ outputStyle: 'expanded' }).on('error', scss.logError))
-      .pipe(groupMedia())
-      .pipe(
-        autoprefixer({
-          grid: true,
-          overrideBrowserslist: ['last 5 versions'],
-          cascade: true,
-        })
-      )
-      // .pipe(
-      //   webpCss({
-      //     webpClass: '._webp',
-      //     noWebpClass: '._no-webp',
-      //   })
-      // )
-      .pipe(gulp.dest(_path.build.css))
-      .pipe(cleanCss())
-      .pipe(
-        rename({
-          extname: '.min.css',
-        })
-      )
-      .pipe(gulp.dest(_path.build.css))
-      .pipe(sync.stream())
-  );
+  return gulp
+    .src(_path.src.css)
+    .pipe(plumber())
+    .pipe(scss({ outputStyle: 'expanded' }).on('error', scss.logError))
+    .pipe(groupMedia())
+    .pipe(
+      autoprefixer({
+        grid: true,
+        overrideBrowserslist: ['last 5 versions'],
+        cascade: true,
+      })
+    )
+    .pipe(
+      webpCss({
+        webpClass: '._webp',
+        noWebpClass: '._no-webp',
+      })
+    )
+    .pipe(gulp.dest(_path.build.css))
+    .pipe(cleanCss())
+    .pipe(
+      rename({
+        extname: '.min.css',
+      })
+    )
+    .pipe(gulp.dest(_path.build.css))
+    .pipe(sync.stream());
 };
 
 // Images

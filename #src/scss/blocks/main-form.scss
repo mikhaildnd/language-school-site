@@ -1,0 +1,155 @@
+.main-form {
+  // .main-form__group
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+    margin-bottom: 12px;
+    @media (min-width: $md4) {
+      margin-bottom: 14px;
+    }
+    &--offset-bottom {
+      margin-bottom: 28px;
+      @media (min-width: $md4) {
+        margin-bottom: 30px;
+      }
+    }
+    &--additional-group {
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+  }
+  // .main-form__item
+  &__item {
+    margin-left: 7.5px;
+    margin-right: 7.5px; //todo extends
+    &--name-field {
+      @extend %pair-fields;
+    }
+    &--phone-field {
+      @extend %pair-fields;
+    }
+    &--full-width {
+      flex-basis: calc(100% - 15px);
+    }
+    &--tab {
+      //todo мб убрать модификатор
+      flex-basis: calc(50% - 15px);
+      // label {
+      //   @include h2_mobile;
+      //   text-align: center;
+      //   border-bottom: 2px solid #94c6c4;
+      //   display: block;
+      //   padding: 10px 12px;
+      //   cursor: pointer;
+      // }
+      // input:checked + label {
+      //   border-color: $green;
+      // }
+      // input {
+      //   display: none;
+      // }
+    }
+    &--select {
+      flex-basis: 100%;
+    }
+    &--radio-pair {
+      display: flex;
+      align-items: center;
+    }
+    &--button {
+      text-align: center;
+      @media (min-width: $md4) {
+        text-align: initial;
+      }
+    }
+  }
+}
+//Form fileds
+.field {
+  @include h3_mobile;
+  @include field-decorate;
+  width: 100%;
+  &--select {
+    position: relative;
+    appearance: none;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border-width: 6px 4px 0;
+      border-style: solid;
+      border-color: $black transparent transparent;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+  &--text {
+    @extend %field-error;
+  }
+}
+.radio-button {
+  position: relative;
+  cursor: pointer;
+  background-color: $white;
+  border: 2px solid $green;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  appearance: none;
+  color-adjust: exact;
+  transition: box-shadow 0.1s linear;
+  &:hover {
+    box-shadow: 0 0 3px 1px $green;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  &:checked::before {
+    background-color: $green;
+    width: 6px;
+    height: 6px;
+  }
+  &:active::before {
+    background-color: $green;
+    width: 12px;
+    height: 12px;
+  }
+  &.error {
+    border: 2px solid #bdbdbd;
+    background-color: $white;
+    box-shadow: none;
+    &::before {
+      background-color: $white;
+    }
+  }
+  &.inactive {
+    border: 2px solid #bdbdbd;
+    background-color: #bdbdbd;
+    box-shadow: none;
+    &::before {
+      background-color: #bdbdbd;
+    }
+  }
+  &--offset-right {
+    margin-right: 10px;
+  }
+}
+//todo сделать элементом наверн
+.label {
+  @include h3_mobile;
+  cursor: pointer;
+}

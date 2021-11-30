@@ -1,0 +1,116 @@
+.prices {
+  @include padding-container($maxWidthContainer, $pl, $pr);
+  // .prices__heading
+  &__heading {
+    text-align: center;
+    @include h1_mobile;
+    @include text-gradient;
+    margin-bottom: 30px;
+    @media (min-width: $md4) {
+      margin-bottom: 40px;
+    }
+  }
+  // .prices__tabs
+  &__tabs {
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  // .prices__tabs-group
+  &__tabs-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    &--short {
+      max-width: 80%;
+    }
+  }
+  // .prices__tabs-item
+  &__tabs-item {
+    flex-basis: 50%;
+    margin: 10px 7.5px;
+    @media (min-width: $md4) {
+      margin: 10px;
+    }
+  }
+  // .prices__rates
+  &__rates {
+    max-width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__rates-group {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 -35px;
+  }
+  // .prices__rates-card
+  &__rates-card {
+    // flex-basis: calc(33.33% - 70px);
+    margin: 0 35px;
+    max-width: 300px;
+  }
+}
+.card-rates {
+  width: 280px;
+  min-height: 430px;
+  @include section-decorate;
+  overflow: hidden;
+  @media (min-width: $md4) {
+    width: 300px;
+  }
+  // .card-rates__decorate
+  &__decorate {
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+    &--bg-4-of-half-hour {
+      background-image: url(../img/card-rates/card-1.svg);
+    }
+    &--bg-8-of-half-hour {
+      background-image: url(../img/card-rates/card-2.svg);
+    }
+    &--bg-12-of-half-hour {
+      background-image: url(../img/card-rates/card-3.svg);
+    }
+    &--bg-4-of-full-hour {
+      background-image: url(../img/card-rates/card-4.svg);
+    }
+    &--bg-8-of-full-hour {
+      background-image: url(../img/card-rates/card-5.svg);
+    }
+    &--bg-12-of-full-hour {
+      background-image: url(../img/card-rates/card-6.svg);
+    }
+    &--bg-4-club {
+      background-image: url(../img/card-rates/card-7.svg);
+    }
+    &--bg-8-club {
+      background-image: url(../img/card-rates/card-8.svg);
+    }
+  }
+  // .card-rates__content
+  &__content {
+    // background-color: $light-yellow;
+    padding: 40px 20px 62px;
+    text-align: center;
+  }
+  // .card-rates__duration
+  &__duration {
+    @include h2;
+    margin-bottom: 14px;
+  }
+  // .card-rates__cost
+  &__cost {
+    @include price;
+    margin-bottom: 40px;
+  }
+  // .card-rates__button
+  &__button {
+  }
+}

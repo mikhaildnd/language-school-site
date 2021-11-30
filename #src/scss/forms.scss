@@ -189,3 +189,20 @@
     }
   }
 }
+//========================================================================================================================================================
+.tab-label {
+  label {
+    @include h2_mobile;
+    text-align: center;
+    border-bottom: 2px solid #94c6c4;
+    display: block;
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+  }
+  input:checked + label {
+    border-color: $green;
+  }
+}

@@ -1,0 +1,73 @@
+.languages {
+  @include padding-container($maxWidthContainer, $pl, $pr);
+  @include section-decorate;
+  display: flex;
+  justify-content: center;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  @media (min-width: $md1) {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+  // .languages__inner
+  &__inner {
+    @include container(840px, auto);
+    @media (min-width: $md4) {
+      width: 100%;
+    }
+  }
+  // .languages__heading
+  &__heading {
+    @include h1_mobile;
+    @include text-gradient;
+    margin-bottom: 40px;
+  }
+  // .languages__list
+  &__list {
+    @media (min-width: $md4) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+  // .languages__item
+  &__item {
+    @include h2_mobile;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    @media (min-width: $md4) {
+      flex-basis: 25%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &::before {
+      @include icon-before(36px, inline-block);
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    &--eng {
+      &::before {
+        background-image: url(../img/icons/languages/eng.svg);
+      }
+    }
+    &--de {
+      &::before {
+        background-image: url(../img/icons/languages/de.svg);
+      }
+    }
+    &--esp {
+      &::before {
+        background-image: url(../img/icons/languages/esp.svg);
+      }
+    }
+    &--fr {
+      &::before {
+        background-image: url(../img/icons/languages/fr.svg);
+      }
+    }
+  }
+}

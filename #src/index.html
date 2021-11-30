@@ -4,8 +4,8 @@
   <body>
     <div class="wrapper">
       @@include('_header.html',{})
-      <main class="page">
-        <div class="promo">
+      <div class="page">
+        <div class="promo page__promo">
           <div class="promo__info">
             <h1 class="promo__heading">ШКОЛА ИНОСТРАННЫХ ЯЗЫКОВ ДЛЯ ВСЕЙ СЕМЬИ</h1>
             <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
@@ -21,12 +21,12 @@
             </div>
           </div>
         </div>
-        <div class="lessons">
+        <div class="lessons page__lessons">
           <div class="lessons__content">
             <div class="lessons__item">
               <div class="lessons__img">
                 <picture>
-                  <source srcset="img/lessons/lessons-adult.webp" />
+                  <source srcset="img/lessons/lessons-adult.webp" type="image/webp" />
                   <img src="img/lessons/lessons-adult.jpg" alt="Обучение для взрослых" />
                 </picture>
               </div>
@@ -39,7 +39,7 @@
             <div class="lessons__item">
               <div class="lessons__img">
                 <picture>
-                  <source srcset="img/lessons/lessons-children.webp" />
+                  <source srcset="img/lessons/lessons-children.webp" type="image/webp" />
                   <img src="img/lessons/lessons-children.jpg" alt="Обучение для детей" />
                 </picture>
               </div>
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="languages">
+        <div class="languages page__languages">
           <div class="languages__inner">
             <h3 class="languages__heading">
               <span>У нас ваши дети</span>
@@ -66,7 +66,7 @@
             </ul>
           </div>
         </div>
-        <div class="benefits">
+        <div class="benefits page__benefits">
           <div class="benefits__text-block">
             <h3 class="benefits__heading"><span>Почему Speaky School?</span></h3>
             <p class="benefits__text">
@@ -90,7 +90,7 @@
             </li>
           </ul>
         </div>
-        <div class="trial-lesson">
+        <div class="trial-lesson page__trial-lesson">
           <div class="trial-lesson__inner">
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
@@ -98,12 +98,13 @@
                 <div
                   class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
                 >
-                  <div class="main-form__item main-form__item--tab">
+                  <div class="tab-label main-form__item main-form__item--tab">
                     <input name="for-whom" id="adult" type="radio" checked />
                     <label for="adult">Взрослые</label>
                   </div>
                   <div
                     class="
+                      tab-label
                       main-form__item
                       main-form__item--half-width
                       main-form__item--tab
@@ -213,7 +214,7 @@
             </picture>
           </div>
         </div>
-        <div class="for-clients">
+        <div class="for-clients page__for-clients">
           <div class="for-clients__item">
             <div class="for-clients__img-wrapper">
               <div
@@ -226,8 +227,9 @@
                   <source
                     srcset="img/for-kids/for-kids-image-lg.webp"
                     media="(min-width: 1300px)"
+                    type="image/webp"
                   />
-                  <source srcset="img/for-kids/for-kids-image.webp" />
+                  <source srcset="img/for-kids/for-kids-image.webp" type="image/webp" />
                   <img src="img/for-kids/for-kids-image.jpg" alt="Фото учащихся младшей группы" />
                 </picture>
               </div>
@@ -267,7 +269,7 @@
                 "
               >
                 <picture>
-                  <source srcset="img/for-adults/for-adults-image.webp" />
+                  <source srcset="img/for-adults/for-adults-image.webp" type="image/webp" />
                   <img src="img/for-adults/for-adults-image.jpg" alt="Фото взрослых учащихся" />
                 </picture>
               </div>
@@ -297,7 +299,7 @@
             </div>
           </div>
         </div>
-        <section class="learning-way">
+        <section class="learning-way page__learning-way">
           <div class="learning-way__text-wrapper">
             <h2 class="learning-way__heading">
               <span>Мы используем SMART-подход в обучении</span>
@@ -388,11 +390,13 @@
                 <source
                   srcset="img/learning-target/learning-target.webp"
                   media="(min-width: 1300px)"
+                  type="image/webp"
                 />
-                <source srcset="img/learning-target/learning-target-sm.webp" />
+                <source srcset="img/learning-target/learning-target-sm.webp" type="image/webp" />
                 <source
                   media="(min-width: 768px)"
                   srcset="img/learning-target/learning-target.webp"
+                  type="image/webp"
                 />
                 <img src="img/learning-target/learning-target.jpg" alt="Фото учащихся учащейся" />
               </picture>
@@ -487,7 +491,7 @@
             </div>
           </div>
         </section>
-        <div class="trial-lesson">
+        <div class="trial-lesson page__trial-lesson">
           <div class="trial-lesson__inner">
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
@@ -495,12 +499,13 @@
                 <div
                   class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
                 >
-                  <div class="main-form__item main-form__item--tab">
+                  <div class="tab-label main-form__item main-form__item--tab">
                     <input name="for-whom" id="adult" type="radio" checked />
                     <label for="adult">Взрослые</label>
                   </div>
                   <div
                     class="
+                      tab-label
                       main-form__item
                       main-form__item--half-width
                       main-form__item--tab
@@ -610,7 +615,7 @@
             </picture>
           </div>
         </div>
-        <div class="history">
+        <div class="history page__history">
           <h2 class="history__heading"><span>История развития Speaky school</span></h2>
           <div class="history__nav-line nav-line">
             <div class="nav-line__item">
@@ -652,7 +657,7 @@
                   "
                 >
                   <picture>
-                    <source srcset="img/slider-history/slider-image-1.webp" />
+                    <source srcset="img/slider-history/slider-image-1.webp" type="image/webp" />
                     <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2019 года" />
                   </picture>
                 </div>
@@ -673,7 +678,7 @@
                   "
                 >
                   <picture>
-                    <source srcset="img/slider-history/slider-image-1.webp" />
+                    <source srcset="img/slider-history/slider-image-1.webp" type="image/webp" />
                     <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2019 года" />
                   </picture>
                 </div>
@@ -690,7 +695,7 @@
                   "
                 >
                   <picture>
-                    <source srcset="img/slider-history/slider-image-1.webp" />
+                    <source srcset="img/slider-history/slider-image-1.webp" type="image/webp" />
                     <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2019 года" />
                   </picture>
                 </div>
@@ -698,7 +703,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       @@include('_footer.html',{})
     </div>
     @@include('_popup.html',{}) @@include('_js.html',{})

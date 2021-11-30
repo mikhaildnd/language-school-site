@@ -5,8 +5,8 @@
   list-style: none;
   &--gutters {
     .social-links__item {
-      margin-right: 35px;
-      @media (min-width: 870px) {
+      margin-right: 25px;
+      @media (min-width: $md3) {
         margin-right: 50px;
       }
       &:last-child {
