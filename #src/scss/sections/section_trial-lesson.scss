@@ -1,5 +1,5 @@
 .trial-lesson {
-  @include container($maxWidthContainer);
+  @include container(1260px);
   @include section-decorate;
   overflow: hidden;
   // background-color: rgb(116, 200, 67);

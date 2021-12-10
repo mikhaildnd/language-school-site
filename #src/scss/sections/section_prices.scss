@@ -38,20 +38,29 @@
   }
   // .prices__rates
   &__rates {
+    display: flex;
+    flex-wrap: nowrap;
     max-width: 1040px;
     margin-right: auto;
     margin-left: auto;
+    overflow: hidden;
   }
   &__rates-group {
     display: flex;
+    // justify-content: space-between;
     justify-content: flex-start;
-    margin: 0 -35px;
+    // margin: 0 -35px;
   }
   // .prices__rates-card
   &__rates-card {
+    margin-right: 70px;
     // flex-basis: calc(33.33% - 70px);
-    margin: 0 35px;
+    // margin: 0 35px;
     max-width: 300px;
+    flex-shrink: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 .card-rates {

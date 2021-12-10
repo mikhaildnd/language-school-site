@@ -81,8 +81,9 @@ body {
 @import 'extends';
 @import 'blocks/image-decorate';
 @import 'blocks/social-links'; //сами иконки подключены шрифтом
-@import 'blocks/abbreviation-bg.scss';
+@import 'blocks/abbreviation-bg';
 @import 'blocks/main-form';
+@import 'blocks/popup';
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
 
 //<ПОДКЛЮЧЕНИЕ СТИЛЕЙ БЛОКОВ>
@@ -99,6 +100,8 @@ body {
 @import 'footer';
 @import 'index';
 @import 'for-kids-online';
+@import 'for-adults';
+@import 'offer';
 
 //<ОСНОВНОЙ БЛОК>
 .page {
@@ -108,22 +111,27 @@ body {
   margin-top: 60px;
   padding-top: 70px;
   &__promo {
-    margin-bottom: 80px;
-    &--offset-bot-100 {
-      margin-bottom: 100px;
-    }
+    margin-bottom: 100px;
   }
   &__lessons {
-    margin-bottom: 80px;
-    @media (min-width: $md4) {
-      margin-bottom: 70px;
-    }
+    @include offset-standart;
+
+    // margin-bottom: 80px;
+    // @media (min-width: $md4) {
+    //   margin-bottom: 70px;
+    // }
   }
   &__languages {
     @include offset-standart;
   }
   &__benefits {
     @include offset-standart;
+    &--width-limit-975 {
+      max-width: 975px;
+    }
+    &--width-limit-1175 {
+      max-width: 1175px;
+    }
   }
   &__trial-lesson {
     @include offset-standart;
@@ -150,6 +158,13 @@ body {
     @include offset-standart;
   }
   &__prices {
+    @include offset-standart;
+  }
+  &__todo-list {
+    @include offset-standart;
+  }
+  &__learning-tip {
+    @include padding-container(980px, $pl, $pr);
     @include offset-standart;
   }
 }

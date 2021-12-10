@@ -24,6 +24,7 @@
   // .features__heading
   &__heading {
     @include h1_mobile;
+    @include text-gradient;
     margin-bottom: 20px;
   }
   // .features__list

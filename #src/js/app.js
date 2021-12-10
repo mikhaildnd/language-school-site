@@ -40,6 +40,13 @@ toggleClass(
   }
 );
 
+// const pricesSlider1 = new Swiper('.prices__rates-group', {
+//   speed: 200,
+//   slidesPerView: 1,
+//   // centeredSlides: true,
+//   // spaceBetween: 150,
+// });
+
 // let sendMessage = (arg1, arg2) => {
 //   // console.log(arg1, arg2);
 //   console.log('hey');
@@ -67,4 +74,23 @@ toggleClass(
 //   //   addFields.classList.remove('show');
 //   // }
 //   // addFields.classList.add('show');
+// });
+
+//========================================================================================================================================================
+// const priceItemsContainer = document.querySelector('.prices__rates');
+// const priceItems = document.querySelectorAll('.prices__rates-group');
+// const button = document.querySelector('.tab-label input');
+
+// const containerCoord = priceItemsContainer.getBoundingClientRect().width;
+// console.log(containerCoord);
+
+// button.addEventListener('click', () => {
+//   priceItems.forEach((item) => {
+//     // let start = item.getBoundingClientRect().width;
+//     item.style.transition = 'all 0.3s linear';
+//     item.style.position = 'relative';
+//     // item.style.transform = `translate(${-start + 'px'})`;
+//     item.style.left = -containerCoord + 'px';
+//     console.log(item);
+//   });
 // });

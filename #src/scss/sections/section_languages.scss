@@ -1,5 +1,5 @@
 .languages {
-  @include padding-container($maxWidthContainer, $pl, $pr);
+  @include container(1260px);
   @include section-decorate;
   display: flex;
   justify-content: center;
@@ -12,6 +12,8 @@
   // .languages__inner
   &__inner {
     @include container(840px, auto);
+    padding-left: $pl * 2;
+    padding-right: $pr * 2;
     @media (min-width: $md4) {
       width: 100%;
     }

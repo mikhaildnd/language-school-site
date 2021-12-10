@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-  <title>for-kids-offline</title>
+  <title>for-adults</title>
   <meta charset="UTF-8" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="stylesheet" href="css/style.min.css" />
@@ -139,10 +139,10 @@
 </header>
 
       <div class="page">
-        <div class="promo">
+        <div class="promo page__promo">
           <div class="promo__info">
             <h1 class="promo__heading">ЭФФЕКТИВНОЕ ИЗУЧЕНИЕ ЯЗЫКОВ</h1>
-            <p>Прокачайте язык вместе с нами под любые цели</p>
+            <p class="promo__text">Прокачайте язык вместе с нами под любые цели</p>
             <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
           </div>
           <div class="promo__decoration">
@@ -166,7 +166,48 @@
             </div>
           </div>
         </div>
-        <div class="languages">
+        <div class="lessons page__lessons">
+          <div class="lessons__content">
+            <div class="lessons__item">
+              <div class="lessons__img">
+                <picture>
+                  <source srcset="img/lessons/lessons-for-work.webp" type="image/webp" />
+                  <img src="img/lessons/lessons-for-work.jpg" alt="Обучение для взрослых" />
+                </picture>
+              </div>
+              <div class="lessons__text">
+                <span>Для</span>
+                <br />
+                <span>Работы</span>
+              </div>
+            </div>
+            <div class="lessons__item">
+              <div class="lessons__img">
+                <picture>
+                  <source srcset="img/lessons/lessons-for-self.webp" type="image/webp" />
+                  <img src="img/lessons/lessons-for-self.jpg" alt="Обучение для детей" />
+                </picture>
+              </div>
+              <div class="lessons__text">
+                <span>Для себя</span>
+              </div>
+            </div>
+            <div class="lessons__item">
+              <div class="lessons__img">
+                <picture>
+                  <source srcset="img/lessons/lessons-for-travel.webp" type="image/webp" />
+                  <img src="img/lessons/lessons-for-travel.jpg" alt="Обучение для детей" />
+                </picture>
+              </div>
+              <div class="lessons__text">
+                <span>Для</span>
+                <br />
+                <span>Путешествий</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="languages page__languages">
           <div class="languages__inner">
             <h3 class="languages__heading">
               <span>У нас ваши дети</span>
@@ -181,7 +222,104 @@
             </ul>
           </div>
         </div>
-        <div class="trial-lesson">
+        <div class="learning-tip page__learning-tip">
+          <div
+            class="
+              learning-tip__image
+              image-decorate image-decorate--layer-top image-decorate--circle
+            "
+          >
+            <picture>
+              <source
+                srcset="img/learning-target/learning-target.webp"
+                media="(min-width: 1300px)"
+                type="image/webp"
+              />
+              <source srcset="img/learning-target/learning-target-sm.webp" type="image/webp" />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/learning-target/learning-target.webp"
+                type="image/webp"
+              />
+              <img src="img/learning-target/learning-target.jpg" alt="Фото учащихся учащейся" />
+            </picture>
+          </div>
+          <div class="learning-tip__text-wrapper">
+            <h2 class="learning-tip__heading">
+              <span>Давайте представим, какая у вас может быть цель?</span>
+            </h2>
+            <p class="learning-tip__text">
+              Например, вы — свадебный организатор и большинство всех церемоний проходит за рубежом.
+              Чтобы общаться с подрядчиками, выполнять свою работу эффективно и качественно, вам
+              100% нужен хороший язык.
+            </p>
+          </div>
+        </div>
+        <div class="todo-list page__todo-list">
+          <h2 class="todo-list__heading"><span>Что будем делать мы?</span></h2>
+          <ul class="todo-list__list">
+            <li class="todo-list__item">
+              <span class="todo-list__item-counter"></span>
+              <p class="todo-list__item-text">Сформулируем конкретную цель</p>
+            </li>
+            <li class="todo-list__item">
+              <span class="todo-list__item-counter todo-list__item-counter--color-yellow"></span>
+              <p class="todo-list__item-text">Обозначим срок достижения цели</p>
+            </li>
+            <li class="todo-list__item">
+              <span class="todo-list__item-counter todo-list__item-counter--color-orange"></span>
+              <p class="todo-list__item-text">Назначим даты чекпоинтов</p>
+            </li>
+            <li class="todo-list__item">
+              <span class="todo-list__item-counter todo-list__item-counter--color-red"></span>
+              <p class="todo-list__item-text">Начнём постепенно двигаться к цели</p>
+            </li>
+          </ul>
+        </div>
+        <div class="benefits page__benefits page__benefits page__benefits--width-limit-1175">
+          <div class="benefits__text-block">
+            <h3 class="benefits__heading"><span>Итог:</span></h3>
+            <p class="benefits__text">
+              Все ваши занятия будут выстроены исходя из профессиональных интересов, таким образом:
+            </p>
+          </div>
+          <ul class="benefits__list benefits__list--result">
+            <li class="benefits__item benefits__item--elearning">Отобразим рабочие сценарии</li>
+            <li class="benefits__item benefits__item--devices">Выучим специальный вокабуляр</li>
+            <li class="benefits__item benefits__item--ebook">
+              Погрузим вас в рабочую, при этом языковую среду
+            </li>
+          </ul>
+        </div>
+        <div class="tip page__tip">
+          <div class="tip__inner">
+            <div class="tip__message">
+              <div class="tip__message-wrapper">
+                <h2 class="tip__message-heading">
+                  <span>Все задачи выполнимы и интересны, когда они ясны</span>
+                </h2>
+                <p class="tip__message-text">
+                  А может быть язык вам нужен для путешествий? Для переезда в другую страну? Или у
+                  вас профессиональные цели и язык вам нужен для повышения?
+                </p>
+              </div>
+              <button class="tip__button btn btn--green btn--size-normal">Пробное занятие</button>
+            </div>
+            <div class="tip__image">
+              <div
+                class="
+                  image-decorate image-decorate--layer-top image-decorate--rounded-bottom
+                  tip__image-inner tip__image-inner--frames-kids
+                "
+              >
+                <picture>
+                  <img src="img/for-kids/for-kids-image-lg.jpg" alt="ученики" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trial-lesson page__trial-lesson">
           <div class="trial-lesson__inner">
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
@@ -189,12 +327,13 @@
                 <div
                   class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
                 >
-                  <div class="main-form__item main-form__item--tab">
+                  <div class="tab-label main-form__item main-form__item--tab">
                     <input name="for-whom" id="adult" type="radio" checked />
                     <label for="adult">Взрослые</label>
                   </div>
                   <div
                     class="
+                      tab-label
                       main-form__item
                       main-form__item--half-width
                       main-form__item--tab
@@ -296,22 +435,10 @@
           </div>
           <div class="trial-lesson__img">
             <picture>
-              <source
-                srcset="img/modal/trial-side.svg"
-                media="(min-width: 768px)"
-                type="image/svg+xml"
-              />
-              <source
-                srcset="img/modal/trial-slim.svg"
-                media="(min-width: 576px)"
-                type="image/svg+xml"
-              />
-              <source
-                srcset="img/modal/trial-slim-2.svg"
-                media="(min-width: 480px)"
-                type="image/svg+xml"
-              />
-              <source srcset="img/modal/trial-mobile.svg" type="image/svg+xml" />
+              <source srcset="img/modal/trial-side.svg" media="(min-width: 768px)" />
+              <source srcset="img/modal/trial-slim.svg" media="(min-width: 576px)" />
+              <source srcset="img/modal/trial-slim-2.svg" media="(min-width: 480px)" />
+              <source srcset="img/modal/trial-mobile.svg" />
               <img src="img/modal/trial-mobile.png" alt="Изображение модального окна" />
             </picture>
           </div>
@@ -394,27 +521,70 @@
 </footer>
 
     </div>
-    <div class="popup popup_popup">
-	<div class="popup__content">
-		<div class="popup__body">
-			<div class="popup__close"></div>
-		</div>
-	</div>
-</div>
-<div class="popup popup_massagename-message">
-	<div class="popup__content">
-		<div class="popup__body">
-			<div class="popup__close"></div>
-		</div>
-	</div>
-</div>
-<div class="popup popup_video">
-	<div class="popup__content">
-		<div class="popup__body">
-			<div class="popup__close popup__close_video"></div>
-			<div class="popup__video _video"></div>
-		</div>
-	</div>
+    <div class="popup">
+  <div class="popup__body">
+    <div class="popup__inner">
+      <div class="popup__decorate popup__decorate--obj-pos-top-right">
+        <picture>
+          <source srcset="img/modal/main-modal-left.svg" />
+          <img src="img/modal/main-modal-left.png" alt="левая рамка модального окна" />
+        </picture>
+      </div>
+      <div class="popup__content">
+        <button class="popup__close">Закрыть</button>
+        <legend class="popup__heading">Оплата услуг</legend>
+        <form class="popup__form main-form">
+          <div class="main-form__group">
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text error" type="text" placeholder="Имя" value="" />
+            </div>
+          </div>
+          <div class="main-form__group">
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text" type="tel" placeholder="Телефон" value="" />
+            </div>
+          </div>
+          <!-- <div class="main-form__group">
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text error" type="text" placeholder="Имя" value="" />
+            </div>
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text" type="tel" placeholder="Телефон" value="" />
+            </div>
+          </div> -->
+          <div class="main-form__group main-form__group">
+            <div class="main-form__item main-form__item--full-width">
+              <input class="field field--text" type="email" placeholder="Почта" value="" />
+            </div>
+          </div>
+          <div class="main-form__group">
+            <div class="main-form__item main-form__item--full-width main-form__item--currency-rub">
+              <input
+                class="field field--number field--padding-right"
+                type="number"
+                placeholder="Сумма платежа"
+                value=""
+              />
+            </div>
+          </div>
+          <p class="main-form__text">
+            Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями договора оферты и обработку
+            персональных данных.
+          </p>
+          <div class="main-form__item main-form__item--button">
+            <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+          </div>
+        </form>
+      </div>
+      <div class="popup__decorate popup__decorate--obj-pos-top-left">
+        <picture>
+          <!-- <source srcset="img/modal/trial-side.svg" /> -->
+          <source srcset="img/modal/main-modal-right.svg" />
+          <img src="img/modal/main-modal-right.png" alt="правая рамка модального окна" />
+        </picture>
+      </div>
+    </div>
+  </div>
 </div>
  <script src="js/app.min.js"></script>
 

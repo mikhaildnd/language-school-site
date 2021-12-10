@@ -514,12 +514,7 @@
             </ul>
           </div>
           <div class="learning-way__target learning-target">
-            <div
-              class="
-                learning-target__image learning-target__image--learning-target
-                image-decorate image-decorate--rounded
-              "
-            >
+            <div class="learning-target__image image-decorate image-decorate--rounded">
               <picture>
                 <source
                   srcset="img/learning-target/learning-target.webp"
@@ -915,27 +910,70 @@
 </footer>
 
     </div>
-    <div class="popup popup_popup">
-	<div class="popup__content">
-		<div class="popup__body">
-			<div class="popup__close"></div>
-		</div>
-	</div>
-</div>
-<div class="popup popup_massagename-message">
-	<div class="popup__content">
-		<div class="popup__body">
-			<div class="popup__close"></div>
-		</div>
-	</div>
-</div>
-<div class="popup popup_video">
-	<div class="popup__content">
-		<div class="popup__body">
-			<div class="popup__close popup__close_video"></div>
-			<div class="popup__video _video"></div>
-		</div>
-	</div>
+    <div class="popup">
+  <div class="popup__body">
+    <div class="popup__inner">
+      <div class="popup__decorate popup__decorate--obj-pos-top-right">
+        <picture>
+          <source srcset="img/modal/main-modal-left.svg" />
+          <img src="img/modal/main-modal-left.png" alt="левая рамка модального окна" />
+        </picture>
+      </div>
+      <div class="popup__content">
+        <button class="popup__close">Закрыть</button>
+        <legend class="popup__heading">Оплата услуг</legend>
+        <form class="popup__form main-form">
+          <div class="main-form__group">
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text error" type="text" placeholder="Имя" value="" />
+            </div>
+          </div>
+          <div class="main-form__group">
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text" type="tel" placeholder="Телефон" value="" />
+            </div>
+          </div>
+          <!-- <div class="main-form__group">
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text error" type="text" placeholder="Имя" value="" />
+            </div>
+            <div class="main-form__item main-form__item--half-width-768">
+              <input class="field field--text" type="tel" placeholder="Телефон" value="" />
+            </div>
+          </div> -->
+          <div class="main-form__group main-form__group">
+            <div class="main-form__item main-form__item--full-width">
+              <input class="field field--text" type="email" placeholder="Почта" value="" />
+            </div>
+          </div>
+          <div class="main-form__group">
+            <div class="main-form__item main-form__item--full-width main-form__item--currency-rub">
+              <input
+                class="field field--number field--padding-right"
+                type="number"
+                placeholder="Сумма платежа"
+                value=""
+              />
+            </div>
+          </div>
+          <p class="main-form__text">
+            Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями договора оферты и обработку
+            персональных данных.
+          </p>
+          <div class="main-form__item main-form__item--button">
+            <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
+          </div>
+        </form>
+      </div>
+      <div class="popup__decorate popup__decorate--obj-pos-top-left">
+        <picture>
+          <!-- <source srcset="img/modal/trial-side.svg" /> -->
+          <source srcset="img/modal/main-modal-right.svg" />
+          <img src="img/modal/main-modal-right.png" alt="правая рамка модального окна" />
+        </picture>
+      </div>
+    </div>
+  </div>
 </div>
  <script src="js/app.min.js"></script>
 

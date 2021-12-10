@@ -22,15 +22,46 @@
       }
     }
   }
+  // .main-form__text
+  &__text {
+    font-family: $text;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
   // .main-form__item
   &__item {
     margin-left: 7.5px;
     margin-right: 7.5px; //todo extends
+    &--currency-rub {
+      position: relative;
+      &::after {
+        @include h2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '\20BD';
+        width: 50px;
+        height: 100%;
+        background-color: transparent;
+      }
+    }
     &--name-field {
+      //!del
       @extend %pair-fields;
     }
     &--phone-field {
       @extend %pair-fields;
+    }
+    &--half-width-768 {
+      flex-basis: calc(100% - 15px);
+      @media (min-width: $md4) {
+        flex-basis: calc(50% - 15px);
+      }
     }
     &--full-width {
       flex-basis: calc(100% - 15px);
@@ -38,20 +69,6 @@
     &--tab {
       //todo мб убрать модификатор
       flex-basis: calc(50% - 15px);
-      // label {
-      //   @include h2_mobile;
-      //   text-align: center;
-      //   border-bottom: 2px solid #94c6c4;
-      //   display: block;
-      //   padding: 10px 12px;
-      //   cursor: pointer;
-      // }
-      // input:checked + label {
-      //   border-color: $green;
-      // }
-      // input {
-      //   display: none;
-      // }
     }
     &--select {
       flex-basis: 100%;
@@ -95,12 +112,20 @@
   @include h3_mobile;
   @include field-decorate;
   width: 100%;
+  &--padding-right {
+    padding-right: 50px;
+  }
   &--select {
     padding-right: 1.5em; //отступ для стрелки
     appearance: none;
   }
   &--text {
     @extend %field-error;
+  }
+  &--number {
+    position: relative;
+    @extend %field-error;
+    appearance: textfield;
   }
 }
 .radio-button {

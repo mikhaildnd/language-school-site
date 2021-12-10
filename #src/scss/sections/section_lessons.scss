@@ -17,27 +17,49 @@
   }
   // .lessons__item
   &__item {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    overflow: hidden;
     @media (min-width: $md5) {
       flex-basis: calc(50% - 20px);
-      justify-content: flex-start;
       margin-left: 10px;
       margin-right: 10px;
     }
     @media (min-width: $md4) {
-      flex-basis: auto;
+      flex-basis: calc(33.333% - 20px);
+    }
+    @media (min-width: $md3) {
+      justify-content: flex-start;
+    }
+    @media (min-width: $md1) {
+      flex-basis: calc(25% - 20px);
     }
   }
   // .lessons__text
   &__text {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
     @include h1_mobile;
-    align-self: flex-end;
-    margin-left: -100px;
+    text-transform: uppercase;
     @media (min-width: $md7) {
       @include h1;
+    }
+    @media (min-width: $md6) {
+      left: 25%;
+    }
+    @media (min-width: $md5) {
+      left: 10%;
+    }
+    @media (min-width: $md4) {
+      left: 5%;
+    }
+    @media (min-width: $md3) {
+      left: 0;
+    }
+    @media (min-width: $md1) {
+      left: 30%;
     }
     span {
       background-color: $white;
