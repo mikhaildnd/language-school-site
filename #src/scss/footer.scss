@@ -109,7 +109,7 @@
       order: 3;
     }
   }
-  // .footer__bottom-tem
+  // .footer__bottom-item
   &__bottom-item {
     font-size: 12px;
     @media (min-width: $md3) {
@@ -119,8 +119,5 @@
   // .footer__copyright
   &__copyright {
     margin-right: 20px;
-  }
-  // .footer__autor
-  &__autor {
   }
 }
