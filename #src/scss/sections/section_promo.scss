@@ -37,11 +37,7 @@
         grid-template-columns: minmax(45%, 1fr) minmax(200px, 560px);
       }
       &::after {
-        background-image: url('../../img/main-image.png');
-        // background-image: image-set(
-        //   url('../../img/main-image.svg') type('image/svg'),
-        //   url('../../img/main-image.png') type('image/png')
-        // );
+        background-image: url('../../img/main-image.svg');
         @media (min-width: $md3) {
           height: 500px;
         }
