@@ -1,31 +1,23 @@
-//<МИКСИНЫ>
 @import 'mixins';
-//</МИКСИНЫ>
+@import 'vars';
 
-//<ШРИФТЫ>
-
-//<Подключаем шрифты>
-//&display=swap&subset=cyrillic-ext
+/* Fonts */
 // @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap&subset=cyrillic-ext');
 @import 'fonts';
-//</Подключаем шрифты>
 
-//<Иконочные шрифты>
+/* Icon font */
 //@import "icons";
-//</Иконочные шрифты>
 
-//<Шрифт по умолчанию>
+//Font by default>
 $fontFamily: 'Raleway-Light';
 $fontSize: 16;
-//</Шрифт по умолчанию>
 
-//</ШРИФТЫ>
-
-//<ПЕРЕМЕННЫЕ>
+/* Width variables */
 $minWidth: 320px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1300px;
 
+/* Breakpoints variables */
 $md1: 1300px;
 $md2: 1024px;
 $md3: 992px;
@@ -36,57 +28,56 @@ $md7: 375px;
 
 $mainColor: #000;
 
-//</ПЕРЕМЕННЫЕ>
-
-//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+/* null */
 @import 'null';
 body {
   color: $mainColor;
-  &._lock {
-    overflow: hidden;
+}
+
+// .wrapper {
+//   width: 100%;
+//   min-height: 100%;
+//   overflow: hidden;
+// }
+
+.container {
+  --container-gutter: 20px;
+  max-width: $maxWidthContainer;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+  &--filled-block {
+    --container-gutter: 0;
+    @media (min-width: $md5) {
+      --container-gutter: 20px;
+    }
   }
 }
-//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
 
-//<ОБОЛОЧКА>
-.wrapper {
-  width: 100%;
-  min-height: 100%;
+/* Visible-hidden class */
+.visible-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
 }
-//</ОБОЛОЧКА>
 
-//<ОСНОВНАЯ СЕТКА>
-.container {
-  max-width: $maxWidthContainer;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  // @media (min-width: $md2) {
-  //   padding-left: 40px;
-  //   padding-right: 40px;
-  // }
-  // @media (min-width: $md4) {
-  //   max-width: 720px;
-  // }
-}
-//</ОСНОВНАЯ СЕТКА>
-
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
-// @import 'animations';
-@import 'vars';
+/* Blocks */
+@import 'header';
+@import 'footer';
 @import 'forms';
-@import 'extends';
 @import 'blocks/image-decorate';
 @import 'blocks/social-links'; //сами иконки подключены шрифтом
 @import 'blocks/abbreviation-bg';
 @import 'blocks/main-form';
 @import 'blocks/popup';
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
 
-//<ПОДКЛЮЧЕНИЕ СТИЛЕЙ БЛОКОВ>
+/* Sections */
 @import 'sections/section_promo';
 @import 'sections/section_lessons';
 @import 'sections/section_languages';
@@ -95,76 +86,33 @@ body {
 @import 'sections/section_result';
 @import 'sections/section_our-values';
 @import 'sections/section_prices';
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
-@import 'header';
-@import 'footer';
+@import 'sections/section_features';
+@import 'sections/section_offer-text';
+
+/* Pages */
 @import 'index';
-@import 'for-kids-online';
 @import 'for-adults';
-@import 'offer';
 
-//<ОСНОВНОЙ БЛОК>
+/* Page */
 .page {
-  @include max-width-limiter;
-  flex-grow: 1;
-  flex-shrink: 0;
-  margin-top: 60px;
-  padding-top: 70px;
-  &__promo {
+  margin-top: 70px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  @media (min-width: $md1) {
+    padding-bottom: 140px;
+  }
+  &__item {
     margin-bottom: 100px;
-  }
-  &__lessons {
-    @include offset-standart;
-
-    // margin-bottom: 80px;
-    // @media (min-width: $md4) {
-    //   margin-bottom: 70px;
-    // }
-  }
-  &__languages {
-    @include offset-standart;
-  }
-  &__benefits {
-    @include offset-standart;
-    &--width-limit-975 {
-      max-width: 975px;
+    &:last-child {
+      margin-bottom: 0;
     }
-    &--width-limit-1175 {
-      max-width: 1175px;
+    @media (min-width: $md1) {
+      margin-bottom: 140px;
     }
-  }
-  &__trial-lesson {
-    @include offset-standart;
-  }
-  &__for-clients {
-    @include offset-standart;
-  }
-  &__learning-way {
-    @include offset-standart;
-  }
-  &__history {
-    @include offset-standart;
-  }
-  &__features {
-    @include offset-standart;
-  }
-  &__tip {
-    @include offset-standart;
-  }
-  &__result {
-    @include offset-standart;
-  }
-  &__our-values {
-    @include offset-standart;
-  }
-  &__prices {
-    @include offset-standart;
-  }
-  &__todo-list {
-    @include offset-standart;
-  }
-  &__learning-tip {
-    @include padding-container(980px, $pl, $pr);
-    @include offset-standart;
+    &--gutter-static-100 {
+      @media (min-width: $md1) {
+        margin-bottom: 100px;
+      }
+    }
   }
 }
