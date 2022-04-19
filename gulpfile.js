@@ -1,9 +1,4 @@
 import gulp from 'gulp';
-// import logger from 'gulplog';
-import webpCss from 'gulp-webpcss';
-// import webpHtml from 'gulp-webp-html';
-// import sourcemap from 'gulp-sourcemaps'; //не установлен
-// import debug from 'gulp-debug';
 import plumber from 'gulp-plumber';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -109,16 +104,12 @@ export const scripts = () => {
 
 // html
 export const html = () => {
-  return (
-    gulp
-      .src(_path.src.html, {})
-      // .pipe(debug({ title: '1:' }))
-      .pipe(plumber())
-      .pipe(fileinclude())
-      // .pipe(webpHtml())
-      .pipe(gulp.dest(_path.build.html))
-      .pipe(sync.stream())
-  );
+  return gulp
+    .src(_path.src.html, {})
+    .pipe(plumber())
+    .pipe(fileinclude())
+    .pipe(gulp.dest(_path.build.html))
+    .pipe(sync.stream());
 };
 //iconfonts
 export const iconfonts = () => {
@@ -139,14 +130,7 @@ export const styles = () => {
     .pipe(
       autoprefixer({
         grid: true,
-        overrideBrowserslist: ['last 5 versions'],
         cascade: true,
-      })
-    )
-    .pipe(
-      webpCss({
-        webpClass: '._webp',
-        noWebpClass: '._no-webp',
       })
     )
     .pipe(gulp.dest(_path.build.css))
