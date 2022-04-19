@@ -1,43 +1,32 @@
 //Benefits
 .benefits {
-  @include padding-container($maxWidthContainer, $pl, $pr);
-  @media (min-width: $md4) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, min-content);
-    grid-template-areas:
-      'text text text .'
-      'list list list list';
-  }
-  @media (min-width: $md2) {
-    @include container-paddings($pl, $pr);
-    grid-template-columns: repeat(6, minmax(min-content, 1fr));
-    grid-template-areas: 'text text list list list list';
-  }
-  &--text-top {
-    @media (min-width: $md2) {
-      grid-template-areas:
-        'text text text . . .'
-        'list list list list list list';
-    }
-    & .benefits__text-block {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  }
-  // .benefits__text-block
-  &__text-block {
-    margin-bottom: 40px;
+  // .benefits__content
+  &__content {
     @media (min-width: $md4) {
-      grid-area: text;
+      --col-size: minmax(min-content, 340px);
+      display: grid;
+      grid-template-columns: var(--col-size) 1fr;
+      grid-template-areas:
+        'heading list'
+        'text list';
+      align-items: start;
+      column-gap: 30px;
     }
     @media (min-width: $md2) {
-      margin-bottom: 0;
-      margin-right: 40px;
+      column-gap: 60px;
+    }
+    &--kids-offline {
+      @media (min-width: $md4) {
+        --col-size: minmax(340px, 1fr);
+        grid-template-areas:
+          'heading .'
+          'list list';
+      }
     }
   }
   // .benefits__heading
   &__heading {
+    grid-area: heading;
     @include h1_mobile;
     @include text-gradient;
     &:not(:last-child) {
@@ -46,97 +35,71 @@
   }
   // .benefits__text
   &__text {
+    grid-area: text;
     @include h3_mobile;
+    margin-bottom: 40px;
+    @media (min-width: $md4) {
+      margin-bottom: 0;
+    }
   }
   // .benefits__list
   &__list {
+    grid-area: list;
+    display: grid;
+    row-gap: 20px;
     @media (min-width: $md5) {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 15px -10px;
-
-      //   display: grid;
-      //   grid-template-columns: repeat(2, minmax(min-content, 1fr));
-      //   grid-template-areas:
-      //     'teachers lang'
-      //     'online personal'
-      //     'individual accreditate';
-      //   gap: 0 20px;
-    }
-    @media (min-width: $md4) {
-      grid-area: list;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 30px;
     }
     &--result {
-      & .benefits__item {
-        @media (min-width: $md5) {
-          flex-basis: calc(100% - 20px);
-        }
-        @media (min-width: $md4) {
-          flex-basis: calc(33.333% - 20px);
-        }
+      @media (min-width: $md5) {
+        grid-template-columns: auto;
+      }
+      @media (min-width: $md3) {
+        grid-template-columns: repeat(2, auto);
+      }
+      @media (min-width: $md1) {
+        grid-template-columns: repeat(3, auto);
       }
     }
   }
   // .benefits__item
   &__item {
     @include h2_mobile;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
     align-items: center;
+    column-gap: 15px;
     &::before {
       @include icon-before(36px, inline-block);
-      margin-right: 15px;
-    }
-    @media (min-width: $md5) {
-      flex-basis: calc(50% - 20px);
-      margin: 15px 10px;
-      &::before {
-        flex-shrink: 0;
-      }
     }
     &--teachers {
-      @media (min-width: $md4) {
-        // grid-area: teachers;
-      }
       &::before {
         background-image: url(../img/icons/benefits/teachers.svg);
       }
     }
     &--online {
-      @media (min-width: $md4) {
-        // grid-area: online;
-      }
       &::before {
         background-image: url(../img/icons/benefits/online.svg);
       }
     }
     &--individual {
-      @media (min-width: $md4) {
-        // grid-area: individual;
-      }
       &::before {
         background-image: url(../img/icons/benefits/individual.svg);
       }
     }
     &--lang {
-      @media (min-width: $md4) {
-        // grid-area: lang;
-      }
       &::before {
         background-image: url(../img/icons/benefits/lang.svg);
       }
     }
     &--personal {
-      @media (min-width: $md4) {
-        // grid-area: personal;
-      }
       &::before {
         background-image: url(../img/icons/benefits/personal.svg);
       }
     }
     &--accreditate {
-      @media (min-width: $md4) {
-        // grid-area: accreditate;
-      }
       &::before {
         background-image: url(../img/icons/benefits/accreditate.svg);
       }
@@ -175,7 +138,6 @@
 }
 //For clients
 .for-clients {
-  @include padding-container($maxWidthContainer, $pl, $pr);
   // .for-clients__item
   &__item {
     margin-bottom: 100px;
@@ -381,7 +343,12 @@
 }
 //Learning-way
 .learning-way {
-  @include padding-container(920px, $pl, $pr);
+  display: flex;
+  justify-content: center;
+  // .learning-way__content
+  &__content {
+    max-width: 920px;
+  }
   // .learning-way__text-wrapper
   &__text-wrapper {
     margin-bottom: 40px;
@@ -401,9 +368,9 @@
   &__method {
     margin-bottom: 100px;
   }
-  // .learning-way__steps
-  &__steps {
-  }
+  // // .learning-way__steps
+  // &__steps {
+  // }
 }
 //Learning-method (part of "learning-way" section)
 .learning-method {
@@ -588,7 +555,12 @@
 }
 //History
 .history {
-  @include padding-container(920px, $pl, $pr);
+  // .history__content
+  &__content {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   // .history__heading
   &__heading {
     @include h1_mobile;
@@ -608,66 +580,67 @@
     margin-right: auto;
   }
 }
-//Nav-line
+//nav-line
 .nav-line {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+  //нужный год - 1
+  --start-year: 2015;
+  counter-reset: timeline var(--start-year, 2015);
   font-size: 16px;
   margin-top: 1.875em;
   &::before {
     position: absolute;
-    top: 50%;
+    bottom: 9px;
     content: '';
     width: 100%;
     height: 2px;
     background-color: $mint;
-    transform: translateY(-50%);
+  }
+  // .nav-line__wrapper
+  &__wrapper {
+    padding-bottom: 5px;
   }
   // .nav-line__item
   &__item {
     position: relative;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: minmax(min-content, 50px);
+    row-gap: 7px;
     justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-    margin-right: 30px;
+    justify-items: center;
+    align-content: end;
     cursor: pointer;
-    &:first-child {
-      margin-left: 60px;
+    outline: none;
+    &::before {
+      counter-increment: timeline;
+      content: counter(timeline);
+      display: block;
+      font-family: $text;
+      line-height: 1.625;
+      transition: color 0.2s linear;
     }
-    &:last-child {
-      margin-right: 60px;
+    /*  bullet */
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $mint;
+      transition: box-shadow 0.2s linear, background-color 0.2s linear;
     }
-    &:hover {
-      .nav-line__bullet {
+    &.swiper-slide {
+      flex-shrink: 1;
+    }
+    &.swiper-slide-thumb-active,
+    &:focus-visible {
+      &::before {
+        color: $green;
+      }
+      &::after {
         background-color: $green;
         box-shadow: 0 0 5px 1px $green;
       }
-      .nav-line__number {
-        color: $green;
-      }
     }
-  }
-  // .nav-line__bullet
-  &__bullet {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $mint;
-    transition: box-shadow, background-color 0.2s linear;
-  }
-  // .nav-line__number
-  //не исп. инклюд, fz в nav-line для изменения отступа при изменении fz
-  &__number {
-    font-family: $text;
-    line-height: 1.625;
-    position: absolute;
-    display: block;
-    top: -1.875em;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: color 0.2s linear;
   }
 }
 //Slider-history
