@@ -1,77 +1,79 @@
-.main-form {
-  // .main-form__group
-  &__group {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -7.5px;
-    margin-right: -7.5px;
+.form {
+  min-width: 280px;
+  // .form__section
+  &__section {
     margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @media (min-width: $md4) {
       margin-bottom: 14px;
     }
-    &--offset-bottom {
-      margin-bottom: 28px;
+    &--student-info {
+      grid-template-columns: 1fr;
+      margin-bottom: 26px;
       @media (min-width: $md4) {
         margin-bottom: 30px;
       }
     }
-    &--additional-group {
-      display: none;
-      &.show {
-        display: block;
-      }
+    &--select-language {
+      grid-template-columns: 1fr;
     }
-  }
-  // .main-form__text
-  &__text {
-    font-family: $text;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: 24px;
-    margin-bottom: 15px;
-  }
-  // .main-form__item
-  &__item {
-    margin-left: 7.5px;
-    margin-right: 7.5px; //todo extends
-    &--currency-rub {
-      position: relative;
-      &::after {
-        @include h2;
-        display: flex;
-        justify-content: center;
+    &--education-place {
+      .main-form__item {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 10px;
         align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: '\20BD';
-        width: 50px;
-        height: 100%;
-        background-color: transparent;
+        justify-content: start;
+      }
+      .form__item {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        column-gap: 10px;
       }
     }
-    &--name-field {
-      //!del
-      @extend %pair-fields;
+    &--submit {
+      grid-template-columns: 1fr;
+      justify-items: start;
     }
-    &--phone-field {
-      @extend %pair-fields;
-    }
-    &--half-width-768 {
-      flex-basis: calc(100% - 15px);
+    &--bottom-gutter-lg {
+      margin-bottom: 26px;
       @media (min-width: $md4) {
-        flex-basis: calc(50% - 15px);
+        margin-bottom: 30px;
       }
     }
-    &--full-width {
-      flex-basis: calc(100% - 15px);
+  }
+  // .form__group
+  &__group {
+    display: grid;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
     }
-    &--tab {
-      //todo мб убрать модификатор
-      flex-basis: calc(50% - 15px);
+    @media (min-width: $md4) {
+      margin-bottom: 14px;
     }
+    &--additional {
+      transition: all 0.2s linear;
+      &.hide {
+        margin-bottom: 0;
+        height: 0;
+      }
+    }
+    &--col-2 {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 12px;
+      @media (min-width: $md5) {
+        column-gap: 20px;
+      }
+    }
+  }
+  // .form__item
+  &__item {
     &--select {
-      flex-basis: 100%;
       position: relative;
       &::after {
         position: absolute;
@@ -94,30 +96,78 @@
         transform: perspective(100px) rotateX(0deg) translateX(-50%);
         opacity: 1;
       }
-    }
-    &--radio-pair {
-      display: flex;
-      align-items: center;
-    }
-    &--button {
-      text-align: center;
-      @media (min-width: $md4) {
-        text-align: initial;
+      select {
+        appearance: none;
+        padding-right: 1.5em;
       }
+    }
+  }
+  // .form__text
+  &__text {
+    // @extend %form-group-margin;
+    font-family: $text;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    @media (min-width: $md7) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: $md4) {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+  }
+  // .main-form__btn-wrapper
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // @extend %form-group-margin;
+    @media (min-width: $md4) {
+      justify-content: flex-start;
     }
   }
 }
 //Form fileds
+
+//extend styles
+%field-error {
+  &:invalid {
+    border: 1px solid #ffa0a0;
+    &:hover {
+      box-shadow: 0 2px 4px 0 #ffa0a0;
+    }
+  }
+}
+
 .field {
   @include h3_mobile;
-  @include field-decorate;
   width: 100%;
+  padding: 0.675em 1em;
+  border-radius: 10px;
+  border: 1px solid #ffeca0;
+  padding: 0.75em 1em;
+  background-color: $white;
+  transition: box-shadow 0.1s linear;
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4px 0 #ffeca0;
+  }
+  &:disabled {
+    border: 1px solid #f5f5f5;
+    background-color: #fcfcfc;
+    color: #858585;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  @media (min-width: $md4) {
+    padding: 0.75em 1em;
+  }
   &--padding-right {
     padding-right: 50px;
-  }
-  &--select {
-    padding-right: 1.5em; //отступ для стрелки
-    appearance: none;
   }
   &--text {
     @extend %field-error;
@@ -139,7 +189,9 @@
   appearance: none;
   color-adjust: exact;
   transition: box-shadow 0.1s linear;
-  &:hover {
+  outline: none;
+  &:hover:not(:checked),
+  &:focus-visible {
     box-shadow: 0 0 3px 1px $green;
   }
   &::before {
@@ -157,12 +209,12 @@
     width: 6px;
     height: 6px;
   }
-  &:active::before {
+  &:active:not(:checked)::before {
     background-color: $green;
     width: 12px;
     height: 12px;
   }
-  &.error {
+  &:invalid {
     border: 2px solid #bdbdbd;
     background-color: $white;
     box-shadow: none;
@@ -170,7 +222,7 @@
       background-color: $white;
     }
   }
-  &.inactive {
+  &:disabled {
     border: 2px solid #bdbdbd;
     background-color: #bdbdbd;
     box-shadow: none;
@@ -178,9 +230,9 @@
       background-color: #bdbdbd;
     }
   }
-  &--offset-right {
-    margin-right: 10px;
-  }
+  // &--offset-right {
+  //   margin-right: 10px;
+  // }
 }
 //todo сделать элементом наверн
 .label {
