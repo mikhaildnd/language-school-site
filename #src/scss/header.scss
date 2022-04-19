@@ -6,15 +6,19 @@
   right: 0;
   height: 70px;
   background-color: $white;
+  &__inner {
+    @include padding-container($maxWidthContainer, $pl, $pr);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
+
 .main-nav {
-  @include padding-container($maxWidthContainer, $pl, $pr);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
   // .main-nav__list
   &__list {
     display: flex;
@@ -180,8 +184,6 @@
     letter-spacing: 0.02rem;
     white-space: nowrap;
     @media (min-width: $md4) {
-      // margin-left: 12px;
-      // margin-right: 12px;
       margin-left: 21px;
       margin-right: 21px;
     }
