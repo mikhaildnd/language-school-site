@@ -2,542 +2,681 @@
 <html lang="ru">
   @@include('_head.html',{ "title":"for-kids-online" })
   <body>
-    <div class="wrapper">
-      @@include('_header.html',{})
+    @@include('_header.html',{})
+    <main>
       <div class="page">
-        <div class="promo page__promo">
-          <div class="promo__info">
-            <h1 class="promo__heading">ИЗУЧЕНИЕ ЯЗЫКОВ ОНЛАЙН ДЛЯ ДЕТЕЙ С 3 ЛЕТ</h1>
-            <a href="" class="promo__btn btn btn--size-normal btn--green">Пробное занятие</a>
-          </div>
-          <div class="promo__decoration">
-            <div class="promo__inner promo__inner--width-limiter-450">
-              <div class="promo__image-decoration">
-                <picture>
-                  <source srcset="img/for-kids/for-kids-hero-frame.svg" type="image/svg+xml" />
-                  <img src="img/for-kids/for-kids-hero-frame.png" alt="Композиция" />
-                </picture>
-              </div>
-              <div
-                class="
-                  promo__image-photo promo__image-photo--kids-online promo__image-photo--rounded
-                "
-              >
-                <picture>
-                  <source srcset="img/for-kids/for-kids-hero-image.webp" type="image/webp" />
-                  <img src="img/for-kids/for-kids-hero-image.jpg" alt="Композиция" />
-                </picture>
+        <!-- Promo -->
+        <div class="promo promo page__item page__item--gutter-static-100">
+          <div class="container">
+            <div class="promo__content promo__content--kids-online">
+              <div class="promo__info">
+                <h1 class="promo__heading">ИЗУЧЕНИЕ ЯЗЫКОВ ОНЛАЙН ДЛЯ ДЕТЕЙ С 3 ЛЕТ</h1>
+                <button data-trigger-for="trial" class="btn btn--size-normal btn--green">
+                  Пробное занятие
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="languages page__languages">
-          <div class="languages__inner">
-            <h3 class="languages__heading">
-              <span>У нас ваши дети</span>
-              <br />
-              <span>могут выучить:</span>
-            </h3>
-            <ul class="languages__list">
-              <li class="languages__item languages__item--eng">Английский</li>
-              <li class="languages__item languages__item--de">Немецкий</li>
-              <li class="languages__item languages__item--esp">Испанский</li>
-              <li class="languages__item languages__item--fr">Французский</li>
+        <!--  Languages -->
+        <div class="page__item">
+          <div class="container container--filled-block">
+            <section class="languages">
+              <div class="languages__content">
+                <h3 class="languages__heading">
+                  <span>У нас ваши дети</span>
+                  <br />
+                  <span>могут выучить:</span>
+                </h3>
+                <ul class="languages__list">
+                  <li class="languages__item languages__item--eng">Английский</li>
+                  <li class="languages__item languages__item--de">Немецкий</li>
+                  <li class="languages__item languages__item--esp">Испанский</li>
+                  <li class="languages__item languages__item--fr">Французский</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Features -->
+        <div class="features page__item">
+          <div class="container">
+            <div class="features__content">
+              <div class="features__text">
+                <h2 class="features__heading"><span>Выбирая для своего ребенка</span></h2>
+                <p>
+                  изучение языков в нашей языковой школе, вы должны знать об особенностях нашего
+                  онлайн-обучения:
+                </p>
+              </div>
+              <ul class="features__list">
+                <li class="features__list-item">
+                  <p>
+                    На первом занятии мы узнаем об интересах вашего ребенка, его увлечениях и
+                    особенностях.
+                  </p>
+                </li>
+                <li class="features__list-item">
+                  <p>
+                    Далее, после общения с ним, мы составляем ИНДИВИДУАЛЬНЫЙ ОБРАЗОВАТЕЛЬНЫЙ МАРШРУТ
+                    конкретно для вас.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Tip -->
+        <div class="page__item page__item--minor-gutters-standart">
+          <div class="container container--filled-block">
+            <div class="tip">
+              <div class="tip__content">
+                <div class="tip__message">
+                  <div class="tip__message-wrapper">
+                    <h2 class="tip__message-heading">
+                      <span>
+                        Выучить язык
+                        <br />
+                        совсем несложно
+                      </span>
+                    </h2>
+                  </div>
+                  <button data-trigger-for="trial" class="btn btn--green btn--size-normal">
+                    Пробное занятие
+                  </button>
+                </div>
+                <div class="tip__image">
+                  <div
+                    class="image-decorate image-decorate--layer-top image-decorate--rounded-bottom tip__image-inner tip__image-inner--frames-kids"
+                  >
+                    <picture>
+                      <img src="img/for-kids/for-kids-image-lg.jpg" alt="ученики" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Result -->
+        <div class="result page__item">
+          <div class="result__content">
+            <h2 class="result__heading">
+              <div class="container">
+                <span>Результата достигаем за счет:</span>
+              </div>
+            </h2>
+            <ul class="result__list swiper container">
+              <div class="result__list-wrapper swiper-wrapper">
+                <li class="result__item item-result swiper-slide">
+                  <p class="item-result__text item-result__text--icon-books">
+                    языковой цели для каждого студента и срока достижения цели
+                  </p>
+                </li>
+                <li class="result__item item-result swiper-slide">
+                  <p class="item-result__text item-result__text--icon-device">
+                    максимального погружения в языковую среду с носителями языка
+                  </p>
+                </li>
+                <li class="result__item item-result swiper-slide">
+                  <p class="item-result__text item-result__text--icon-brain">
+                    грамматики, письма, чтения, аудирования на каждом уроке
+                  </p>
+                </li>
+                <li class="result__item item-result swiper-slide">
+                  <p class="item-result__text item-result__text--icon-innovation">
+                    заданийна основе интересов и увлечений детей
+                  </p>
+                </li>
+                <li class="result__item item-result swiper-slide">
+                  <p class="item-result__text item-result__text--icon-audiobook">
+                    обратной связи с родителями каждые 8-10 занятий с промежуточными тестами
+                  </p>
+                </li>
+                <li class="result__item item-result swiper-slide">
+                  <p class="item-result__text item-result__text--icon-network">
+                    чёткого тайминга занятий и контроля результатов
+                  </p>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
-        <div class="features page__features">
-          <div class="features__text">
-            <h2 class="features__heading"><span>Выбирая для своего ребенка</span></h2>
-            <p>
-              изучение языков в нашей языковой школе, вы должны знать об особенностях нашего
-              онлайн-обучения:
-            </p>
-          </div>
-          <ul class="features__list">
-            <li class="features__list-item">
-              <p>
-                На первом занятии мы узнаем об интересах вашего ребенка, его увлечениях и
-                особенностях.
-              </p>
-            </li>
-            <li class="features__list-item">
-              <p>
-                Далее, после общения с ним, мы составляем ИНДИВИДУАЛЬНЫЙ ОБРАЗОВАТЕЛЬНЫЙ МАРШРУТ
-                конкретно для вас.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="tip page__tip">
-          <div class="tip__inner">
-            <div class="tip__message">
-              <div class="tip__message-wrapper">
-                <h2 class="tip__message-heading">
-                  <span>
-                    Выучить язык
-                    <br />
-                    совсем несложно
-                  </span>
+        <!-- Our-values -->
+        <div class="our-values page__item">
+          <div class="container">
+            <div class="our-values__content">
+              <div class="our-values__group">
+                <h2 class="our-values__heading">
+                  <span>Что такое иностранные языки для нас?</span>
                 </h2>
-                <!-- <p class="tip__message-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, vero!
-                </p> -->
+                <ul class="our-values__list">
+                  <li class="our-values__list-item">
+                    <span class="our-values__list-item-content">
+                      <svg
+                        class="our-values__list-item-decoration"
+                        width="30"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
+                        <line
+                          x1="0"
+                          y1="50%"
+                          x2="100%"
+                          y2="50%"
+                          stroke-width="2"
+                          stroke="rebeccapurple"
+                          stroke-dasharray="6,4"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span class="our-values__list-item-text">Навыки</span>
+                    </span>
+                  </li>
+                  <li class="our-values__list-item">
+                    <span class="our-values__list-item-content">
+                      <svg
+                        class="our-values__list-item-decoration"
+                        width="30"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
+                        <line
+                          x1="0"
+                          y1="50%"
+                          x2="100%"
+                          y2="50%"
+                          stroke-width="2"
+                          stroke="rebeccapurple"
+                          stroke-dasharray="6,4"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span class="our-values__list-item-text">Культурная среда</span>
+                    </span>
+                  </li>
+                  <li class="our-values__list-item">
+                    <span class="our-values__list-item-content">
+                      <svg
+                        class="our-values__list-item-decoration"
+                        width="30"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
+                        <line
+                          x1="0"
+                          y1="50%"
+                          x2="100%"
+                          y2="50%"
+                          stroke-width="2"
+                          stroke="rebeccapurple"
+                          stroke-dasharray="6,4"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span class="our-values__list-item-text">Жизненные ценности</span>
+                    </span>
+                  </li>
+                  <li class="our-values__list-item">
+                    <span class="our-values__list-item-content">
+                      <svg
+                        class="our-values__list-item-decoration"
+                        width="30"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
+                        <line
+                          x1="0"
+                          y1="50%"
+                          x2="100%"
+                          y2="50%"
+                          stroke-width="2"
+                          stroke="rebeccapurple"
+                          stroke-dasharray="6,4"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span class="our-values__list-item-text">Знания</span>
+                    </span>
+                  </li>
+                  <li class="our-values__list-item">
+                    <span class="our-values__list-item-content">
+                      <svg
+                        class="our-values__list-item-decoration"
+                        width="30"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
+                        <line
+                          x1="0"
+                          y1="50%"
+                          x2="100%"
+                          y2="50%"
+                          stroke-width="2"
+                          stroke="rebeccapurple"
+                          stroke-dasharray="6,4"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span class="our-values__list-item-text">Языковая среда</span>
+                    </span>
+                  </li>
+                  <li class="our-values__list-item">
+                    <span class="our-values__list-item-content">
+                      <svg
+                        class="our-values__list-item-decoration"
+                        width="30"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
+                        <line
+                          x1="0"
+                          y1="50%"
+                          x2="100%"
+                          y2="50%"
+                          stroke-width="2"
+                          stroke="rebeccapurple"
+                          stroke-dasharray="6,4"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span class="our-values__list-item-text">Дружественная атмосфера</span>
+                    </span>
+                  </li>
+                </ul>
               </div>
-              <button class="tip__button btn btn--green btn--size-normal">Пробное занятие</button>
-            </div>
-            <div class="tip__image">
               <div
-                class="
-                  image-decorate image-decorate--layer-top image-decorate--rounded-bottom
-                  tip__image-inner tip__image-inner--frames-kids
-                "
+                class="our-values__image image-decorate image-decorate--layer-top image-decorate--circle-exclude-lt"
               >
                 <picture>
-                  <img src="img/for-kids/for-kids-image-lg.jpg" alt="ученики" />
+                  <source
+                    srcset="img/for-kids/for-kids-image-lg.webp"
+                    media="(min-width: 1300px)"
+                    type="image/webp"
+                  />
+                  <source srcset="img/for-kids/for-kids-image.webp" type="image/webp" />
+                  <img src="img/for-kids/for-kids-image.jpg" alt="Фото учащихся младшей группы" />
                 </picture>
               </div>
             </div>
           </div>
         </div>
-        <div class="result page__result">
-          <h2 class="result__heading"><span>Результата достигаем за счет:</span></h2>
-          <div class="result__list">
-            <div class="result__item item-result">
-              <p class="item-result__text item-result__text--icon-books">
-                языковой цели для каждого студента и срока достижения цели
-              </p>
-            </div>
-            <div class="result__item item-result">
-              <p class="item-result__text item-result__text--icon-device">
-                максимального погружения в языковую среду с носителями языка
-              </p>
-            </div>
-            <div class="result__item item-result">
-              <p class="item-result__text item-result__text--icon-brain">
-                грамматики, письма, чтения, аудирования на каждом уроке
-              </p>
-            </div>
-            <div class="result__item item-result">
-              <p class="item-result__text item-result__text--icon-innovation">
-                заданийна основе интересов и увлечений детей
-              </p>
-            </div>
-            <div class="result__item item-result">
-              <p class="item-result__text item-result__text--icon-audiobook">
-                обратной связи с родителями каждые 8-10 занятий с промежуточными тестами
-              </p>
-            </div>
-            <div class="result__item item-result">
-              <p class="item-result__text item-result__text--icon-network">
-                чёткого тайминга занятий и контроля результатов
-              </p>
+        <!-- Prices -->
+        <div class="prices page__item" data-tabs="prices-tabs">
+          <div class="container">
+            <h2 class="prices__heading"><span>Пакеты обучения</span></h2>
+            <div class="prices__tabs">
+              <button class="prices__button">Онлайн</button>
+              <button class="prices__button">Оффлайн</button>
             </div>
           </div>
-        </div>
-        <div class="our-values page__our-values">
-          <div class="our-values__group">
-            <h2 class="our-values__heading"><span>Что такое иностранные языки для нас?</span></h2>
-            <ul class="our-values__list">
-              <li class="our-values__list-item">
-                <svg
-                  class="our-values__list-item-decoration"
-                  width="30"
-                  height="16"
-                  viewBox="0 0 100% 100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
-                  <line
-                    x1="0"
-                    y1="50%"
-                    x2="100%"
-                    y2="50%"
-                    stroke-width="2"
-                    stroke="rebeccapurple"
-                    stroke-dasharray="6,4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Навыки</span>
-              </li>
-              <li class="our-values__list-item">
-                <svg
-                  class="our-values__list-item-decoration"
-                  width="30"
-                  height="16"
-                  viewBox="0 0 100% 100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
-                  <line
-                    x1="0"
-                    y1="50%"
-                    x2="100%"
-                    y2="50%"
-                    stroke-width="2"
-                    stroke="rebeccapurple"
-                    stroke-dasharray="6,4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Культурная среда</span>
-              </li>
-              <li class="our-values__list-item">
-                <svg
-                  class="our-values__list-item-decoration"
-                  width="30"
-                  height="16"
-                  viewBox="0 0 100% 100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
-                  <line
-                    x1="0"
-                    y1="50%"
-                    x2="100%"
-                    y2="50%"
-                    stroke-width="2"
-                    stroke="rebeccapurple"
-                    stroke-dasharray="6,4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Жизненные ценности</span>
-              </li>
-              <li class="our-values__list-item">
-                <svg
-                  class="our-values__list-item-decoration"
-                  width="30"
-                  height="16"
-                  viewBox="0 0 100% 100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
-                  <line
-                    x1="0"
-                    y1="50%"
-                    x2="100%"
-                    y2="50%"
-                    stroke-width="2"
-                    stroke="rebeccapurple"
-                    stroke-dasharray="6,4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Знания</span>
-              </li>
-              <li class="our-values__list-item">
-                <svg
-                  class="our-values__list-item-decoration"
-                  width="30"
-                  height="16"
-                  viewBox="0 0 100% 100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
-                  <line
-                    x1="0"
-                    y1="50%"
-                    x2="100%"
-                    y2="50%"
-                    stroke-width="2"
-                    stroke="rebeccapurple"
-                    stroke-dasharray="6,4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Языковая среда</span>
-              </li>
-              <li class="our-values__list-item">
-                <svg
-                  class="our-values__list-item-decoration"
-                  width="30"
-                  height="16"
-                  viewBox="0 0 100% 100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="8" cy="50%" r="8" fill="rebeccapurple" />
-                  <line
-                    x1="0"
-                    y1="50%"
-                    x2="100%"
-                    y2="50%"
-                    stroke-width="2"
-                    stroke="rebeccapurple"
-                    stroke-dasharray="6,4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Дружественная атмосфера</span>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="
-              our-values__image
-              image-decorate image-decorate--layer-top image-decorate--circle-exclude-lt
-            "
-          >
-            <picture>
-              <source
-                srcset="img/for-kids/for-kids-image-lg.webp"
-                media="(min-width: 1300px)"
-                type="image/webp"
-              />
-              <source srcset="img/for-kids/for-kids-image.webp" type="image/webp" />
-              <img src="img/for-kids/for-kids-image.jpg" alt="Фото учащихся младшей группы" />
-            </picture>
-          </div>
-        </div>
-        <div class="prices page__prices">
-          <h2 class="prices__heading"><span>Пакеты обучения</span></h2>
-          <div class="prices__tabs">
-            <div class="prices__tabs-group">
-              <div class="tab-label prices__tabs-item">
-                <input id="individual" name="lessons-where" type="radio" checked />
-                <label for="individual">Индивидуальные занятия</label>
-              </div>
-              <div class="tab-label prices__tabs-item">
-                <input id="club" name="lessons-where" type="radio" />
-                <label for="club">Разговорный клуб</label>
-              </div>
+          <div class="prices__rates prices__rates--online" data-tabs="prices-online-tabs">
+            <div
+              class="prices__tabs prices__tabs--three-buttons prices__tabs--gutter-bottom-lg container"
+            >
+              <button class="prices__button">Групповые</button>
+              <button class="prices__button">Индивидуальные</button>
+              <button class="prices__button">Разговорный клуб</button>
             </div>
-            <div class="prices__tabs-group prices__tabs-group--short">
-              <div class="tab-label prices__tabs-item">
-                <input id="half-hour" name="lessons-duration" type="radio" checked />
-                <label for="half-hour">30 минут</label>
+            <div class="prices__rates-wrapper">
+              <div class="prices__rates-group swiper">
+                <div class="swiper-wrapper">
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">4 занятия по 30 мин</p>
+                      <div class="card-rates__cost">3400 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">8 занятий по 30 мин</p>
+                      <div class="card-rates__cost">6800 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div
+                      class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"
+                    ></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">12 занятий по 30 мин</p>
+                      <div class="card-rates__cost">10200 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">4 занятия по 30 мин</p>
+                      <div class="card-rates__cost">3400 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">8 занятий по 30 мин</p>
+                      <div class="card-rates__cost">6800 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div
+                      class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"
+                    ></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">12 занятий по 30 мин</p>
+                      <div class="card-rates__cost">10200 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="tab-label prices__tabs-item">
-                <input id="full-hour" name="lessons-duration" type="radio" />
-                <label for="full-hour">60 минут</label>
+              <div class="prices__rates-group swiper">
+                <div class="swiper-wrapper">
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">4 занятия по 30 мин</p>
+                      <div class="card-rates__cost">3400 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">8 занятий по 30 мин</p>
+                      <div class="card-rates__cost">6800 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div
+                      class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"
+                    ></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">12 занятий по 30 мин</p>
+                      <div class="card-rates__cost">10200 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="prices__rates-group swiper">
+                <div class="swiper-wrapper">
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">4 занятия по 30 мин</p>
+                      <div class="card-rates__cost">3400 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">8 занятий по 30 мин</p>
+                      <div class="card-rates__cost">6800 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div
+                      class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"
+                    ></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">12 занятий по 30 мин</p>
+                      <div class="card-rates__cost">10200 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="prices__rates">
-            <div class="prices__rates-group">
-              <!-- <div class="swiper-wrapper"> -->
-              <!-- <div class="swiper-slide"> -->
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">4 занятия по 30 мин</p>
-                  <div class="card-rates__cost">3400 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- <div class="swiper-slide"> -->
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">8 занятий по 30 мин</p>
-                  <div class="card-rates__cost">6800 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- <div class="swiper-slide"> -->
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">12 занятий по 30 мин</p>
-                  <div class="card-rates__cost">10200 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- </div> -->
+          <div class="prices__rates prices__rates--offline" data-tabs="prices-offline-tabs">
+            <div
+              class="prices__tabs prices__tabs--two-buttons-sm prices__tabs--gutter-bottom-lg container"
+            >
+              <button class="prices__button">Групповые</button>
+              <button class="prices__button">Индивидуальные</button>
             </div>
-            <div class="prices__rates-group">
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-4-of-full-hour"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">4 занятия по 60 мин</p>
-                  <div class="card-rates__cost">5400 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
+            <div class="prices__rates-wrapper">
+              <div class="prices__rates-group swiper">
+                <div class="swiper-wrapper">
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">4 занятия по 30 мин</p>
+                      <div class="card-rates__cost">3400 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">8 занятий по 30 мин</p>
+                      <div class="card-rates__cost">6800 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div
+                      class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"
+                    ></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">12 занятий по 30 мин</p>
+                      <div class="card-rates__cost">10200 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-8-of-full-hour"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">8 занятий по 60 мин</p>
-                  <div class="card-rates__cost">10800 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
-                </div>
-              </div>
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-12-of-full-hour"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">12 занятий по 60 мин</p>
-                  <div class="card-rates__cost">16200 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="prices__rates-group">
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-4-club"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">4 занятия по 60 мин</p>
-                  <div class="card-rates__cost">4800 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
-                </div>
-              </div>
-              <div class="prices__rates-card card-rates">
-                <div class="card-rates__decorate card-rates__decorate--bg-8-club"></div>
-                <div class="card-rates__content">
-                  <p class="card-rates__duration">8 занятий по 60 мин</p>
-                  <div class="card-rates__cost">9200 ₽</div>
-                  <button class="card-rates__button btn btn--green btn--size-normal">
-                    Выбрать
-                  </button>
+              <div class="prices__rates-group swiper">
+                <div class="swiper-wrapper">
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-4-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">4 занятия по 30 мин</p>
+                      <div class="card-rates__cost">3400 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div class="card-rates__decorate card-rates__decorate--bg-8-of-half-hour"></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">8 занятий по 30 мин</p>
+                      <div class="card-rates__cost">6800 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prices__rates-card card-rates swiper-slide">
+                    <div
+                      class="card-rates__decorate card-rates__decorate--bg-12-of-half-hour"
+                    ></div>
+                    <div class="card-rates__content">
+                      <p class="card-rates__duration">12 занятий по 30 мин</p>
+                      <div class="card-rates__cost">10200 ₽</div>
+                      <button class="card-rates__button btn btn--green btn--size-normal">
+                        Выбрать
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="trial-lesson page__trial-lesson">
-          <div class="trial-lesson__inner">
-            <div class="trial-lesson__content">
-              <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
-              <form class="trial-lesson__form main-form">
-                <div
-                  class="main-form__group main-form__group--offset-bottom main-form__group--tabs"
-                >
-                  <div class="tab-label main-form__item main-form__item--tab">
-                    <input name="for-whom" id="adult" type="radio" checked />
-                    <label for="adult">Взрослые</label>
-                  </div>
-                  <div
-                    class="
-                      tab-label
-                      main-form__item
-                      main-form__item--half-width
-                      main-form__item--tab
-                      main-form__item--children
-                    "
+        <!-- Trial-lesson -->
+        <div class="page__item page__item--minor-gutters-standart">
+          <div class="container container--filled-block">
+            <div class="trial-lesson">
+              <div class="trial-lesson__content">
+                <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
+                <form class="trial-lesson__form form" data-form="trial-form">
+                  <section class="form__section form__section--bottom-gutter-lg">
+                    <div class="form__group form__group--col-2">
+                      <div class="tab-label form__item">
+                        <label class="tab-label__label">
+                          <span class="tab-label__text">Взрослые</span>
+                          <input
+                            class="tab-label__input visible-hidden"
+                            name="for-whom"
+                            type="radio"
+                            data-state-fields="hide"
+                            checked
+                          />
+                          <span class="tab-label__underline"></span>
+                        </label>
+                      </div>
+                      <div class="tab-label form__item">
+                        <label class="tab-label__label">
+                          <span class="tab-label__text">Дети</span>
+                          <input
+                            class="tab-label__input visible-hidden"
+                            name="for-whom"
+                            type="radio"
+                            data-state-fields="show"
+                          />
+                          <span class="tab-label__underline"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="form__section form__section--select-language">
+                    <div class="form__item form__item--select">
+                      <select class="field" id="lang">
+                        <option selected>Английский язык</option>
+                        <option value="1">Французский язык</option>
+                        <option value="2">Немецкий язык</option>
+                        <option value="3">Испанский язык</option>
+                      </select>
+                    </div>
+                  </section>
+                  <section class="form__section form__section--education-place">
+                    <div class="form__group form__group--col-2">
+                      <div class="form__item">
+                        <input
+                          class="radio-button"
+                          name="where-study"
+                          id="school"
+                          type="radio"
+                          checked
+                        />
+                        <label class="label" for="school">Занятия в клубе</label>
+                      </div>
+                      <div class="form__item">
+                        <input class="radio-button" name="where-study" id="online" type="radio" />
+                        <label class="label" for="online">Онлайн-занятия</label>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="form__section form__section--student-info">
+                    <div class="form__group form__group--col-2">
+                      <div class="form__item">
+                        <input
+                          class="field field--text"
+                          type="text"
+                          placeholder="Ваше имя"
+                          value=""
+                        />
+                      </div>
+                      <div class="form__item">
+                        <input
+                          class="field field--text"
+                          type="tel"
+                          placeholder="Ваш телефон"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="form__group form__group--col-2 form__group--additional hide">
+                      <div class="form__item">
+                        <input
+                          class="field field--text"
+                          type="text"
+                          placeholder="Имя ребенка"
+                          value=""
+                        />
+                      </div>
+                      <div class="form__item">
+                        <input
+                          class="field field--text"
+                          type="text"
+                          placeholder="Возраст ребенка"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <div class="form__item"></div>
+                      <input
+                        class="field field--text"
+                        type="email"
+                        placeholder="Ваша почта"
+                        value=""
+                      />
+                    </div>
+                  </section>
+                  <section
+                    class="form__section form__section--submit form__section--bottom-gutter-lg"
                   >
-                    <input name="for-whom" id="children" type="radio" />
-                    <label for="children">Дети</label>
-                  </div>
-                </div>
-                <div class="main-form__group">
-                  <div class="main-form__item main-form__item--select">
-                    <select class="field field--select" id="lang">
-                      <option selected>Английский язык</option>
-                      <option value="1">Французский язык</option>
-                      <option value="2">Немецкий язык</option>
-                      <option value="3">Испанский язык</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="main-form__group">
-                  <div
-                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
-                  >
                     <input
-                      class="radio-button radio-button--offset-right"
-                      name="where-study"
-                      id="school"
-                      type="radio"
-                      checked
+                      class="btn btn--size-normal btn--green"
+                      type="submit"
+                      value="Отправить"
                     />
-                    <label class="label" for="school">Занятия в клубе</label>
-                  </div>
-                  <div
-                    class="main-form__item main-form__item--half-width main-form__item--radio-pair"
-                  >
-                    <input
-                      class="radio-button radio-button--offset-right"
-                      name="where-study"
-                      id="online"
-                      type="radio"
-                    />
-                    <label class="label" for="online">Онлайн-занятия</label>
-                  </div>
-                </div>
-                <div class="main-form__group">
-                  <div class="main-form__item main-form__item--name-field">
-                    <input
-                      class="field field--text error"
-                      type="text"
-                      placeholder="Ваше имя"
-                      value=""
-                    />
-                  </div>
-                  <div class="main-form__item main-form__item--phone-field">
-                    <input
-                      class="field field--text"
-                      type="tel"
-                      placeholder="Ваш телефон"
-                      value=""
-                    />
-                  </div>
-                </div>
-
-                <div class="main-form__group main-form__group--additional-group">
-                  <div class="main-form__item main-form__item--name-field">
-                    <input
-                      class="field field--text"
-                      type="text"
-                      placeholder="Имя ребенка"
-                      value=""
-                    />
-                  </div>
-                  <div class="main-form__item main-form__item--name-field">
-                    <input
-                      class="field field--text"
-                      type="text"
-                      placeholder="Возраст ребенка"
-                      value=""
-                    />
-                  </div>
-                </div>
-
-                <div class="main-form__group main-form__group--offset-bottom">
-                  <div class="main-form__item main-form__item--full-width">
-                    <input
-                      class="field field--text"
-                      type="email"
-                      placeholder="Ваша почта"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div class="main-form__item main-form__item--button">
-                  <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
-                </div>
-              </form>
+                  </section>
+                </form>
+              </div>
             </div>
-          </div>
-          <div class="trial-lesson__img">
-            <picture>
-              <source srcset="img/modal/trial-side.svg" media="(min-width: 768px)" />
-              <source srcset="img/modal/trial-slim.svg" media="(min-width: 576px)" />
-              <source srcset="img/modal/trial-slim-2.svg" media="(min-width: 480px)" />
-              <source srcset="img/modal/trial-mobile.svg" />
-              <img src="img/modal/trial-mobile.png" alt="Изображение модального окна" />
-            </picture>
           </div>
         </div>
       </div>
-      @@include('_footer.html',{})
-    </div>
-    @@include('_popup.html',{}) @@include('_js.html',{})
+    </main>
+    @@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{})
   </body>
 </html>
