@@ -1,0 +1,22 @@
+.offer-text {
+  &__content {
+    @media (min-width: $md4) {
+      column-count: 2;
+      column-gap: 20px;
+    }
+    h3 {
+      @include h2_mobile;
+      margin-bottom: 30px;
+    }
+    p {
+      @include h3_mobile;
+      margin-bottom: 20px;
+    }
+  }
+  &__unit {
+    margin-bottom: 50px;
+    @media (min-width: $md2) {
+      margin-bottom: 60px;
+    }
+  }
+}
