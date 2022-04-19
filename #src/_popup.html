@@ -1,64 +1,92 @@
-<div class="popup">
+<div id="trial" class="popup">
   <div class="popup__body">
     <div class="popup__inner">
-      <div class="popup__decorate popup__decorate--obj-pos-top-right">
-        <picture>
-          <source srcset="img/modal/main-modal-left.svg" />
-          <img src="img/modal/main-modal-left.png" alt="левая рамка модального окна" />
-        </picture>
-      </div>
       <div class="popup__content">
         <button class="popup__close">Закрыть</button>
-        <legend class="popup__heading">Оплата услуг</legend>
-        <form class="popup__form main-form">
-          <div class="main-form__group">
-            <div class="main-form__item main-form__item--half-width-768">
-              <input class="field field--text error" type="text" placeholder="Имя" value="" />
+        <h3 class="popup__heading">Записаться на пробное занятие</h3>
+        <form id="form-popup" class="form" data-form="trial-form">
+          <section class="form__section form__section--bottom-gutter-lg">
+            <div class="form__group form__group--col-2">
+              <div class="tab-label form__item">
+                <label class="tab-label__label">
+                  <span class="tab-label__text">Взрослые</span>
+                  <input
+                    class="tab-label__input visible-hidden"
+                    name="for-whom"
+                    type="radio"
+                    data-state-fields="hide"
+                    checked
+                  />
+                  <span class="tab-label__underline"></span>
+                </label>
+              </div>
+              <div class="tab-label form__item">
+                <label class="tab-label__label">
+                  <span class="tab-label__text">Дети</span>
+                  <input
+                    class="tab-label__input visible-hidden"
+                    name="for-whom"
+                    type="radio"
+                    data-state-fields="show"
+                  />
+                  <span class="tab-label__underline"></span>
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="main-form__group">
-            <div class="main-form__item main-form__item--half-width-768">
-              <input class="field field--text" type="tel" placeholder="Телефон" value="" />
+          </section>
+          <section class="form__section form__section--select-language">
+            <div class="form__item form__item--select">
+              <select class="field" id="lang">
+                <option selected>Английский язык</option>
+                <option value="1">Французский язык</option>
+                <option value="2">Немецкий язык</option>
+                <option value="3">Испанский язык</option>
+              </select>
             </div>
-          </div>
-          <!-- <div class="main-form__group">
-            <div class="main-form__item main-form__item--half-width-768">
-              <input class="field field--text error" type="text" placeholder="Имя" value="" />
+          </section>
+          <section class="form__section form__section--education-place">
+            <div class="form__group form__group--col-2">
+              <div class="form__item">
+                <input class="radio-button" name="where-study" id="school" type="radio" checked />
+                <label class="label" for="school">Занятия в клубе</label>
+              </div>
+              <div class="form__item">
+                <input class="radio-button" name="where-study" id="online" type="radio" />
+                <label class="label" for="online">Онлайн-занятия</label>
+              </div>
             </div>
-            <div class="main-form__item main-form__item--half-width-768">
-              <input class="field field--text" type="tel" placeholder="Телефон" value="" />
+          </section>
+          <section class="form__section form__section--student-info">
+            <div class="form__group form__group--col-2">
+              <div class="form__item">
+                <input class="field field--text" type="text" placeholder="Ваше имя" value="" />
+              </div>
+              <div class="form__item">
+                <input class="field field--text" type="tel" placeholder="Ваш телефон" value="" />
+              </div>
             </div>
-          </div> -->
-          <div class="main-form__group main-form__group">
-            <div class="main-form__item main-form__item--full-width">
-              <input class="field field--text" type="email" placeholder="Почта" value="" />
+            <div class="form__group form__group--col-2 form__group--additional hide">
+              <div class="form__item">
+                <input class="field field--text" type="text" placeholder="Имя ребенка" value="" />
+              </div>
+              <div class="form__item">
+                <input
+                  class="field field--text"
+                  type="text"
+                  placeholder="Возраст ребенка"
+                  value=""
+                />
+              </div>
             </div>
-          </div>
-          <div class="main-form__group">
-            <div class="main-form__item main-form__item--full-width main-form__item--currency-rub">
-              <input
-                class="field field--number field--padding-right"
-                type="number"
-                placeholder="Сумма платежа"
-                value=""
-              />
+            <div class="form__group">
+              <div class="form__item"></div>
+              <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
             </div>
-          </div>
-          <p class="main-form__text">
-            Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями договора оферты и обработку
-            персональных данных.
-          </p>
-          <div class="main-form__item main-form__item--button">
+          </section>
+          <section class="form__section form__section--submit form__section--bottom-gutter-lg">
             <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
-          </div>
+          </section>
         </form>
-      </div>
-      <div class="popup__decorate popup__decorate--obj-pos-top-left">
-        <picture>
-          <!-- <source srcset="img/modal/trial-side.svg" /> -->
-          <source srcset="img/modal/main-modal-right.svg" />
-          <img src="img/modal/main-modal-right.png" alt="правая рамка модального окна" />
-        </picture>
       </div>
     </div>
   </div>
