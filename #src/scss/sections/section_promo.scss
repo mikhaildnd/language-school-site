@@ -1,21 +1,97 @@
 .promo {
-  @include padding-container($maxWidthContainer, $pl, $pr);
-  @media (min-width: $md4) {
-    display: flex;
-  }
-  &--offer {
-    .promo__heading {
-      margin-bottom: 10px;
+  // .promo__content
+  &__content {
+    display: grid;
+    row-gap: 60px;
+    @media (min-width: $md4) {
+      grid-template-columns: minmax(55%, 1fr) minmax(200px, 450px);
+      column-gap: 32px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 260px;
+      @media (min-width: $md7) {
+        height: 300px;
+      }
+      @media (min-width: $md5) {
+        height: 392px;
+      }
+      @media (min-width: $md4) {
+        height: 330px;
+        background-position: right;
+      }
+      @media (min-width: $md3) {
+        height: 390px;
+      }
+      @media (min-width: $md2) {
+        height: 420px;
+      }
+    }
+    //todo еще нужно донастроить на брейкпоинтах размеры
+    &--main {
+      @media (min-width: $md4) {
+        grid-template-columns: minmax(45%, 1fr) minmax(200px, 560px);
+      }
+      &::after {
+        background-image: url('../../img/main-image.png');
+        // background-image: image-set(
+        //   url('../../img/main-image.svg') type('image/svg'),
+        //   url('../../img/main-image.png') type('image/png')
+        // );
+        @media (min-width: $md3) {
+          height: 500px;
+        }
+        @media (min-width: $md2) {
+          height: 520px;
+        }
+        @media (min-width: $md1) {
+          height: 560px;
+        }
+      }
+    }
+    &--kids-online {
+      &::after {
+        background-image: url('../../img/kids-online-promo.png');
+        // background-image: image-set(
+        //   url('../../img/kids-online-promo.webp') type('image/webp'),
+        //   url('../../img/kids-online-promo.png') type('image/png')
+        // );
+      }
+    }
+    &--kids-offline {
+      &::after {
+        background-image: url('../../img/kids-offline-promo.png');
+        // background-image: image-set(
+        //   url('../../img/kids-offline-promo.webp') type('image/webp'),
+        //   url('../../img/kids-offline-promo.png') type('image/png')
+        // );
+      }
+    }
+    &--adults {
+      &::after {
+        height: 220px;
+        background-image: url('../../img/adults-promo.png');
+        // background-image: image-set(
+        //   url('../../img/adults-promo.webp') type('image/webp'),
+        //   url('../../img/adults-promo.png') type('image/png')
+        // );
+        @media (min-width: $md7) {
+          height: 250px;
+        }
+      }
+      @media (min-width: $md4) {
+        grid-template-columns: minmax(45%, 1fr) minmax(200px, 580px);
+      }
     }
   }
   // .promo__info
   &__info {
-    margin-bottom: 60px;
     @media (min-width: $md4) {
       align-self: center;
-      flex-basis: calc(55% - 16px);
-      margin-right: 16px;
-      margin-bottom: 0;
     }
   }
   // .promo__group
@@ -45,6 +121,9 @@
     @media (min-width: $md1) {
       font-size: 50px;
     }
+    &--offer {
+      margin-bottom: 10px;
+    }
   }
   &__sub-heading {
     @include h1_mobile;
@@ -73,195 +152,5 @@
   // .promo__date
   &__date {
     @include h2_mobile;
-  }
-  // .promo__btn
-  &__btn {
-  }
-  // .promo__decoration
-  &__decoration {
-    margin-left: -20px;
-    margin-right: -20px;
-    overflow: hidden;
-    @media (min-width: $md4) {
-      flex-basis: calc(45% - 16px);
-      margin-left: 16px;
-      margin-right: 0;
-    }
-  }
-  // .promo__inner
-  &__inner {
-    // height: 100%;
-    position: relative;
-    &--width-limiter-450 {
-      @media (min-width: $md2) {
-        max-width: 450px;
-        margin-left: auto;
-      }
-    }
-  }
-  // .promo__image-decoration
-  &__image-decoration {
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-    &--left-offset {
-      padding-left: 25px;
-    }
-    &--left-offset-28p {
-      padding-left: 28%;
-    }
-  }
-  // .promo__image-photo
-  &__image-photo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      overflow: hidden;
-      border: 4px solid $orange;
-    }
-    //sizes and position
-    &--adults {
-      width: 167px;
-      height: 154px;
-      @media (min-width: $md7) {
-        width: 195px;
-        height: 180px;
-      }
-      @media (min-width: $md6) {
-        width: 250px;
-        height: 230px;
-      }
-      @media (min-width: $md5) {
-        width: 300px;
-        height: 275px;
-      }
-      @media (min-width: $md4) {
-        width: 163px;
-        height: 152px;
-      }
-      @media (min-width: $md3) {
-        width: 215px;
-        height: 200px;
-      }
-      @media (min-width: $md2) {
-        width: 222px;
-        height: 204px;
-      }
-      @media (min-width: $md1) {
-        width: 287px;
-        height: 262px;
-      }
-    }
-    &--kids-online {
-      left: 30px;
-      width: 195px;
-      height: 195px;
-      @media (min-width: $md7) {
-        left: 35px;
-        width: 235px;
-        height: 235px;
-      }
-      @media (min-width: $md6) {
-        left: 45px;
-        width: 290px;
-        height: 290px;
-      }
-      @media (min-width: $md5) {
-        left: 57px;
-        width: 347px;
-        height: 347px;
-      }
-      @media (min-width: $md4) {
-        left: 30px;
-        width: 188px;
-        height: 188px;
-      }
-      @media (min-width: $md3) {
-        left: 40px;
-        width: 250px;
-        height: 250px;
-      }
-      @media (min-width: $md2) {
-        width: 260px;
-        height: 260px;
-      }
-      @media (min-width: $md1) {
-        left: 45px;
-        width: 272px;
-        height: 272px;
-      }
-    }
-    &--kids-offline {
-      left: 25px;
-      width: 197px;
-      height: 197px;
-      @media (min-width: $md7) {
-        width: 234px;
-        height: 234px;
-      }
-      @media (min-width: $md6) {
-        width: 304px;
-        height: 304px;
-      }
-      @media (min-width: $md5) {
-        width: 368px;
-        height: 368px;
-      }
-      @media (min-width: $md4) {
-        width: 192px;
-        height: 192px;
-      }
-      @media (min-width: $md3) {
-        width: 258px;
-        height: 258px;
-      }
-      @media (min-width: $md2) {
-        width: 268px;
-        height: 268px;
-      }
-      @media (min-width: $md1) {
-        width: 284px;
-        height: 284px;
-      }
-      //рамка снаружи
-      &::before {
-        z-index: 3;
-        content: '';
-        position: absolute;
-        bottom: 22%;
-        left: -25px;
-        width: 50px;
-        height: 136px;
-        background-image: url(../img/for-kids-offline/for-kids-offline-frame-top.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-    //form
-    &--rounded {
-      img {
-        border-radius: 50%;
-      }
-    }
-    &--drop {
-      img {
-        border-radius: 40px 0 40px 140px;
-        // border-radius: 25% 0 25% 52%;
-      }
-    }
-    &--drop-turn-90 {
-      img {
-        border-radius: 140px 40px 0 40px;
-      }
-    }
   }
 }
