@@ -6,7 +6,6 @@
 # Node artifact files
 node_modules/
 dist/
-speaky/
 
 # Compiled Java class files
 *.class
@@ -48,3 +47,6 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+#my files
+speaky/
