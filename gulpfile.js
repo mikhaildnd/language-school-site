@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import dartSass from 'sass';
+import decomment from 'gulp-decomment';
 import gulpSass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import groupMedia from 'gulp-group-css-media-queries';
@@ -28,7 +29,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const project_name = path.basename(__dirname);
 const src_folder = '#src';
 
-let isDev = true; //false чтобы минифицировал js
+let isDev = false; //false чтобы минифицировал js
 let isProd = !isDev;
 
 // Path
@@ -68,7 +69,6 @@ export const scripts = () => {
     watch: false,
     entry: {
       app: './#src/js/app.js',
-      // vendors: './#src/js/vendors.js',
     },
     output: {
       filename: '[name].min.js',
@@ -80,20 +80,18 @@ export const scripts = () => {
           test: /\.js$/,
           loader: 'babel-loader',
           include: path.join(__dirname, '#src/js'),
-          // include: path.join(__dirname, '#src'),
-          // exclude: '/node_modules/',
         },
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader'],
-          // use: 'style!css',
         },
       ],
     },
     mode: isDev ? 'development' : 'production',
     //https://webpack.js.org/configuration/devtool/
-    devtool: isDev ? 'eval-source-map' : false, //мб false в 5 вебпаке //upd: да
+    devtool: isDev ? 'eval-source-map' : false,
   };
+
   return gulp
     .src(_path.src.js)
     .pipe(plumber())
@@ -108,6 +106,7 @@ export const html = () => {
     .src(_path.src.html, {})
     .pipe(plumber())
     .pipe(fileinclude())
+    .pipe(decomment())
     .pipe(gulp.dest(_path.build.html))
     .pipe(sync.stream());
 };
