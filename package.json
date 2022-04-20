@@ -13,6 +13,7 @@
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
+    "gulp-decomment": "^0.2.2",
     "gulp-file-include": "latest",
     "gulp-fonter": "latest",
     "gulp-group-css-media-queries": "latest",
