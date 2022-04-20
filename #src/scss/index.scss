@@ -27,7 +27,7 @@
   // .benefits__heading
   &__heading {
     grid-area: heading;
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -36,7 +36,7 @@
   // .benefits__text
   &__text {
     grid-area: text;
-    @include h3_mobile;
+    @include heading-v3;
     margin-bottom: 40px;
     @media (min-width: $md4) {
       margin-bottom: 0;
@@ -65,7 +65,7 @@
   }
   // .benefits__item
   &__item {
-    @include h2_mobile;
+    @include heading-v2;
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
@@ -277,7 +277,7 @@
   }
   // .for-clients__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 30px;
   }
@@ -323,12 +323,12 @@
   }
   // .for-clients__listheading
   &__list-heading {
-    @include h2_mobile;
+    @include heading-v2;
     margin-bottom: 18px;
   }
   // .for-clients__list
   &__list {
-    @include h3_mobile;
+    @include heading-v3;
     padding-left: 17px;
   }
   // .for-clients__list-item
@@ -355,22 +355,21 @@
   }
   // .learning-way__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 30px;
   }
   // .learning-way__text
   &__text {
-    @include h3;
+    font-family: $text;
+    font-size: 16px;
+    line-height: 1.625;
     max-width: 430px;
   }
   // .learning-way__method
   &__method {
     margin-bottom: 100px;
   }
-  // // .learning-way__steps
-  // &__steps {
-  // }
 }
 //Learning-method (part of "learning-way" section)
 .learning-method {
@@ -400,14 +399,16 @@
   }
   // .learning-method__decryption-text
   &__decryption-text {
-    @include h3_mobile;
+    @include heading-v3;
     display: block;
     padding-top: 32px;
     color: $green;
   }
   // .learning-method__main-text
   &__main-text {
-    @include h2;
+    font-family: $heading-alt;
+    font-size: 18px;
+    line-height: 1.665;
     display: block;
   }
 }
@@ -471,18 +472,17 @@
   }
   // .learning-target__heading
   &__heading {
-    @include h2_mobile;
+    @include heading-v2;
     display: block;
     margin-bottom: 18px;
   }
   // .learning-target__text
   &__text {
-    @include h3_mobile;
+    @include heading-v3;
   }
 }
 //learning-steps (part of "learning-way" section)
 .learning-steps {
-  // @include container(820px);
   counter-reset: step-list;
   // .learning-steps__item
   &__item {
@@ -543,14 +543,14 @@
   }
   // .learning-steps__heading
   &__heading {
-    @include h2_mobile;
+    @include heading-v2;
     position: relative;
     margin-bottom: 16px;
     padding-top: 10px;
   }
   // .learning-steps__text
   &__text {
-    @include h3_mobile;
+    @include heading-v3;
   }
 }
 //History
@@ -563,7 +563,7 @@
   }
   // .history__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 40px;
     @media (min-width: $md1) {
@@ -671,12 +671,12 @@
   }
   // .slider-history__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     margin-bottom: 20px;
   }
   // .slider-history__text
   &__text {
-    @include h2_mobile;
+    @include heading-v2;
   }
   // .slider-history__image
   &__image {

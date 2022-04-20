@@ -1,15 +1,12 @@
 import { TabManager } from './modules/tabs-manager.js';
 import { toggleClass } from './modules/helpers.js';
 import { initMailForms } from './modules/helpers.js';
-// import { bodyUnlock } from './modules/helpers.js';
-// import { bodyLock } from './modules/helpers.js';
 import { Popup } from './modules/popup.js';
 
-import Swiper, { Thumbs, A11y, Keyboard, Navigation } from 'swiper';
+import Swiper, { Thumbs, A11y, Keyboard } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/a11y';
 import 'swiper/css/keyboard';
-import 'swiper/css/navigation';
 
 /* Функция инициации слайдеров */
 function initSwiperSliders(selector, options = {}) {
@@ -161,8 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
   mediaQuery.addEventListener('change', sliderStateSwitcherHandler);
   //<===
 
+  /* Price cards sliders */
   initSwiperSliders('.prices__rates-group', {
-    loop: true,
+    // loop: true,
+    initialSlide: 1,
     centeredSlides: true,
     slidesPerView: 1.3,
     spaceBetween: 20,
@@ -192,10 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 2.6,
       },
       1024: {
+        // initialSlide: 1,
         slidesPerView: 3,
         spaceBetween: 30,
       },
       1300: {
+        // initialSlide: 1,
         slidesPerView: 3,
         spaceBetween: 70,
       },

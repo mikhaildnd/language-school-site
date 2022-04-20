@@ -2,13 +2,14 @@
   // .prices__heading
   &__heading {
     text-align: center;
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 30px;
     @media (min-width: $md4) {
       margin-bottom: 40px;
     }
   }
+
   // .prices__tabs
   &__tabs {
     display: grid;
@@ -41,6 +42,7 @@
       margin-bottom: 40px;
     }
   }
+
   // .prices__button
   &__button {
     border-bottom: 2px solid #94c6c4;
@@ -56,6 +58,7 @@
       border-color: $green;
     }
   }
+
   // .prices__tabs-group
   &__tabs-group {
     display: flex;
@@ -63,11 +66,8 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    //todo проверить где исп-ся
-    &--short {
-      max-width: 80%;
-    }
   }
+
   // .prices__tabs-item
   &__tabs-item {
     flex-basis: 50%;
@@ -76,6 +76,7 @@
       margin: 10px;
     }
   }
+
   // .prices__rates
   &__rates {
     display: none;
@@ -83,6 +84,7 @@
       display: block;
     }
   }
+
   // .prices__rates-wrapper
   &__rates-wrapper {
     max-width: 1040px;
@@ -93,6 +95,7 @@
       padding-right: $pr;
     }
   }
+
   // .prices__rates-group
   &__rates-group {
     display: none;
@@ -100,85 +103,88 @@
     &.show {
       display: flex;
     }
-    // &.swiper {
-    //   overflow: visible;
-    //   @media (min-width: $md2) {
-    //     overflow: hidden;
-    //   }
-    // }
-  }
-  // .prices__rates-card
-  &__rates-card {
-    // max-width: 260px;
-    // @media (min-width:$md7){
-    //   max-width: 280px;
-    // }
-    // @media (min-width: $md2) {
-    //   max-width: 300px;
-    // }
-    // flex-shrink: 0;
   }
 }
+
+/* Card-rates block */
 .card-rates {
-  //todo вынести ширину в элемент мб
-  // width: 280px;
-  // min-height: 430px;
   min-height: 400px;
   @include section-decorate;
   overflow: hidden;
-  // @media (min-width: $md4) {
-  //   width: 300px;
-  // }
-  // .card-rates__decorate
-  &__decorate {
+  &::before {
+    content: '';
+    display: block;
     width: 100%;
     height: 150px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 0;
-    &--bg-4-of-half-hour {
+  }
+  &--bg-4-of-half-hour {
+    &::before {
       background-image: url(../img/card-rates/card-1.svg);
     }
-    &--bg-8-of-half-hour {
+  }
+  &--bg-8-of-half-hour {
+    &::before {
       background-image: url(../img/card-rates/card-2.svg);
     }
-    &--bg-12-of-half-hour {
+  }
+  &--bg-12-of-half-hour {
+    &::before {
       background-image: url(../img/card-rates/card-3.svg);
     }
-    &--bg-4-of-full-hour {
+  }
+  &--bg-4-of-full-hour {
+    &::before {
       background-image: url(../img/card-rates/card-4.svg);
     }
-    &--bg-8-of-full-hour {
+  }
+  &--bg-8-of-full-hour {
+    &::before {
       background-image: url(../img/card-rates/card-5.svg);
     }
-    &--bg-12-of-full-hour {
+  }
+  &--bg-12-of-full-hour {
+    &::before {
       background-image: url(../img/card-rates/card-6.svg);
     }
-    &--bg-4-club {
+  }
+  &--bg-4-club {
+    &::before {
       background-image: url(../img/card-rates/card-7.svg);
     }
-    &--bg-8-club {
+  }
+  &--bg-8-club {
+    &::before {
       background-image: url(../img/card-rates/card-8.svg);
     }
   }
+
   // .card-rates__content
   &__content {
-    // background-color: $light-yellow;
     padding: 40px 20px 62px;
     text-align: center;
   }
+
   // .card-rates__duration
   &__duration {
-    @include h2;
+    font-family: $heading-alt;
+    font-size: 18px;
+    line-height: 1.665;
     margin-bottom: 14px;
   }
+
   // .card-rates__cost
   &__cost {
-    @include price;
+    font-family: $heading;
+    font-size: 20px;
+    letter-spacing: 0.02rem;
+    line-height: 1.365;
     margin-bottom: 40px;
+    @media (min-width: $md4) {
+      font-size: 22px;
+      line-height: 1.3;
+    }
   }
-  //todo проверить и удалить в хтмл если есть
-  // // .card-rates__button
-  // &__button {
-  // }
 }

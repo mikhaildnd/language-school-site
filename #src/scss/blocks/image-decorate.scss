@@ -1,4 +1,4 @@
-//!Рамка и обводка картинки
+//Рамка и обводка картинки
 .image-decorate {
   position: relative;
   display: block;
@@ -54,10 +54,10 @@
     }
   }
   img {
-    @include image;
-    position: absolute; //
+    position: absolute;
     display: block;
     z-index: 2;
     border: 3px solid #ffeca0;
+    object-fit: cover;
   }
 }

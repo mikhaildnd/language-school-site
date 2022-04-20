@@ -5,13 +5,13 @@
       display: flex;
     }
   }
+
   // .features__text
   &__text {
     margin-bottom: 40px;
     @media (min-width: $md4) {
       margin-right: 40px;
       margin-bottom: 0;
-      // max-width: 430px;
       flex-basis: 35%;
       flex-shrink: 0;
     }
@@ -19,15 +19,17 @@
       margin-right: 65px;
     }
     p {
-      @include h2_mobile;
+      @include heading-v2;
     }
   }
+
   // .features__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 20px;
   }
+
   // .features__list
   &__list {
     display: flex;
@@ -48,9 +50,10 @@
       margin: 30px -10px -10px;
     }
   }
+
   // .features__list-item
   &__list-item {
-    @include h3_mobile;
+    @include heading-v3;
     margin-top: 15px;
     margin-bottom: 15px;
     padding-left: 14px;
@@ -59,7 +62,6 @@
     border-left-width: 4px;
     @media (min-width: $md1) {
       flex-basis: calc(50% - 20px);
-      //?флекс, чтобы p внутри центрировались
       display: flex;
       align-items: center;
       margin: 10px;

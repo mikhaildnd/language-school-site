@@ -16,6 +16,7 @@
       column-gap: 70px;
     }
   }
+
   // .lessons__item
   &__item {
     width: 223px;
@@ -34,17 +35,15 @@
       }
     }
   }
+
   // .lessons__text
   &__text {
-    @include h1_mobile;
+    @include heading-v1;
     position: absolute;
     bottom: 0;
     left: 25%;
     text-transform: uppercase;
     word-break: break-word;
-    @media (min-width: $md7) {
-      @include h1;
-    }
     span {
       background-color: $white;
       padding-left: 5px;
@@ -52,6 +51,7 @@
       transition: background-color 0.2s linear;
     }
   }
+
   // .lessons__img-wrapper
   &__img-wrapper {
     flex-shrink: 0;
@@ -60,12 +60,14 @@
     border-radius: 60px;
     overflow: hidden;
   }
+
   // .lessons__img
   &__img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
+
   // .lessons__link
   &__link {
     color: inherit;

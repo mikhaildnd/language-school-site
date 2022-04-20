@@ -26,6 +26,7 @@
       padding-right: $pr * 2;
     }
   }
+
   // .tip__message
   &__message {
     margin-bottom: 40px;
@@ -35,28 +36,33 @@
       margin-bottom: 0;
     }
   }
+
   // .tip__message-wrapper
   &__message-wrapper {
     margin-bottom: 40px;
   }
+
   // .tip__message-heading
   &__message-heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
+
   // .tip__message-text
   &__message-text {
-    @include h3_mobile;
+    @include heading-v3;
   }
+
   // .tip__image
   &__image {
     @media (min-width: $md4) {
       flex-basis: 50%;
     }
   }
+
   // .tip__image-inner
   &__image-inner {
     margin-left: auto;

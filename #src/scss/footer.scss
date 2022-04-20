@@ -1,6 +1,7 @@
 .footer {
   background-color: $light-yellow;
   border-radius: 50px 50px 0 0;
+
   // .footer__inner
   &__inner {
     @include padding-container($maxWidthContainer, $pl, $pr);
@@ -12,6 +13,7 @@
       flex-wrap: wrap;
     }
   }
+
   // .footer__block-group
   &__block-group {
     margin-bottom: 50px;
@@ -23,6 +25,7 @@
       order: 1;
     }
   }
+
   // .footer__logo
   &__logo {
     margin-bottom: 32px;
@@ -39,18 +42,20 @@
       }
     }
   }
-  // .footer__socials
-  &__socials {
+
+  // .footer__social
+  &__social {
     margin-bottom: 30px;
   }
+
   // .footer__social-links
   &__social-links {
+    display: grid;
+    grid-auto-flow: column;
     justify-content: center;
-    margin-bottom: 42px;
+    column-gap: 50px;
   }
-  // .footer__button
-  &__button {
-  }
+
   // .footer__courses
   &__courses {
     margin-bottom: 30px;
@@ -64,6 +69,7 @@
       padding-top: 15px;
     }
   }
+
   // .footer__contacts
   &__contacts {
     margin-bottom: 50px;
@@ -77,19 +83,23 @@
       padding-top: 15px;
     }
   }
+
   // .footer__item-heading
   &__item-heading {
-    @include h2_mobile;
+    @include heading-v2;
     margin-bottom: 20px;
   }
+
   // .footer__list
   &__list {
-    @include h3_mobile;
+    @include heading-v3;
   }
+
   // .footer__list-item
   &__list-item {
     margin-bottom: 12px;
   }
+
   // .footer__link
   &__link {
     color: $black;
@@ -98,6 +108,7 @@
       text-decoration: underline;
     }
   }
+
   // .footer__bottom
   &__bottom {
     display: flex;
@@ -109,6 +120,7 @@
       order: 3;
     }
   }
+
   // .footer__bottom-item
   &__bottom-item {
     font-size: 12px;
@@ -116,6 +128,7 @@
       font-size: 14px;
     }
   }
+
   // .footer__copyright
   &__copyright {
     margin-right: 20px;

@@ -1,4 +1,4 @@
-//<BUTTONS (a.btn+tab)>====================================================================================================
+/* Button */
 .btn {
   display: inline-block;
   user-select: none;
@@ -35,174 +35,283 @@
     }
   }
 }
-//<Form> ========================================================================================================================================================
-.form {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-left: -8px;
-  // margin-right: -8px;
-  // .form__group
-  &__group {
-    position: relative;
-    // margin-left: 8px;
-    // margin-right: 8px;
-    margin-bottom: 24px;
-    &--name {
-      flex-basis: 50%;
-    }
-    &--phone {
-      flex-basis: 50%;
-    }
-    &--textarea {
-      flex-basis: 100%;
-    }
-    &--submit {
-      display: flex;
-      flex-direction: column;
-      @media (min-width: $md5) {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    //*стиль ошибки
-    &.error {
-      .form__input,
-      .form__textarea {
-        border-bottom: 1px solid red;
-        background-color: rgba(255, 0, 0, 0.102);
-      }
-      .form__label {
-        color: red;
-      }
-    }
-  }
-  // .form__label
-  &__label {
-    position: absolute;
-    top: 50%;
-    left: 14px;
-    font-size: 14px;
-    transition: top 0.3s ease-in-out;
-    transform: translateY(-50%);
-    @media (min-width: $md5) {
-      font-size: 16px;
-    }
-    &--textarea {
-      top: 85%;
-    }
-  }
-  &__input,
-  &__textarea {
-    width: 100%;
-    font-size: 14px;
-    padding: 0.5em 1.1em;
-    border-bottom: 1px solid black;
-    @media (min-width: $md5) {
-      font-size: 16px;
-    }
-    @media (min-width: $md4) {
-      font-size: 18px;
-    }
-    &:focus {
-      border-bottom: 1px solid black;
-      outline: none;
-    }
-    &:focus + label,
-    &:not(:placeholder-shown) + label {
-      top: 0;
-      left: 14px;
-      font-size: 10px;
-      color: black;
-      @media (min-width: $md5) {
-        font-size: 12px;
-      }
-    }
-  }
-  // .form__input
-  &__input {
-    height: 40px;
-    @media (min-width: $md5) {
-      height: 48px;
-    }
-    @media (min-width: $md4) {
-      height: 56px;
-    }
-  }
-  // .form__textarea
-  &__textarea {
-    resize: vertical;
-    min-height: 135px;
-  }
-  // .form__label-checkbox
-  &__label-checkbox {
-    margin-bottom: 20px;
-    @media (min-width: $md6) {
-      margin-bottom: 30px;
-    }
-    @media (min-width: $md5) {
-      // flex-basis: 70%;
-      max-width: 500px;
-      margin-bottom: 0;
-      margin-right: 15px;
-    }
-  }
-  // .form__btn
-  &__btn {
-    @media (min-width: $md5) {
-      // flex-basis: 30%;
-      flex-shrink: 0;
-      width: 140px;
-    }
-  }
-}
-//========================================================================================================================================================
-//todo https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
-.checkbox-label {
-  // .checkbox-label__container
-  &__container {
-    display: flex;
-    align-items: flex-start;
-    user-select: none;
-  }
-  // .checkbox-label__input
-  &__input {
-    width: 20px;
-    height: 20px;
-    margin-right: 16px;
-    @media (min-width: $md7) {
-      width: 28px;
-      height: 28px;
-    }
-    @media (min-width: $md4) {
-      width: 32px;
-      height: 32px;
-    }
-  }
-  // .checkbox-label__text
-  &__text {
-    font-size: 12px;
-    line-height: 1.2;
-    color: #666;
-    cursor: pointer;
-    @media (min-width: $md4) {
-      font-size: 14px;
-    }
-  }
-}
-//========================================================================================================================================================
+
+/* Tab-label */
 .tab-label {
-  label {
-    @include h2_mobile;
-    text-align: center;
-    border-bottom: 2px solid #94c6c4;
+  // .tab-label__label
+  &__label {
+    position: relative;
     display: block;
     padding: 10px 12px;
     cursor: pointer;
+    text-align: center;
   }
-  input {
-    display: none;
+
+  // .tab-label__input
+  &__input {
+    &:checked + span {
+      border-color: $green;
+    }
   }
-  input:checked + label {
-    border-color: $green;
+
+  // .tab-label__text
+  &__text {
+    @include heading-v2;
   }
+
+  // .tab-label__underline
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #94c6c4;
+  }
+}
+
+/* Form */
+.form {
+  min-width: 280px;
+
+  // .form__section
+  &__section {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $md4) {
+      margin-bottom: 14px;
+    }
+    &--student-info {
+      grid-template-columns: 1fr;
+      margin-bottom: 26px;
+      @media (min-width: $md4) {
+        margin-bottom: 30px;
+      }
+    }
+    &--select-language {
+      grid-template-columns: 1fr;
+    }
+    &--education-place {
+      .main-form__item {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: start;
+      }
+      .form__item {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        column-gap: 10px;
+      }
+    }
+    &--submit {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+    &--bottom-gutter-lg {
+      margin-bottom: 26px;
+      @media (min-width: $md4) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // .form__group
+  &__group {
+    display: grid;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $md4) {
+      margin-bottom: 14px;
+    }
+    &--additional {
+      transition: all 0.2s linear;
+      &.hide {
+        margin-bottom: 0;
+        height: 0;
+      }
+    }
+    &--col-2 {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 12px;
+      @media (min-width: $md5) {
+        column-gap: 20px;
+      }
+    }
+  }
+
+  // .form__item
+  &__item {
+    &--select {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        content: '';
+        display: block;
+        background-image: url(../img/icons/dropdown-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 10px;
+        height: 6px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      &:hover .education__dropdown,
+      &:focus-within .education__dropdown {
+        transform: perspective(100px) rotateX(0deg) translateX(-50%);
+        opacity: 1;
+      }
+      select {
+        appearance: none;
+        padding-right: 1.5em;
+      }
+    }
+  }
+
+  // .form__text
+  &__text {
+    font-family: $text;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    @media (min-width: $md7) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: $md4) {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+  }
+
+  // .main-form__btn-wrapper
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media (min-width: $md4) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+//extend styles for .field
+%field-error {
+  &:invalid {
+    border: 1px solid #ffa0a0;
+    &:hover {
+      box-shadow: 0 2px 4px 0 #ffa0a0;
+    }
+  }
+}
+
+/* Field */
+.field {
+  @include heading-v3;
+  width: 100%;
+  padding: 0.675em 1em;
+  border-radius: 10px;
+  border: 1px solid #ffeca0;
+  padding: 0.75em 1em;
+  background-color: $white;
+  transition: box-shadow 0.1s linear;
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4px 0 #ffeca0;
+  }
+  &:disabled {
+    border: 1px solid #f5f5f5;
+    background-color: #fcfcfc;
+    color: #858585;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  @media (min-width: $md4) {
+    padding: 0.75em 1em;
+  }
+  &--padding-right {
+    padding-right: 50px;
+  }
+  &--text {
+    @extend %field-error;
+  }
+  &--number {
+    position: relative;
+    @extend %field-error;
+    appearance: textfield;
+  }
+}
+
+/* Radio-button */
+.radio-button {
+  position: relative;
+  cursor: pointer;
+  background-color: $white;
+  border: 2px solid $green;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  appearance: none;
+  color-adjust: exact;
+  transition: box-shadow 0.1s linear;
+  outline: none;
+  &:hover:not(:checked),
+  &:focus-visible {
+    box-shadow: 0 0 3px 1px $green;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  &:checked::before {
+    background-color: $green;
+    width: 6px;
+    height: 6px;
+  }
+  &:active:not(:checked)::before {
+    background-color: $green;
+    width: 12px;
+    height: 12px;
+  }
+  &:invalid {
+    border: 2px solid #bdbdbd;
+    background-color: $white;
+    box-shadow: none;
+    &::before {
+      background-color: $white;
+    }
+  }
+  &:disabled {
+    border: 2px solid #bdbdbd;
+    background-color: #bdbdbd;
+    box-shadow: none;
+    &::before {
+      background-color: #bdbdbd;
+    }
+  }
+}
+
+/* Label */
+.label {
+  @include heading-v3;
+  cursor: pointer;
 }

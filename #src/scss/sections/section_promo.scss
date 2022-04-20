@@ -31,7 +31,6 @@
         height: 420px;
       }
     }
-    //todo еще нужно донастроить на брейкпоинтах размеры
     &--main {
       @media (min-width: $md4) {
         grid-template-columns: minmax(45%, 1fr) minmax(200px, 560px);
@@ -52,29 +51,17 @@
     &--kids-online {
       &::after {
         background-image: url('../../img/kids-online-promo.png');
-        // background-image: image-set(
-        //   url('../../img/kids-online-promo.webp') type('image/webp'),
-        //   url('../../img/kids-online-promo.png') type('image/png')
-        // );
       }
     }
     &--kids-offline {
       &::after {
         background-image: url('../../img/kids-offline-promo.png');
-        // background-image: image-set(
-        //   url('../../img/kids-offline-promo.webp') type('image/webp'),
-        //   url('../../img/kids-offline-promo.png') type('image/png')
-        // );
       }
     }
     &--adults {
       &::after {
         height: 220px;
         background-image: url('../../img/adults-promo.png');
-        // background-image: image-set(
-        //   url('../../img/adults-promo.webp') type('image/webp'),
-        //   url('../../img/adults-promo.png') type('image/png')
-        // );
         @media (min-width: $md7) {
           height: 250px;
         }
@@ -84,12 +71,14 @@
       }
     }
   }
+
   // .promo__info
   &__info {
     @media (min-width: $md4) {
       align-self: center;
     }
   }
+
   // .promo__group
   &__group {
     margin-bottom: 40px;
@@ -100,10 +89,12 @@
       margin-bottom: 0;
     }
   }
+
   // .promo__sub-info
   &__sub-info {
     margin-bottom: 60px;
   }
+
   // .promo__heading
   &__heading {
     font-family: $heading;
@@ -122,9 +113,10 @@
     }
   }
   &__sub-heading {
-    @include h1_mobile;
+    @include heading-v1;
     margin-bottom: 10px;
   }
+
   // .promo__text
   &__text {
     font-family: $heading-alt;
@@ -135,6 +127,7 @@
       font-size: 22px;
     }
   }
+
   // .promo__sub-text
   &__sub-text {
     font-family: $text;
@@ -145,8 +138,9 @@
       line-height: 1.625;
     }
   }
+
   // .promo__date
   &__date {
-    @include h2_mobile;
+    @include heading-v2;
   }
 }

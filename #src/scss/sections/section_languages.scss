@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   @include section-decorate;
+
   // .languages__content
   &__content {
     display: grid;
@@ -24,16 +25,18 @@
       margin-bottom: 85px;
     }
   }
+
   // .languages__heading
   &__heading {
     text-align: center;
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 40px;
     @media (min-width: $md4) {
       text-align: initial;
     }
   }
+
   // .languages__list
   &__list {
     justify-self: center;
@@ -48,9 +51,10 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
   // .languages__item
   &__item {
-    @include h2_mobile;
+    @include heading-v2;
     display: flex;
     align-items: center;
     &::before {

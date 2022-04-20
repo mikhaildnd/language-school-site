@@ -1,33 +1,35 @@
 .learning-tip {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 40px;
-  @media (min-width: $md4) {
-    flex-wrap: nowrap;
+
+  // .learning-target__content
+  &__content {
+    max-width: 980px;
+    display: grid;
+    row-gap: 40px;
+    @media (min-width: $md4) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
+    @media (min-width: $md3) {
+      column-gap: 50px;
+    }
+    @media (min-width: $md2) {
+      column-gap: 88px;
+    }
   }
+
   // .learning-target__image
   &__image {
-    flex-shrink: 0;
     width: 281px;
     height: 215px;
-    margin-bottom: 60px;
     @media (min-width: $md7) {
       width: 335px;
       height: 268px;
     }
-    @media (min-width: $md4) {
-      margin-left: 0;
-      margin-right: 30px;
-      margin-bottom: 0;
-    }
     @media (min-width: $md3) {
       width: 446px;
       height: 345px;
-      margin-right: 50px;
-    }
-    @media (min-width: $md2) {
-      margin-right: 88px;
     }
     img {
       position: absolute;
@@ -57,6 +59,7 @@
       top: 84%;
     }
   }
+
   // .learning-target__text-wrapper
   &__text-wrapper {
     max-width: 450px;
@@ -64,26 +67,34 @@
       align-self: center;
     }
   }
+
   // .learning-target__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     margin-bottom: 20px;
     @media (min-width: $md4) {
       margin-bottom: 30px;
     }
   }
+
   // .learning-target__text
   &__text {
-    @include h3_mobile;
+    @include heading-v3;
   }
 }
 
 .todo-list {
-  @include padding-container(875px, $pl, $pr);
+  // .todo-list__content
+  &__content {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   // .todo-list__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     @include text-gradient;
     text-align: center;
     margin-bottom: 40px;
@@ -91,24 +102,32 @@
       margin-bottom: 50px;
     }
   }
+
   // .todo-list__list
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 40px 20px;
     counter-reset: todo-list;
-    margin: -20px -10px;
+    @media (min-width: $md4) {
+      grid-template-columns: repeat(4, auto);
+    }
+    @media (min-width: $md2) {
+      column-gap: 60px;
+    }
+    @media (min-width: $md1) {
+      column-gap: 90px;
+    }
   }
+
   // .todo-list__item
   &__item {
-    flex-basis: calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 10px;
-    @media (min-width: $md4) {
-      flex-basis: calc(25% - 20px);
-    }
   }
+
   // .todo-list__item-counter
   &__item-counter {
     position: relative;
@@ -138,9 +157,10 @@
       background-color: $red;
     }
   }
+
   // .todo-list__item-text
   &__item-text {
-    @include h2_mobile;
+    @include heading-v2;
     text-align: center;
     max-width: 130px;
     @media (min-width: $md7) {

@@ -10,13 +10,11 @@
   background-color: rgba(0, 0, 0, 0.582);
   overflow-y: auto;
   opacity: 0;
-  // visibility: hidden;
   transition: opacity 0.3s linear;
   &.open {
     pointer-events: all;
     z-index: 1000;
     opacity: 1;
-    // visibility: visible;
     .popup__body {
       transform: translateY(0%);
     }
@@ -87,7 +85,7 @@
   }
   // .popup__heading
   &__heading {
-    @include h1_mobile;
+    @include heading-v1;
     margin-bottom: 30px;
   }
   // .popup__close
