@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openButtonName: 'show',
     /* 6. Селектор контейнера, который прячем(Прячу блок с доп. полями) */
     hidingFieldsContainer: '.form__group--additional',
-    /* 7. Без комментариев, ну почти ;) */
+    /* 7. Класс для скрытия эл-та ;) */
     hideClass: 'hide',
   });
 
@@ -160,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Price cards sliders */
   initSwiperSliders('.prices__rates-group', {
-    // loop: true,
     initialSlide: 1,
     centeredSlides: true,
     slidesPerView: 1.3,
@@ -191,12 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 2.6,
       },
       1024: {
-        // initialSlide: 1,
         slidesPerView: 3,
         spaceBetween: 30,
       },
       1300: {
-        // initialSlide: 1,
         slidesPerView: 3,
         spaceBetween: 70,
       },
