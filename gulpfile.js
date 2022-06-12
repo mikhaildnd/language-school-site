@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import dartSass from 'sass';
-import decomment from 'gulp-decomment';
+import htmlmin from 'gulp-htmlmin';
 import gulpSass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import groupMedia from 'gulp-group-css-media-queries';
@@ -29,8 +29,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const project_name = path.basename(__dirname);
 const src_folder = '#src';
 
-let isDev = false; //false чтобы минифицировал js
-let isProd = !isDev;
+const isBuild = process.argv.includes('--build');
+const isDev = !process.argv.includes('--build');
 
 // Path
 const _path = {
@@ -42,6 +42,7 @@ const _path = {
     fonts: project_name + '/fonts/',
     iconfonts: project_name + '/iconfonts/',
     videos: project_name + '/videos/',
+    favicon: project_name + '/',
   },
   src: {
     favicon: src_folder + '/img/favicon.{jpg,png,svg,gif,ico,webp}',
@@ -52,6 +53,7 @@ const _path = {
     fonts: src_folder + '/fonts/*.ttf',
     iconfonts: src_folder + '/iconfonts/*.{ttf,svg,eot,woff}',
     videos: src_folder + '/videos/*.*',
+    favicon: [src_folder + '/favicon.ico', src_folder + '/manifest.json'],
   },
   watch: {
     html: src_folder + '/**/*.html',
@@ -106,10 +108,28 @@ export const html = () => {
     .src(_path.src.html, {})
     .pipe(plumber())
     .pipe(fileinclude())
-    .pipe(decomment())
+    .pipe(
+      gulpIf(
+        isBuild,
+        htmlmin({
+          removeComments: true,
+          collapseWhitespace: true,
+        }),
+      ),
+    )
     .pipe(gulp.dest(_path.build.html))
     .pipe(sync.stream());
 };
+
+//favicon
+export const favicon = () => {
+  return gulp
+    .src(_path.src.favicon)
+    .pipe(plumber())
+    .pipe(gulp.dest(_path.build.favicon))
+    .pipe(sync.stream());
+};
+
 //iconfonts
 export const iconfonts = () => {
   return gulp
@@ -130,14 +150,14 @@ export const styles = () => {
       autoprefixer({
         grid: true,
         cascade: true,
-      })
+      }),
     )
     .pipe(gulp.dest(_path.build.css))
     .pipe(cleanCss())
     .pipe(
       rename({
         extname: '.min.css',
-      })
+      }),
     )
     .pipe(gulp.dest(_path.build.css))
     .pipe(sync.stream());
@@ -154,12 +174,12 @@ export const images = () => {
         webp({
           quality: 75,
         }),
-      ])
+      ]),
     )
     .pipe(
       rename({
         extname: '.webp',
-      })
+      }),
     )
     .pipe(gulp.dest(_path.build.images))
     .pipe(gulp.src(_path.src.images))
@@ -170,7 +190,7 @@ export const images = () => {
         svgoPlugins: [{ removeViewBox: false }],
         interlaced: true,
         optimizationLevel: 3, //0 to 7
-      })
+      }),
     )
     .pipe(gulp.dest(_path.build.images));
 };
@@ -188,7 +208,7 @@ export const fontsOtf2ttf = () => {
     .pipe(
       fonter({
         formats: ['ttf'],
-      })
+      }),
     )
     .pipe(gulp.dest('./' + src_folder + '/fonts/'));
 };
@@ -224,7 +244,7 @@ export const fontsInclude = (cb) => {
           fs.appendFile(
             fileContent,
             '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n',
-            cb
+            cb,
           );
         }
         c_fontname = fontname;
@@ -240,7 +260,6 @@ export const server = () => {
     notify: false,
     server: {
       baseDir: './' + project_name + '/',
-      // port: 3000,
     },
   });
 };
@@ -255,10 +274,10 @@ export const watch = () => {
 
 export const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, images, iconfonts),
+  gulp.parallel(favicon, html, styles, scripts, iconfonts, images),
   fontsOtf2ttf,
   fonts,
-  fontsInclude
+  fontsInclude,
 );
 
 export default gulp.series(build, gulp.parallel(server, watch));
