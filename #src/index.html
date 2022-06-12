@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('_head.html',{ "title":"Home" })
+  @@include('_head.html',{ "title":"Speaky School" })
   <body>
     @@include('_header.html',{})
     <main class="page">
@@ -18,7 +18,7 @@
         </div>
       </section>
       <!-- Lessons -->
-      <section class="lessons page__item">
+      <div class="lessons page__item">
         <div class="container">
           <div class="lessons__content">
             <div class="lessons__item">
@@ -55,7 +55,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <!--  Languages -->
       <div class="page__item">
         <div class="container container--filled-block">
@@ -114,7 +114,7 @@
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
               <form class="trial-lesson__form form" data-form="trial-form">
-                <section class="form__section form__section--bottom-gutter-lg">
+                <div class="form__section form__section--bottom-gutter-lg">
                   <div class="form__group form__group--col-2">
                     <div class="tab-label form__item">
                       <label class="tab-label__label">
@@ -142,8 +142,8 @@
                       </label>
                     </div>
                   </div>
-                </section>
-                <section class="form__section form__section--select-language">
+                </div>
+                <div class="form__section form__section--select-language">
                   <div class="form__item form__item--select">
                     <select class="field" id="lang">
                       <option selected>Английский язык</option>
@@ -152,8 +152,8 @@
                       <option value="3">Испанский язык</option>
                     </select>
                   </div>
-                </section>
-                <section class="form__section form__section--education-place">
+                </div>
+                <div class="form__section form__section--education-place">
                   <div class="form__group form__group--col-2">
                     <div class="form__item">
                       <input
@@ -170,8 +170,8 @@
                       <label class="label" for="online">Онлайн-занятия</label>
                     </div>
                   </div>
-                </section>
-                <section class="form__section form__section--student-info">
+                </div>
+                <div class="form__section form__section--student-info">
                   <div class="form__group form__group--col-2">
                     <div class="form__item">
                       <input
@@ -217,12 +217,10 @@
                       value=""
                     />
                   </div>
-                </section>
-                <section
-                  class="form__section form__section--submit form__section--bottom-gutter-lg"
-                >
+                </div>
+                <div class="form__section form__section--submit form__section--bottom-gutter-lg">
                   <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
-                </section>
+                </div>
               </form>
             </div>
           </div>
@@ -475,7 +473,7 @@
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
               <form class="trial-lesson__form form" data-form="trial-form">
-                <section class="form__section form__section--bottom-gutter-lg">
+                <div class="form__section form__section--bottom-gutter-lg">
                   <div class="form__group form__group--col-2">
                     <div class="tab-label form__item">
                       <label class="tab-label__label">
@@ -503,36 +501,36 @@
                       </label>
                     </div>
                   </div>
-                </section>
-                <section class="form__section form__section--select-language">
+                </div>
+                <div class="form__section form__section--select-language">
                   <div class="form__item form__item--select">
-                    <select class="field" id="lang">
+                    <select class="field" id="lang-2">
                       <option selected>Английский язык</option>
                       <option value="1">Французский язык</option>
                       <option value="2">Немецкий язык</option>
                       <option value="3">Испанский язык</option>
                     </select>
                   </div>
-                </section>
-                <section class="form__section form__section--education-place">
+                </div>
+                <div class="form__section form__section--education-place">
                   <div class="form__group form__group--col-2">
                     <div class="form__item">
                       <input
                         class="radio-button"
                         name="where-study"
-                        id="school"
+                        id="school-2"
                         type="radio"
                         checked
                       />
-                      <label class="label" for="school">Занятия в клубе</label>
+                      <label class="label" for="school-2">Занятия в клубе</label>
                     </div>
                     <div class="form__item">
-                      <input class="radio-button" name="where-study" id="online" type="radio" />
-                      <label class="label" for="online">Онлайн-занятия</label>
+                      <input class="radio-button" name="where-study" id="online-2" type="radio" />
+                      <label class="label" for="online-2">Онлайн-занятия</label>
                     </div>
                   </div>
-                </section>
-                <section class="form__section form__section--student-info">
+                </div>
+                <div class="form__section form__section--student-info">
                   <div class="form__group form__group--col-2">
                     <div class="form__item">
                       <input
@@ -578,12 +576,10 @@
                       value=""
                     />
                   </div>
-                </section>
-                <section
-                  class="form__section form__section--submit form__section--bottom-gutter-lg"
-                >
+                </div>
+                <div class="form__section form__section--submit form__section--bottom-gutter-lg">
                   <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
-                </section>
+                </div>
               </form>
             </div>
           </div>

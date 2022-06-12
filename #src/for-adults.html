@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('_head.html',{ "title":"for-adults" })
+  @@include('_head.html',{ "title":"Speaky School: занятия для взрослых" })
   <body>
     @@include('_header.html',{})
     <main class="page">
@@ -355,7 +355,7 @@
             <div class="trial-lesson__content">
               <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
               <form class="trial-lesson__form form" data-form="trial-form">
-                <section class="form__section form__section--bottom-gutter-lg">
+                <div class="form__section form__section--bottom-gutter-lg">
                   <div class="form__group form__group--col-2">
                     <div class="tab-label form__item">
                       <label class="tab-label__label">
@@ -383,8 +383,8 @@
                       </label>
                     </div>
                   </div>
-                </section>
-                <section class="form__section form__section--select-language">
+                </div>
+                <div class="form__section form__section--select-language">
                   <div class="form__item form__item--select">
                     <select class="field" id="lang">
                       <option selected>Английский язык</option>
@@ -393,8 +393,8 @@
                       <option value="3">Испанский язык</option>
                     </select>
                   </div>
-                </section>
-                <section class="form__section form__section--education-place">
+                </div>
+                <div class="form__section form__section--education-place">
                   <div class="form__group form__group--col-2">
                     <div class="form__item">
                       <input
@@ -411,8 +411,8 @@
                       <label class="label" for="online">Онлайн-занятия</label>
                     </div>
                   </div>
-                </section>
-                <section class="form__section form__section--student-info">
+                </div>
+                <div class="form__section form__section--student-info">
                   <div class="form__group form__group--col-2">
                     <div class="form__item">
                       <input
@@ -458,12 +458,10 @@
                       value=""
                     />
                   </div>
-                </section>
-                <section
-                  class="form__section form__section--submit form__section--bottom-gutter-lg"
-                >
+                </div>
+                <div class="form__section form__section--submit form__section--bottom-gutter-lg">
                   <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
-                </section>
+                </div>
               </form>
             </div>
           </div>

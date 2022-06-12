@@ -5,7 +5,7 @@
         <button class="popup__close">Закрыть</button>
         <h3 class="popup__heading">Записаться на пробное занятие</h3>
         <form id="form-popup" class="form" data-form="trial-form">
-          <section class="form__section form__section--bottom-gutter-lg">
+          <div class="form__section form__section--bottom-gutter-lg">
             <div class="form__group form__group--col-2">
               <div class="tab-label form__item">
                 <label class="tab-label__label">
@@ -33,30 +33,36 @@
                 </label>
               </div>
             </div>
-          </section>
-          <section class="form__section form__section--select-language">
+          </div>
+          <div class="form__section form__section--select-language">
             <div class="form__item form__item--select">
-              <select class="field" id="lang">
+              <select class="field" id="lang-popup">
                 <option selected>Английский язык</option>
                 <option value="1">Французский язык</option>
                 <option value="2">Немецкий язык</option>
                 <option value="3">Испанский язык</option>
               </select>
             </div>
-          </section>
-          <section class="form__section form__section--education-place">
+          </div>
+          <div class="form__section form__section--education-place">
             <div class="form__group form__group--col-2">
               <div class="form__item">
-                <input class="radio-button" name="where-study" id="school" type="radio" checked />
-                <label class="label" for="school">Занятия в клубе</label>
+                <input
+                  class="radio-button"
+                  name="where-study"
+                  id="school-popup"
+                  type="radio"
+                  checked
+                />
+                <label class="label" for="school-popup">Занятия в клубе</label>
               </div>
               <div class="form__item">
-                <input class="radio-button" name="where-study" id="online" type="radio" />
-                <label class="label" for="online">Онлайн-занятия</label>
+                <input class="radio-button" name="where-study" id="online-popup" type="radio" />
+                <label class="label" for="online-popup">Онлайн-занятия</label>
               </div>
             </div>
-          </section>
-          <section class="form__section form__section--student-info">
+          </div>
+          <div class="form__section form__section--student-info">
             <div class="form__group form__group--col-2">
               <div class="form__item">
                 <input class="field field--text" type="text" placeholder="Ваше имя" value="" />
@@ -82,10 +88,10 @@
               <div class="form__item"></div>
               <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
             </div>
-          </section>
-          <section class="form__section form__section--submit form__section--bottom-gutter-lg">
+          </div>
+          <div class="form__section form__section--submit form__section--bottom-gutter-lg">
             <input class="btn btn--size-normal btn--green" type="submit" value="Отправить" />
-          </section>
+          </div>
         </form>
       </div>
     </div>
