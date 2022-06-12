@@ -393,14 +393,14 @@ body {
   opacity: 1;
 }
 
-.education__dropdown-inner {
+.education__dropdown-list {
   position: relative;
   padding: 10px 20px;
   background-color: #ffeca0;
   border-radius: 15px;
 }
 
-.education__dropdown-inner::before {
+.education__dropdown-list::before {
   content: "";
   position: absolute;
   top: 0;
