@@ -26,8 +26,8 @@ import fs from 'fs';
 
 const scss = gulpSass(dartSass);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const project_name = path.basename(__dirname);
-const src_folder = '#src';
+const src_folder = 'src';
+const dist_folder = 'dist';
 
 const isBuild = process.argv.includes('--build');
 const isDev = !process.argv.includes('--build');
@@ -35,33 +35,36 @@ const isDev = !process.argv.includes('--build');
 // Path
 const _path = {
   build: {
-    html: project_name + '/',
-    js: project_name + '/js/',
-    css: project_name + '/css/',
-    images: project_name + '/img/',
-    fonts: project_name + '/fonts/',
-    iconfonts: project_name + '/iconfonts/',
-    videos: project_name + '/videos/',
-    favicon: project_name + '/',
+    html: dist_folder + '/',
+    js: dist_folder + '/js/',
+    css: dist_folder + '/css/',
+    images: dist_folder + '/img/',
+    fonts: dist_folder + '/fonts/',
+    iconfonts: dist_folder + '/iconfonts/',
+    videos: dist_folder + '/videos/',
+    favicon: dist_folder + '/',
   },
   src: {
-    favicon: src_folder + '/img/favicon.{jpg,png,svg,gif,ico,webp}',
     html: [src_folder + '/**/*.html', '!' + src_folder + '/_*.html'],
     js: src_folder + '/js/*.js',
     css: [src_folder + '/scss/style.scss', src_folder + '/scss/iconfonts.scss'],
-    images: [src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}', '!**/favicon.*'],
+    images: [src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp,avif}', '!**/favicon.*'],
     fonts: src_folder + '/fonts/*.ttf',
     iconfonts: src_folder + '/iconfonts/*.{ttf,svg,eot,woff}',
     videos: src_folder + '/videos/*.*',
-    favicon: [src_folder + '/favicon.ico', src_folder + '/manifest.json'],
+    favicon: [
+      src_folder + '/img/favicon.{jpg,png,svg,gif,ico}',
+      src_folder + '/favicon.ico',
+      src_folder + '/manifest.json',
+    ],
   },
   watch: {
     html: src_folder + '/**/*.html',
     js: src_folder + '/**/*.js',
     css: src_folder + '/scss/**/*.scss',
-    images: src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+    images: src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp,avif}',
   },
-  clean: './' + project_name + '/',
+  clean: './' + dist_folder + '/',
 };
 
 // Scripts
@@ -70,7 +73,7 @@ export const scripts = () => {
   const webPackConfig = {
     watch: false,
     entry: {
-      app: './#src/js/app.js',
+      app: './src/js/app.js',
     },
     output: {
       filename: '[name].min.js',
@@ -81,7 +84,7 @@ export const scripts = () => {
         {
           test: /\.js$/,
           loader: 'babel-loader',
-          include: path.join(__dirname, '#src/js'),
+          include: path.join(__dirname, 'src/js'),
         },
         {
           test: /\.css$/,
@@ -259,7 +262,7 @@ export const server = () => {
     ui: false,
     notify: false,
     server: {
-      baseDir: './' + project_name + '/',
+      baseDir: './' + dist_folder + '/',
     },
   });
 };
