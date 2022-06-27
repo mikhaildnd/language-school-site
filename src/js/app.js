@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openButtonName: 'show',
     /* 6. Селектор контейнера, который прячем(Прячу блок с доп. полями) */
     hidingFieldsContainer: '.form__group--additional',
-    /* 7. Класс для скрытия эл-та ;) */
+    /* 7. Класс для скрытия эл-та */
     hideClass: 'hide',
   });
 
@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     eTargetSelector: '.main-nav__dropdown',
     toggleClass: 'open',
     triggerToggle: true,
+    aria: {
+      enable: true,
+      initText: 'Открыть меню',
+      onChangeText: 'Закрыть меню',
+    },
   });
 
   /* Popup */
@@ -64,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     popupId: 'trial', //id попапа
     triggerAttributeName: 'trigger-for',
     //чтобы искать активный попап ('popupSelector + openSelector')
-    //todo нужно переделать это с использованием аттрибутов, думаю
     popupSelector: '.popup',
     popupCloseSelector: '.popup__close',
     popupOutsideAreaSelector: '.popup__inner',
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // },
   });
 
-  //=== Tabs
+  /* Tabs */
   const mainTabs = new TabManager('prices-tabs', {
     tabListSelector: '.prices__tabs',
     tabBtnSelector: '.prices__button',
@@ -121,9 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
     thumbs: {
       swiper: historyNavLineSlider,
     },
+    spaceBetween: 50,
   });
 
-  //===>
+  /* Result section slider */
   const mediaQuery = window.matchMedia('(min-width: 768px)');
 
   const resultSectionSlider = new Swiper('.result .swiper', {
@@ -156,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sliderStateSwitcherHandler = sliderStateSwitcher(resultSectionSlider);
 
   mediaQuery.addEventListener('change', sliderStateSwitcherHandler);
-  //<===
 
   /* Price cards sliders */
   initSwiperSliders('.prices__rates-group', {

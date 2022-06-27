@@ -49,7 +49,7 @@
 
   // .tab-label__input
   &__input {
-    &:checked + span {
+    &:checked + .tab-label__underline {
       border-color: $green;
     }
   }
