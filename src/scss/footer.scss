@@ -5,12 +5,16 @@
   // .footer__inner
   &__inner {
     @include padding-container($maxWidthContainer, $pl, $pr);
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     text-align: center;
     @media (min-width: $md5) {
       display: flex;
       flex-wrap: wrap;
+    }
+    @media (min-width: $md3) {
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
   }
 
@@ -112,12 +116,14 @@
   // .footer__bottom
   &__bottom {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     @media (min-width: $md5) {
       flex-basis: 100%;
     }
     @media (min-width: $md4) {
       order: 3;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 
@@ -131,6 +137,10 @@
 
   // .footer__copyright
   &__copyright {
-    margin-right: 20px;
+    margin-bottom: 10px;
+    @media (min-width: $md4) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 }
