@@ -5,22 +5,46 @@ const helpers = {
       eTargetSelector,
       toggleClass = 'active',
       triggerToggle = false,
+      aria = {
+        enable: false,
+        initText: 'Открыть меню',
+        onChangeText: 'Закрыть меню',
+      },
     } = options;
 
     const trigger = document.querySelector(triggerSelector);
 
     if (!trigger) return;
 
+    if (aria.enable) {
+      trigger.setAttribute('aria-label', aria.initText);
+    }
+
+    const changeAriaAttribute = () => {
+      let ariaLabelStateCondition = 'true' === trigger.getAttribute('aria-expanded');
+
+      trigger.setAttribute('aria-expanded', !ariaLabelStateCondition),
+        ariaLabelStateCondition
+          ? trigger.setAttribute('aria-label', aria.initText)
+          : trigger.setAttribute('aria-label', aria.onChangeText);
+    };
+
     trigger.addEventListener('click', () => {
+      if (aria.enable) {
+        changeAriaAttribute();
+      }
+
       const target = document.querySelector(eTargetSelector);
 
       if (!target) return;
+
       target.classList.toggle(toggleClass);
 
       if (!triggerToggle) return;
       trigger.classList.toggle(toggleClass);
     });
   },
+
   initMailForms: (options = {}) => {
     const {
       formSelectorAttribute = null,
@@ -33,7 +57,7 @@ const helpers = {
     } = options;
 
     const mailForms = document.querySelectorAll(
-      `[data-${formSelectorAttribute}=${formSelectorName}]`
+      `[data-${formSelectorAttribute}=${formSelectorName}]`,
     );
 
     checkFormAvailable(mailForms);
@@ -64,7 +88,7 @@ const helpers = {
         const nextEl = input.nextElementSibling;
         const prevEl = input.previousElementSibling;
 
-        /* Чтоб не крякнуло если вдруг соседа нет */
+        /* Чтоб не сломалось если вдруг соседа нет */
         if (!(nextEl || prevEl)) return;
 
         /* Если инпут ID равен for="" у лейбла накидываем хэш */
@@ -136,7 +160,7 @@ const helpers = {
       if (!mailForms.length) {
         console.error(mailForms);
         console.error(
-          `Аттрибут заполнен некорректно или отсутствует в документе, проверьте корректность заполнения`
+          `Аттрибут заполнен некорректно или отсутствует в документе, проверьте корректность заполнения`,
         );
         return;
       }
@@ -146,7 +170,7 @@ const helpers = {
       if (!hideTab) {
         throw new TypeError(
           `Аттрибут кнопки закрытия заполнен некорректно или отсутствует, проверьте наличие и правильность заполнения.
-          hideTab: ${hideTab}`
+          hideTab: ${hideTab}`,
         );
       }
       if (!showTab) {
