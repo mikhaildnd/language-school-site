@@ -2,7 +2,9 @@
 
 ![Изображение главной страницы](https://user-images.githubusercontent.com/58606474/176136937-b4d05766-34ed-4cb9-b2db-f2b7cfb67c26.jpg)
 
-## Список доступных страниц
+## Список доступных страниц:
+> *Все страницы загружены на сервис [Netlify](https://www.netlify.com/)*
+
 * [Главная страница](https://speaky-school-site.netlify.app/)
 * [Страница онлайн-уроков для детей](https://speaky-school-site.netlify.app/kids-online.html)
 * [Страница оффлайн-уроков для детей](https://speaky-school-site.netlify.app/kids-offline.html)
